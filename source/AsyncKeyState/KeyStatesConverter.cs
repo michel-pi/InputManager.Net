@@ -1,13 +1,28 @@
 ﻿using System;
+using System.Linq;
 using System.Windows.Input;
+using System.Collections.Generic;
 
-namespace AsyncKeyState.Converter
+namespace AsyncKeyState
 {
     /// <summary>
     /// Provides methods for converting KeyStates to strings and vice versa.
     /// </summary>
     public static class KeyStatesConverter
     {
+        private static readonly List<KeyStates> _states = Enum.GetValues(typeof(KeyStates)).Cast<KeyStates>().ToList();
+
+        /// <summary>
+        /// Gets a readonly enumeration of all KeyStates.
+        /// </summary>
+        public static IEnumerable<KeyStates> KeyStates
+        {
+            get
+            {
+                foreach (var state in _states) yield return state;
+            }
+        }
+
         /// <summary>
         /// Converts a KeyStates enum value to a signed int.
         /// </summary>

@@ -1,14 +1,29 @@
 ﻿using System;
+using System.Linq;
 using System.Windows.Forms;
 using System.Windows.Input;
+using System.Collections.Generic;
 
-namespace AsyncKeyState.Converter
+namespace AsyncKeyState
 {
     /// <summary>
     /// Provides methods to convert between strings and enums and aswell Windows Forms (Keys) and WPF (Key) enums.
     /// </summary>
     public static class KeyCodeConverter
     {
+        private static readonly List<Keys> _keys = Enum.GetValues(typeof(Keys)).Cast<Keys>().ToList();
+
+        /// <summary>
+        /// Gets a readonly enumeration of all Keys.
+        /// </summary>
+        public static IEnumerable<Keys> Keys
+        {
+            get
+            {
+                foreach (var key in _keys) yield return key;
+            }
+        }
+
         /// <summary>
         /// Converts a WPF Key to a signed integer.
         /// </summary>
