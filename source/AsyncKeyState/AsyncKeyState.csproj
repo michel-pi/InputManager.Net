@@ -5,6 +5,19 @@
     <ApplicationIcon />
     <OutputType>Library</OutputType>
     <StartupObject />
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageId>AsyncKeyState.Net</PackageId>
+    <Authors>michel-pi</Authors>
+    <Company />
+    <Product>AsyncKeyState.Net</Product>
+    <Description>Provides access to GetAsyncKeyState and GetKeyboardState by providing a complete managed wrapper.</Description>
+    <Copyright>Copyright (c) 2019 michel-pi</Copyright>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageProjectUrl>https://github.com/michel-pi/AsyncKeyState.Net</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/michel-pi/AsyncKeyState.Net</RepositoryUrl>
+    <RepositoryType></RepositoryType>
+    <PackageTags>GetAsyncKeyState GetKeyboardState GetKeyState input wrapper global key state keystate async</PackageTags>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net47|AnyCPU'">
@@ -22,6 +35,13 @@
     <Reference Include="PresentationCore" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="WindowsBase" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>
