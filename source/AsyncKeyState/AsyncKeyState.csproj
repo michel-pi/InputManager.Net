@@ -7,6 +7,17 @@
     <StartupObject />
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net47|AnyCPU'">
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net47|AnyCPU'">
+    <DefineConstants />
+    <DocumentationFile>C:\Users\Michel\Documents\Github\Public\AsyncKeyState.Net\source\AsyncKeyState\AsyncKeyState.xml</DocumentationFile>
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+  </PropertyGroup>
+
   <ItemGroup>
     <Reference Include="PresentationCore" />
     <Reference Include="System.Windows.Forms" />

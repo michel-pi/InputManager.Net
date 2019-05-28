@@ -7,9 +7,19 @@ using AsyncKeyState.PInvoke;
 
 namespace AsyncKeyState
 {
+    /// <summary>
+    /// Provides access to the asynchronous status of all virtual keys.
+    /// </summary>
     public class KeyboardState
     {
+        /// <summary>
+        /// The upper bound of a virtual key.
+        /// </summary>
         public const int MaxKeyValue = User32.MaxKeyCode;
+
+        /// <summary>
+        /// The lower bound of a virtual key.
+        /// </summary>
         public const int MinKeyValue = User32.MinKeyCode;
 
         [ThreadStatic] private static KeyboardState _threadKeyboardState;
@@ -18,6 +28,11 @@ namespace AsyncKeyState
 
         private readonly byte[] _buffer;
 
+        /// <summary>
+        /// Gets the bit field representing the status of a key.
+        /// </summary>
+        /// <param name="index">A virtual key.</param>
+        /// <returns>A 1 byte large bit field holding the status of a virtual key.</returns>
         public byte this[int index]
         {
             get
@@ -28,6 +43,11 @@ namespace AsyncKeyState
             }
         }
 
+        /// <summary>
+        /// Gets the key state of a specified key.
+        /// </summary>
+        /// <param name="key">A virtual key.</param>
+        /// <returns>The KeyStates of the specified key.</returns>
         public KeyStates this[Keys key]
         {
             get
@@ -36,6 +56,9 @@ namespace AsyncKeyState
             }
         }
 
+        /// <summary>
+        /// Initializes a new KeyboardState object and updates the underlying buffer.
+        /// </summary>
         public KeyboardState()
         {
             _managedThreadId = Thread.CurrentThread.ManagedThreadId;
@@ -45,6 +68,11 @@ namespace AsyncKeyState
             Update();
         }
 
+        /// <summary>
+        /// Returns the asynchronous state of a virtual key.
+        /// </summary>
+        /// <param name="key">A virtual key code.</param>
+        /// <returns>The state of a virtual key code.</returns>
         public KeyStates GetKeyState(Keys key)
         {
             if (ValidationHelper.IsKeyOutOfRange(key)) throw ThrowHelper.InvalidEnumArgumentException<Keys>(nameof(key), key);
@@ -71,11 +99,21 @@ namespace AsyncKeyState
             return state;
         }
 
+        /// <summary>
+        /// Determines whether a key is pressed.
+        /// </summary>
+        /// <param name="key">A virtual key.</param>
+        /// <returns><see langword="true"/> if the virtual key is pressed; otherwise, <see langword="false"/>.</returns>
         public bool IsPressed(Keys key)
         {
             return (GetKeyState(key) & KeyStates.Down) == KeyStates.Down;
         }
 
+        /// <summary>
+        /// Determines whether a key was pressed.
+        /// </summary>
+        /// <param name="key">A virtual key.</param>
+        /// <returns><see langword="true"/> if the virtual key was pressed; otherwise, <see langword="false"/>.</returns>
         public bool WasPressed(Keys key)
         {
             var state = GetKeyState(key);
@@ -84,6 +122,11 @@ namespace AsyncKeyState
                 && (state & KeyStates.Down) != KeyStates.Down;
         }
 
+        /// <summary>
+        /// Determines whether a key is pressed for the first time and not held down.
+        /// </summary>
+        /// <param name="key">A virtual key.</param>
+        /// <returns><see langword="true"/> if the virtual key is pressed for the first time and not held down; otherwise, <see langword="false"/>.</returns>
         public bool IsFirstTimePressed(Keys key)
         {
             var state = GetKeyState(key);
@@ -92,16 +135,29 @@ namespace AsyncKeyState
                 && (state & KeyStates.Down) == KeyStates.Down;
         }
 
+        /// <summary>
+        /// Determines whether a key is toggled.
+        /// </summary>
+        /// <param name="key">A virtual key.</param>
+        /// <returns><see langword="true"/> if the virtual key is toggled; otherwise, <see langword="false"/>.</returns>
         public bool IsToggled(Keys key)
         {
             return (GetKeyState(key) & KeyStates.Toggled) == KeyStates.Toggled;
         }
 
+        /// <summary>
+        /// Determines whether a key is not pressed or toggled.
+        /// </summary>
+        /// <param name="key">A virtual key.</param>
+        /// <returns><see langword="true"/> if the virtual key is not pressed or toggled; otherwise, <see langword="false"/>.</returns>
         public bool IsUp(Keys key)
         {
             return GetKeyState(key) == KeyStates.None;
         }
 
+        /// <summary>
+        /// Updates the buffer holding the status of all virtual keys.
+        /// </summary>
         public void Update()
         {
             // invalidates the keyboard state for the current thread
@@ -110,6 +166,11 @@ namespace AsyncKeyState
             User32.GetKeyboardState(_buffer);
         }
 
+        /// <summary>
+        /// Returns a value indicating whether this instance and a specified <see cref="T:System.Object" /> represent the same type and were created on the same thread.
+        /// </summary>
+        /// <param name="obj">The object to compare with this instance.</param>
+        /// <returns><see langword="true" /> if <paramref name="obj" /> is a KeyboardState and was created on the same thread; otherwise, <see langword="false" />.</returns>
         public override bool Equals(object obj)
         {
             if (obj is KeyboardState keyboard)
@@ -122,21 +183,48 @@ namespace AsyncKeyState
             }
         }
 
+        /// <summary>
+        /// Returns a value indicating whether two specified instances of KeyboardState were created on the same thread.
+        /// </summary>
+        /// <param name="value">An object to compare to this instance.</param>
+        /// <returns><see langword="true" /> if <paramref name="value" /> was created on the same thread; otherwise, <see langword="false" />.</returns>
+        public bool Equals(KeyboardState value)
+        {
+            return value != null
+                && value._managedThreadId == _managedThreadId;
+        }
+
+        /// <summary>
+        /// Returns the hash code for this instance.
+        /// </summary>
+        /// <returns>A 32-bit signed integer hash code.</returns>
         public override int GetHashCode()
         {
             return _managedThreadId.GetHashCode();
         }
 
+        /// <summary>
+        /// Converts this KeyboardState structure to a human-readable string.
+        /// </summary>
+        /// <returns>A string representation of this KeyboardState.</returns>
         public override string ToString()
         {
             return $"{ nameof(KeyboardState) } of thread #{ _managedThreadId.ToString() }";
         }
 
+        /// <summary>
+        /// Instantiates a new KeyboardState object.
+        /// </summary>
+        /// <returns>A KeyboardState object.</returns>
         public static KeyboardState Create()
         {
             return new KeyboardState();
         }
 
+        /// <summary>
+        /// Gets a cached and thread-static KeyboardState object which is unique for the calling thread and updates it.
+        /// </summary>
+        /// <returns>A KeyboardState object.</returns>
         public static KeyboardState GetThreadStatic()
         {
             if (_threadKeyboardState == null)
@@ -153,6 +241,11 @@ namespace AsyncKeyState
             }
         }
 
+        /// <summary>
+        /// Gets a cached and thread-static KeyboardState object which is unique for the calling thread.
+        /// </summary>
+        /// <param name="update">Indicates whether the thread-static KeyboardState object should be updated before returning it.</param>
+        /// <returns>A KeyboardState object.</returns>
         public static KeyboardState GetThreadStatic(bool update)
         {
             if (update || _threadKeyboardState == null)

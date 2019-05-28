@@ -4,8 +4,16 @@ using System.Windows.Input;
 
 namespace AsyncKeyState.Converter
 {
+    /// <summary>
+    /// Provides methods to convert between strings and enums and aswell Windows Forms (Keys) and WPF (Key) enums.
+    /// </summary>
     public static class KeyCodeConverter
     {
+        /// <summary>
+        /// Converts a WPF Key to a signed integer.
+        /// </summary>
+        /// <param name="key">A WPF Key.</param>
+        /// <returns>The signed int value representing a WPF Key.</returns>
         public static int ToInt(Key key)
         {
             if (ValidationHelper.IsKeyOutOfRange(key)) throw ThrowHelper.InvalidEnumArgumentException<Key>(nameof(key), key);
@@ -13,6 +21,11 @@ namespace AsyncKeyState.Converter
             return (int)key;
         }
 
+        /// <summary>
+        /// Converts a Windows Forms Keys to a signed integer.
+        /// </summary>
+        /// <param name="key">A Windows Forms Keys.</param>
+        /// <returns>The signed int value representing a WPF Keys.</returns>
         public static int ToInt(Keys key)
         {
             if (ValidationHelper.IsKeyOutOfRange(key)) throw ThrowHelper.InvalidEnumArgumentException<Keys>(nameof(key), key);
@@ -20,6 +33,11 @@ namespace AsyncKeyState.Converter
             return (int)key;
         }
 
+        /// <summary>
+        /// Converts a WPF Key to a human readable string.
+        /// </summary>
+        /// <param name="key">A WPF Key.</param>
+        /// <returns>The string this method generates.</returns>
         public static string ToString(Key key)
         {
             if (ValidationHelper.IsKeyOutOfRange(key)) throw ThrowHelper.InvalidEnumArgumentException<Key>(nameof(key), key);
@@ -27,6 +45,11 @@ namespace AsyncKeyState.Converter
             return key.ToString();
         }
 
+        /// <summary>
+        /// Converts a Windows Forms Keys to a human readable string.
+        /// </summary>
+        /// <param name="key">A Windows Forms Keys enum value.</param>
+        /// <returns>The string this method generates.</returns>
         public static string ToString(Keys key)
         {
             if (ValidationHelper.IsKeyOutOfRange(key)) throw ThrowHelper.InvalidEnumArgumentException<Keys>(nameof(key), key);
@@ -34,6 +57,11 @@ namespace AsyncKeyState.Converter
             return key.ToString();
         }
 
+        /// <summary>
+        /// Turns the string representation of a WPF Key to a WPF Key enum value.
+        /// </summary>
+        /// <param name="value">The string representation of a WPF Key enum value.</param>
+        /// <returns>The WPF Key enum value.</returns>
         public static Key WPFKeyFromString(string value)
         {
             if (value == null) throw ThrowHelper.ArgumentNullException(nameof(value));
@@ -49,6 +77,11 @@ namespace AsyncKeyState.Converter
             }
         }
 
+        /// <summary>
+        /// Turns the string representation of a Windows Forms Keys to a Windows Forms Keys enum value.
+        /// </summary>
+        /// <param name="value">The string representation of a Windows Forms Keys enum value.</param>
+        /// <returns>The Windows Forms Keys enum value.</returns>
         public static Keys FormsKeyFromString(string value)
         {
             if (value == null) throw ThrowHelper.ArgumentNullException(nameof(value));
@@ -64,6 +97,11 @@ namespace AsyncKeyState.Converter
             }
         }
 
+        /// <summary>
+        /// Converts a Windows Forms Keys enum value to a WPF Key enum value.
+        /// </summary>
+        /// <param name="key">A Windows Forms Keys enum value.</param>
+        /// <returns>The WPF Key enum value.</returns>
         public static Key FormsKeyToWPFKey(Keys key)
         {
             if (ValidationHelper.IsKeyOutOfRange(key)) throw ThrowHelper.InvalidEnumArgumentException<Keys>(nameof(key), key);
@@ -71,6 +109,11 @@ namespace AsyncKeyState.Converter
             return KeyInterop.KeyFromVirtualKey((int)key);
         }
 
+        /// <summary>
+        /// Converts a WPF Key enum value to a Windows Forms Keys enum value.
+        /// </summary>
+        /// <param name="key">A WPF Key enum value.</param>
+        /// <returns>The Windows Forms Keys enum value.</returns>
         public static Keys WPFKeyToFormsKey(Key key)
         {
             if (ValidationHelper.IsKeyOutOfRange(key)) throw ThrowHelper.InvalidEnumArgumentException<Key>(nameof(key), key);
