@@ -4,12 +4,12 @@ using System.Runtime.InteropServices;
 
 namespace AsyncKeyState.PInvoke
 {
-    public delegate short GetAsyncKeyStateDelegate(Keys key);
+    internal delegate short GetAsyncKeyStateDelegate(Keys key);
 
     [return: MarshalAs(UnmanagedType.Bool)]
-    public delegate bool GetKeyboardStateDelegate([MarshalAs(UnmanagedType.LPArray)] byte[] buffer);
+    internal delegate bool GetKeyboardStateDelegate([MarshalAs(UnmanagedType.LPArray)] byte[] buffer);
 
-    public delegate short GetKeyStateDelegate(int virtualKeyCode);
+    internal delegate short GetKeyStateDelegate(int virtualKeyCode);
 
     internal static class User32
     {
