@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using System.Windows.Forms;
 using System.Windows.Input;
 
@@ -12,6 +13,8 @@ namespace AsyncKeyState
         public const int MinKeyValue = User32.MinKeyCode;
 
         [ThreadStatic] private static KeyboardState _threadKeyboardState;
+
+        private readonly int _managedThreadId;
 
         private readonly byte[] _buffer;
 
@@ -35,6 +38,8 @@ namespace AsyncKeyState
 
         public KeyboardState()
         {
+            _managedThreadId = Thread.CurrentThread.ManagedThreadId;
+
             _buffer = new byte[MaxKeyValue];
 
             Update();
@@ -103,6 +108,28 @@ namespace AsyncKeyState
             // removes the need for a message loop
             User32.GetKeyState(0);
             User32.GetKeyboardState(_buffer);
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (obj is KeyboardState keyboard)
+            {
+                return keyboard._managedThreadId == _managedThreadId;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public override int GetHashCode()
+        {
+            return _managedThreadId.GetHashCode();
+        }
+
+        public override string ToString()
+        {
+            return $"{ nameof(KeyboardState) } of thread #{ _managedThreadId.ToString() }";
         }
 
         public static KeyboardState Create()
