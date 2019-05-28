@@ -1,17 +1,28 @@
 ﻿using System;
+using System.ComponentModel;
 
 namespace AsyncKeyState
 {
     internal static class ThrowHelper
     {
-        public static void ThrowArgumentNullException(string paramName)
+        public static InvalidEnumArgumentException InvalidEnumArgumentException<T>(string paramName, T value)
         {
-            throw new ArgumentNullException(paramName);
+            return new InvalidEnumArgumentException(paramName, (int)(object)value, typeof(T));
         }
 
-        public static void ThrowArgumentOutOfRangeException(string paramName)
+        public static ArgumentNullException ArgumentNullException(string paramName)
         {
-            throw new ArgumentOutOfRangeException(paramName);
+            return new ArgumentNullException(paramName);
+        }
+
+        public static ArgumentOutOfRangeException ArgumentOutOfRangeException(string paramName)
+        {
+            return new ArgumentOutOfRangeException(paramName);
+        }
+
+        public static ArgumentException EnumParseException<T>(string value)
+        {
+            return new ArgumentException($"Requested value '{ value }' in '{ typeof(T).Name }' was not found.");
         }
     }
 }

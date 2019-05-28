@@ -1,10 +1,10 @@
 ﻿using System;
-using System.Windows.Input;
+using System.Windows.Forms;
 using System.Runtime.InteropServices;
 
 namespace AsyncKeyState.PInvoke
 {
-    public delegate short GetAsyncKeyStateDelegate(Key key);
+    public delegate short GetAsyncKeyStateDelegate(Keys key);
 
     [return: MarshalAs(UnmanagedType.Bool)]
     public delegate bool GetKeyboardStateDelegate([MarshalAs(UnmanagedType.LPArray)] byte[] buffer);
@@ -13,8 +13,8 @@ namespace AsyncKeyState.PInvoke
 
     internal static class User32
     {
-        public const int MaxKeyCode = 0xFF;
-        public const int MinKeyCode = 0x00;
+        public const int MaxKeyCode = 0x100;
+        public const int MinKeyCode = 0x000;
 
         public static readonly GetAsyncKeyStateDelegate GetAsyncKeyState;
         public static readonly GetKeyboardStateDelegate GetKeyboardState;

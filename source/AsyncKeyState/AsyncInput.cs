@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Windows.Forms;
 using System.Windows.Input;
 
 using AsyncKeyState.PInvoke;
@@ -10,57 +11,59 @@ namespace AsyncKeyState
         public const int MaxKeyValue = User32.MaxKeyCode;
         public const int MinKeyValue = User32.MinKeyCode;
 
-        public static KeyStates GetKeyState(Key key)
+        public static KeyStates GetKeyState(Keys key)
         {
-            if (ValidationHelper.IsKeyOutOfRange(key)) ThrowHelper.ThrowArgumentOutOfRangeException(nameof(key));
+            if (ValidationHelper.IsKeyOutOfRange(key)) throw ThrowHelper.InvalidEnumArgumentException<Keys>(nameof(key), key);
 
             var result = User32.GetAsyncKeyState(key);
 
             bool isToggled = (result & 0x0001) != 0;
             bool isPressed = (result & 0x8000) != 0;
 
-            return isToggled
-                ? isPressed ? KeyStates.Down | KeyStates.Toggled : KeyStates.Toggled
-                : isPressed ? KeyStates.Down : KeyStates.None;
+            var state = KeyStates.None;
+
+            if (isToggled)
+            {
+                state |= KeyStates.Toggled;
+            }
+
+            if (isPressed)
+            {
+                state |= KeyStates.Down;
+            }
+
+            return state;
         }
 
-        public static bool IsPressed(Key key)
+        public static bool IsPressed(Keys key)
         {
-            return (GetKeyState(key) & KeyStates.Down) != 0;
+            return (GetKeyState(key) & KeyStates.Down) == KeyStates.Down;
         }
 
-        public static bool WasPressed(Key key)
+        public static bool WasPressed(Keys key)
         {
             var state = GetKeyState(key);
 
-            return (state & KeyStates.Toggled) != 0
-                && (state & KeyStates.Down) == 0;
+            return (state & KeyStates.Toggled) == KeyStates.Toggled
+                && (state & KeyStates.Down) != KeyStates.Down;
         }
 
-        public static bool IsPressedFirstTime(Key key)
+        public static bool IsFirstTimePressed(Keys key)
         {
             var state = GetKeyState(key);
 
-            return (state & KeyStates.Toggled) != 0
-                && (state & KeyStates.Down) != 0;
+            return (state & KeyStates.Toggled) == KeyStates.Toggled
+                && (state & KeyStates.Down) == KeyStates.Down;
         }
 
-        public static bool IsToggled(Key key)
+        public static bool IsToggled(Keys key)
         {
-            return (GetKeyState(key) & KeyStates.Toggled) != 0;
+            return (GetKeyState(key) & KeyStates.Toggled) == KeyStates.Toggled;
         }
 
-        public static bool IsUp(Key key)
+        public static bool IsUp(Keys key)
         {
             return GetKeyState(key) == KeyStates.None;
-        }
-
-        internal static class ValidationHelper
-        {
-            public static bool IsKeyOutOfRange(Key key)
-            {
-                return (int)key < MinKeyValue || (int)key > MaxKeyValue;
-            }
         }
     }
 }

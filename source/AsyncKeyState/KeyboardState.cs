@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Windows.Forms;
 using System.Windows.Input;
 
 using AsyncKeyState.PInvoke;
@@ -10,19 +11,21 @@ namespace AsyncKeyState
         public const int MaxKeyValue = User32.MaxKeyCode;
         public const int MinKeyValue = User32.MinKeyCode;
 
+        [ThreadStatic] private static KeyboardState _threadKeyboardState;
+
         private readonly byte[] _buffer;
 
         public byte this[int index]
         {
             get
             {
-                if (ValidationHelper.IsIndexOutOfRange(index)) ThrowHelper.ThrowArgumentOutOfRangeException(nameof(index));
+                if (ValidationHelper.IsIndexOutOfRange(index)) throw ThrowHelper.ArgumentOutOfRangeException(nameof(index));
 
                 return _buffer[index];
             }
         }
 
-        public KeyStates this[Key key]
+        public KeyStates this[Keys key]
         {
             get
             {
@@ -37,49 +40,59 @@ namespace AsyncKeyState
             Update();
         }
 
-        public KeyStates GetKeyState(Key key)
+        public KeyStates GetKeyState(Keys key)
         {
-            if (ValidationHelper.IsKeyOutOfRange(key)) ThrowHelper.ThrowArgumentOutOfRangeException(nameof(key));
+            if (ValidationHelper.IsKeyOutOfRange(key)) throw ThrowHelper.InvalidEnumArgumentException<Keys>(nameof(key), key);
 
-            var result = _buffer[(int)key];
+            var bitField = _buffer[(int)key];
 
             // a key is toggled when it's most significant bit is set
-            bool isToggled = (result & (1 << 0)) != 0;
+            bool isToggled = (bitField & (1 << 0)) != 0;
             // a key is pressed when it's least significant bit is set
-            bool isPressed = (result & (1 << 7)) != 0;
+            bool isPressed = (bitField & (1 << 7)) != 0;
 
-            return isToggled
-                ? isPressed ? KeyStates.Down | KeyStates.Toggled : KeyStates.Toggled
-                : isPressed ? KeyStates.Down : KeyStates.None;
+            var state = KeyStates.None;
+
+            if (isToggled)
+            {
+                state |= KeyStates.Toggled;
+            }
+
+            if (isPressed)
+            {
+                state |= KeyStates.Down;
+            }
+
+            return state;
         }
 
-        public bool IsPressed(Key key)
+        public bool IsPressed(Keys key)
         {
-            return (GetKeyState(key) & KeyStates.Down) != 0;
+            return (GetKeyState(key) & KeyStates.Down) == KeyStates.Down;
         }
 
-        public bool WasPressed(Key key)
+        public bool WasPressed(Keys key)
         {
             var state = GetKeyState(key);
 
-            return (state & KeyStates.Toggled) != 0
-                && (state & KeyStates.Down) == 0;
+            return (state & KeyStates.Toggled) == KeyStates.Toggled
+                && (state & KeyStates.Down) != KeyStates.Down;
         }
 
-        public bool IsPressedFirstTime(Key key)
+        public bool IsFirstTimePressed(Keys key)
         {
             var state = GetKeyState(key);
 
-            return (state & KeyStates.Toggled) != 0
-                && (state & KeyStates.Down) != 0;
+            return (state & KeyStates.Toggled) == KeyStates.Toggled
+                && (state & KeyStates.Down) == KeyStates.Down;
         }
 
-        public bool IsToggled(Key key)
+        public bool IsToggled(Keys key)
         {
-            return (GetKeyState(key) & KeyStates.Toggled) != 0;
+            return (GetKeyState(key) & KeyStates.Toggled) == KeyStates.Toggled;
         }
 
-        public bool IsUp(Key key)
+        public bool IsUp(Keys key)
         {
             return GetKeyState(key) == KeyStates.None;
         }
@@ -97,16 +110,31 @@ namespace AsyncKeyState
             return new KeyboardState();
         }
 
-        internal static class ValidationHelper
+        public static KeyboardState GetThreadStatic()
         {
-            public static bool IsIndexOutOfRange(int index)
+            if (_threadKeyboardState == null)
             {
-                return index < MinKeyValue || index > MaxKeyValue;
-            }
+                _threadKeyboardState = new KeyboardState();
 
-            public static bool IsKeyOutOfRange(Key key)
+                return _threadKeyboardState;
+            }
+            else
             {
-                return (int)key < MinKeyValue || (int)key > MaxKeyValue;
+                _threadKeyboardState.Update();
+
+                return _threadKeyboardState;
+            }
+        }
+
+        public static KeyboardState GetThreadStatic(bool update)
+        {
+            if (update || _threadKeyboardState == null)
+            {
+                return GetThreadStatic();
+            }
+            else
+            {
+                return _threadKeyboardState;
             }
         }
     }

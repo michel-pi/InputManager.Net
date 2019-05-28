@@ -2,10 +2,14 @@
 
   <PropertyGroup>
     <TargetFrameworks>net47;net48</TargetFrameworks>
+    <ApplicationIcon />
+    <OutputType>Library</OutputType>
+    <StartupObject />
   </PropertyGroup>
 
   <ItemGroup>
     <Reference Include="PresentationCore" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="WindowsBase" />
   </ItemGroup>
 

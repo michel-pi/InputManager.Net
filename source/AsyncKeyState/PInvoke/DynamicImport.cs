@@ -18,8 +18,8 @@ namespace AsyncKeyState.PInvoke
 
         public static IntPtr ImportLibrary(string libraryName)
         {
-            if (libraryName == null) ThrowHelper.ThrowArgumentNullException(nameof(libraryName));
-            if (libraryName.Length == 0) ThrowHelper.ThrowArgumentOutOfRangeException(nameof(libraryName));
+            if (libraryName == null) throw ThrowHelper.ArgumentNullException(nameof(libraryName));
+            if (libraryName.Length == 0) throw ThrowHelper.ArgumentOutOfRangeException(nameof(libraryName));
 
             IntPtr hModule = GetModuleHandle(libraryName);
 
@@ -40,10 +40,10 @@ namespace AsyncKeyState.PInvoke
 
         public static IntPtr ImportMethod(IntPtr moduleHandle, string methodName)
         {
-            if (moduleHandle == IntPtr.Zero) ThrowHelper.ThrowArgumentOutOfRangeException(nameof(moduleHandle));
+            if (moduleHandle == IntPtr.Zero) throw ThrowHelper.ArgumentOutOfRangeException(nameof(moduleHandle));
 
-            if (methodName == null) ThrowHelper.ThrowArgumentNullException(nameof(methodName));
-            if (methodName.Length == 0) ThrowHelper.ThrowArgumentOutOfRangeException(nameof(methodName));
+            if (methodName == null) throw ThrowHelper.ArgumentNullException(nameof(methodName));
+            if (methodName.Length == 0) throw ThrowHelper.ArgumentOutOfRangeException(nameof(methodName));
 
             IntPtr procAddress = GetProcAddress(moduleHandle, methodName);
 
