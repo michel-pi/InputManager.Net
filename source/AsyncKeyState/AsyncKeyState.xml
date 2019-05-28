@@ -61,93 +61,6 @@
             <param name="key">A virtual key.</param>
             <returns><see langword="true"/> if the virtual key is not pressed or toggled; otherwise, <see langword="false"/>.</returns>
         </member>
-        <member name="T:AsyncKeyState.Converter.KeyCodeConverter">
-            <summary>
-            Provides methods to convert between strings and enums and aswell Windows Forms (Keys) and WPF (Key) enums.
-            </summary>
-        </member>
-        <member name="M:AsyncKeyState.Converter.KeyCodeConverter.ToInt(System.Windows.Input.Key)">
-            <summary>
-            Converts a WPF Key to a signed integer.
-            </summary>
-            <param name="key">A WPF Key.</param>
-            <returns>The signed int value representing a WPF Key.</returns>
-        </member>
-        <member name="M:AsyncKeyState.Converter.KeyCodeConverter.ToInt(System.Windows.Forms.Keys)">
-            <summary>
-            Converts a Windows Forms Keys to a signed integer.
-            </summary>
-            <param name="key">A Windows Forms Keys.</param>
-            <returns>The signed int value representing a WPF Keys.</returns>
-        </member>
-        <member name="M:AsyncKeyState.Converter.KeyCodeConverter.ToString(System.Windows.Input.Key)">
-            <summary>
-            Converts a WPF Key to a human readable string.
-            </summary>
-            <param name="key">A WPF Key.</param>
-            <returns>The string this method generates.</returns>
-        </member>
-        <member name="M:AsyncKeyState.Converter.KeyCodeConverter.ToString(System.Windows.Forms.Keys)">
-            <summary>
-            Converts a Windows Forms Keys to a human readable string.
-            </summary>
-            <param name="key">A Windows Forms Keys enum value.</param>
-            <returns>The string this method generates.</returns>
-        </member>
-        <member name="M:AsyncKeyState.Converter.KeyCodeConverter.WPFKeyFromString(System.String)">
-            <summary>
-            Turns the string representation of a WPF Key to a WPF Key enum value.
-            </summary>
-            <param name="value">The string representation of a WPF Key enum value.</param>
-            <returns>The WPF Key enum value.</returns>
-        </member>
-        <member name="M:AsyncKeyState.Converter.KeyCodeConverter.FormsKeyFromString(System.String)">
-            <summary>
-            Turns the string representation of a Windows Forms Keys to a Windows Forms Keys enum value.
-            </summary>
-            <param name="value">The string representation of a Windows Forms Keys enum value.</param>
-            <returns>The Windows Forms Keys enum value.</returns>
-        </member>
-        <member name="M:AsyncKeyState.Converter.KeyCodeConverter.FormsKeyToWPFKey(System.Windows.Forms.Keys)">
-            <summary>
-            Converts a Windows Forms Keys enum value to a WPF Key enum value.
-            </summary>
-            <param name="key">A Windows Forms Keys enum value.</param>
-            <returns>The WPF Key enum value.</returns>
-        </member>
-        <member name="M:AsyncKeyState.Converter.KeyCodeConverter.WPFKeyToFormsKey(System.Windows.Input.Key)">
-            <summary>
-            Converts a WPF Key enum value to a Windows Forms Keys enum value.
-            </summary>
-            <param name="key">A WPF Key enum value.</param>
-            <returns>The Windows Forms Keys enum value.</returns>
-        </member>
-        <member name="T:AsyncKeyState.Converter.KeyStatesConverter">
-            <summary>
-            Provides methods for converting KeyStates to strings and vice versa.
-            </summary>
-        </member>
-        <member name="M:AsyncKeyState.Converter.KeyStatesConverter.ToInt(System.Windows.Input.KeyStates)">
-            <summary>
-            Converts a KeyStates enum value to a signed int.
-            </summary>
-            <param name="state">A KeyStates enum value.</param>
-            <returns>The signed int this method returns.</returns>
-        </member>
-        <member name="M:AsyncKeyState.Converter.KeyStatesConverter.ToString(System.Windows.Input.KeyStates)">
-            <summary>
-            Converts a KeyStates enum value to a human readable string.
-            </summary>
-            <param name="state">A KeyStates enum value.</param>
-            <returns>The string this method generates.</returns>
-        </member>
-        <member name="M:AsyncKeyState.Converter.KeyStatesConverter.FromString(System.String)">
-            <summary>
-            Converts the string representation of a KeyStates enum value to a KeyStates enum value.
-            </summary>
-            <param name="value">The string representation of a KeyStates enum value.</param>
-            <returns>A KeyStates enum value.</returns>
-        </member>
         <member name="T:AsyncKeyState.KeyboardState">
             <summary>
             Provides access to the asynchronous status of all virtual keys.
@@ -273,6 +186,103 @@
             </summary>
             <param name="update">Indicates whether the thread-static KeyboardState object should be updated before returning it.</param>
             <returns>A KeyboardState object.</returns>
+        </member>
+        <member name="T:AsyncKeyState.KeyCodeConverter">
+            <summary>
+            Provides methods to convert between strings and enums and aswell Windows Forms (Keys) and WPF (Key) enums.
+            </summary>
+        </member>
+        <member name="P:AsyncKeyState.KeyCodeConverter.Keys">
+            <summary>
+            Gets a readonly enumeration of all Keys.
+            </summary>
+        </member>
+        <member name="M:AsyncKeyState.KeyCodeConverter.ToInt(System.Windows.Input.Key)">
+            <summary>
+            Converts a WPF Key to a signed integer.
+            </summary>
+            <param name="key">A WPF Key.</param>
+            <returns>The signed int value representing a WPF Key.</returns>
+        </member>
+        <member name="M:AsyncKeyState.KeyCodeConverter.ToInt(System.Windows.Forms.Keys)">
+            <summary>
+            Converts a Windows Forms Keys to a signed integer.
+            </summary>
+            <param name="key">A Windows Forms Keys.</param>
+            <returns>The signed int value representing a WPF Keys.</returns>
+        </member>
+        <member name="M:AsyncKeyState.KeyCodeConverter.ToString(System.Windows.Input.Key)">
+            <summary>
+            Converts a WPF Key to a human readable string.
+            </summary>
+            <param name="key">A WPF Key.</param>
+            <returns>The string this method generates.</returns>
+        </member>
+        <member name="M:AsyncKeyState.KeyCodeConverter.ToString(System.Windows.Forms.Keys)">
+            <summary>
+            Converts a Windows Forms Keys to a human readable string.
+            </summary>
+            <param name="key">A Windows Forms Keys enum value.</param>
+            <returns>The string this method generates.</returns>
+        </member>
+        <member name="M:AsyncKeyState.KeyCodeConverter.WPFKeyFromString(System.String)">
+            <summary>
+            Turns the string representation of a WPF Key to a WPF Key enum value.
+            </summary>
+            <param name="value">The string representation of a WPF Key enum value.</param>
+            <returns>The WPF Key enum value.</returns>
+        </member>
+        <member name="M:AsyncKeyState.KeyCodeConverter.FormsKeyFromString(System.String)">
+            <summary>
+            Turns the string representation of a Windows Forms Keys to a Windows Forms Keys enum value.
+            </summary>
+            <param name="value">The string representation of a Windows Forms Keys enum value.</param>
+            <returns>The Windows Forms Keys enum value.</returns>
+        </member>
+        <member name="M:AsyncKeyState.KeyCodeConverter.FormsKeyToWPFKey(System.Windows.Forms.Keys)">
+            <summary>
+            Converts a Windows Forms Keys enum value to a WPF Key enum value.
+            </summary>
+            <param name="key">A Windows Forms Keys enum value.</param>
+            <returns>The WPF Key enum value.</returns>
+        </member>
+        <member name="M:AsyncKeyState.KeyCodeConverter.WPFKeyToFormsKey(System.Windows.Input.Key)">
+            <summary>
+            Converts a WPF Key enum value to a Windows Forms Keys enum value.
+            </summary>
+            <param name="key">A WPF Key enum value.</param>
+            <returns>The Windows Forms Keys enum value.</returns>
+        </member>
+        <member name="T:AsyncKeyState.KeyStatesConverter">
+            <summary>
+            Provides methods for converting KeyStates to strings and vice versa.
+            </summary>
+        </member>
+        <member name="P:AsyncKeyState.KeyStatesConverter.KeyStates">
+            <summary>
+            Gets a readonly enumeration of all KeyStates.
+            </summary>
+        </member>
+        <member name="M:AsyncKeyState.KeyStatesConverter.ToInt(System.Windows.Input.KeyStates)">
+            <summary>
+            Converts a KeyStates enum value to a signed int.
+            </summary>
+            <param name="state">A KeyStates enum value.</param>
+            <returns>The signed int this method returns.</returns>
+        </member>
+        <member name="M:AsyncKeyState.KeyStatesConverter.ToString(System.Windows.Input.KeyStates)">
+            <summary>
+            Converts a KeyStates enum value to a human readable string.
+            </summary>
+            <param name="state">A KeyStates enum value.</param>
+            <returns>The string this method generates.</returns>
+        </member>
+        <member name="M:AsyncKeyState.KeyStatesConverter.FromString(System.String)">
+            <summary>
+            Converts the string representation of a KeyStates enum value to a KeyStates enum value.
+            </summary>
+            <param name="value">The string representation of a KeyStates enum value.</param>
+            <returns>A KeyStates enum value.</returns>
         </member>
     </members>
 </doc>
