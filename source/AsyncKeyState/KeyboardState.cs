@@ -48,13 +48,7 @@ namespace AsyncKeyState
         /// </summary>
         /// <param name="key">A virtual key.</param>
         /// <returns>The KeyStates of the specified key.</returns>
-        public KeyStates this[Keys key]
-        {
-            get
-            {
-                return GetKeyState(key);
-            }
-        }
+        public KeyStates this[Keys key] => GetKeyState(key);
 
         /// <summary>
         /// Initializes a new KeyboardState object and updates the underlying buffer.
