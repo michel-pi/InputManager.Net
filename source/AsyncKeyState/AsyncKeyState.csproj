@@ -11,7 +11,7 @@
     <Authors>michel-pi</Authors>
     <Company />
     <Product>AsyncKeyState.Net</Product>
-    <Description>Provides access to GetAsyncKeyState and GetKeyboardState by providing a complete managed wrapper.</Description>
+    <Description>Provides access to GetAsyncKeyState and GetKeyboardState by implementing a complete managed wrapper.</Description>
     <Copyright>Copyright (c) 2019 michel-pi</Copyright>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageProjectUrl>https://github.com/michel-pi/AsyncKeyState.Net</PackageProjectUrl>
@@ -25,6 +25,17 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net47|AnyCPU'">
+    <DefineConstants />
+    <DocumentationFile>C:\Users\Michel\Documents\Github\Public\AsyncKeyState.Net\source\AsyncKeyState\AsyncKeyState.xml</DocumentationFile>
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net48|AnyCPU'">
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net48|AnyCPU'">
     <DefineConstants />
     <DocumentationFile>C:\Users\Michel\Documents\Github\Public\AsyncKeyState.Net\source\AsyncKeyState\AsyncKeyState.xml</DocumentationFile>
     <DebugType>none</DebugType>
