@@ -1,16 +1,9 @@
 ﻿using System;
-using System.Windows.Forms;
-using System.Runtime.InteropServices;
+using System.Security;
 
 namespace AsyncKeyState.PInvoke
 {
-    internal delegate short GetAsyncKeyStateDelegate(Keys key);
-
-    [return: MarshalAs(UnmanagedType.Bool)]
-    internal delegate bool GetKeyboardStateDelegate([MarshalAs(UnmanagedType.LPArray)] byte[] buffer);
-
-    internal delegate short GetKeyStateDelegate(int virtualKeyCode);
-
+	[SuppressUnmanagedCodeSecurity]
     internal static class User32
     {
         public const int MaxKeyCode = 0x100;
@@ -20,13 +13,24 @@ namespace AsyncKeyState.PInvoke
         public static readonly GetKeyboardStateDelegate GetKeyboardState;
         public static readonly GetKeyStateDelegate GetKeyState;
 
-        static User32()
+		public static readonly SendInputDelegate SendInput;
+		public static readonly KeybdEventDelegate KeybdEvent;
+		public static readonly MouseEventDelegate MouseEvent;
+		public static readonly PostMessageDelegate PostMessageW;
+		public static readonly SendMessageDelegate SendMessage;
+
+		static User32()
         {
             var library = DynamicImport.ImportLibrary(nameof(User32));
 
             GetAsyncKeyState = DynamicImport.Import<GetAsyncKeyStateDelegate>(library, nameof(GetAsyncKeyState));
             GetKeyboardState = DynamicImport.Import<GetKeyboardStateDelegate>(library, nameof(GetKeyboardState));
             GetKeyState = DynamicImport.Import<GetKeyStateDelegate>(library, nameof(GetKeyState));
-        }
+			SendInput = DynamicImport.Import<SendInputDelegate>(library, nameof(SendInput));
+			KeybdEvent = DynamicImport.Import<KeybdEventDelegate>(library, "keybd_event");
+			MouseEvent = DynamicImport.Import<MouseEventDelegate>(library, "mouse_event");
+			PostMessageW = DynamicImport.Import<PostMessageDelegate>(library, nameof(PostMessageW));
+			SendMessage = DynamicImport.Import<SendMessageDelegate>(library, nameof(SendMessage));
+		}
     }
 }
