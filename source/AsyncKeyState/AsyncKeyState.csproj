@@ -18,7 +18,7 @@
     <RepositoryUrl>https://github.com/michel-pi/AsyncKeyState.Net</RepositoryUrl>
     <RepositoryType></RepositoryType>
     <PackageTags>GetAsyncKeyState GetKeyboardState GetKeyState input wrapper global key state keystate async</PackageTags>
-    <Version>1.0.1</Version>
+    <Version>1.1.0</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net47|AnyCPU'">
