@@ -8,8 +8,6 @@ namespace AsyncKeyState.InputHelper
 {
 	internal static class MouseInputHelper
 	{
-		private static readonly int MouseInputEventSize = NativeMouseInput.Size + 4;
-
 		private static NativeMouseEventFlags GetMouseEventFlags(Keys key, bool down)
 		{
 			switch (key)
@@ -65,29 +63,35 @@ namespace AsyncKeyState.InputHelper
 			{
 				inputEvent.MouseInput.Flags = GetMouseEventFlags(key, true);
 
-				if (User32.SendInput(1u, ref inputEvent, MouseInputEventSize) == 0u)
+				if (User32.SendInput(1u, ref inputEvent, NativeInputEvent.Size) == 0u)
 					return false;
 
 				inputEvent.MouseInput.Flags = GetMouseEventFlags(key, false);
 
-				return User32.SendInput(1u, ref inputEvent, MouseInputEventSize) != 0u;
+				return User32.SendInput(1u, ref inputEvent, NativeInputEvent.Size) != 0u;
 			}
 			else if ((state & KeyStates.Down) == KeyStates.Down)
 			{
 				inputEvent.MouseInput.Flags = GetMouseEventFlags(key, true);
 
-				return User32.SendInput(1u, ref inputEvent, MouseInputEventSize) != 0u;
+				return User32.SendInput(1u, ref inputEvent, NativeInputEvent.Size) != 0u;
 			}
 			else
 			{
 				inputEvent.MouseInput.Flags = GetMouseEventFlags(key, false);
 
-				return User32.SendInput(1u, ref inputEvent, MouseInputEventSize) != 0u;
+				return User32.SendInput(1u, ref inputEvent, NativeInputEvent.Size) != 0u;
 			}
 		}
 
 		public static bool SendMouseMoveEvent(int x, int y, bool relative)
 		{
+			if (!relative)
+			{
+				x *= ushort.MaxValue / Screen.PrimaryScreen.Bounds.Width;
+				y *= ushort.MaxValue / Screen.PrimaryScreen.Bounds.Height;
+			}
+
 			User32.MouseEvent(
 				relative ? NativeMouseEventFlags.Move : NativeMouseEventFlags.Absolute | NativeMouseEventFlags.Move,
 				(uint)x,
@@ -100,6 +104,12 @@ namespace AsyncKeyState.InputHelper
 
 		public static bool SendMouseMoveInput(int x, int y, bool relative)
 		{
+			if (!relative)
+			{
+				x *= ushort.MaxValue / Screen.PrimaryScreen.Bounds.Width;
+				y *= ushort.MaxValue / Screen.PrimaryScreen.Bounds.Height;
+			}
+
 			var inputEvent = new NativeInputEvent()
 			{
 				Type = NativeInputType.Mouse
@@ -112,7 +122,7 @@ namespace AsyncKeyState.InputHelper
 			inputEvent.MouseInput.X = x;
 			inputEvent.MouseInput.Y = y;
 
-			return User32.SendInput(1u, ref inputEvent, MouseInputEventSize) != 0u;
+			return User32.SendInput(1u, ref inputEvent, NativeInputEvent.Size) != 0u;
 		}
 	}
 }

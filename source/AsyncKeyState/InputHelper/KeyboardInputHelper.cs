@@ -8,8 +8,6 @@ namespace AsyncKeyState.InputHelper
 {
 	internal static class KeyboardInputHelper
 	{
-		private static readonly int KeyboardInputEventSize = NativeKeyboardInput.Size + 4;
-
 		public static bool SendKeyboardEvent(Keys key)
 			=> SendKeyboardEvent(key, KeyStates.Toggled);
 
@@ -47,24 +45,24 @@ namespace AsyncKeyState.InputHelper
 			{
 				inputEvent.KeyboardInput.Flags = NativeKeyboardEventFlags.Down;
 
-				if (User32.SendInput(1u, ref inputEvent, KeyboardInputEventSize) == 0u)
+				if (User32.SendInput(1u, ref inputEvent, NativeInputEvent.Size) == 0u)
 					return false;
 
 				inputEvent.KeyboardInput.Flags = NativeKeyboardEventFlags.Up;
 
-				return User32.SendInput(1u, ref inputEvent, KeyboardInputEventSize) != 0u;
+				return User32.SendInput(1u, ref inputEvent, NativeInputEvent.Size) != 0u;
 			}
 			else if ((state & KeyStates.Down) == KeyStates.Down)
 			{
 				inputEvent.KeyboardInput.Flags = NativeKeyboardEventFlags.Down;
 
-				return User32.SendInput(1u, ref inputEvent, KeyboardInputEventSize) != 0u;
+				return User32.SendInput(1u, ref inputEvent, NativeInputEvent.Size) != 0u;
 			}
 			else
 			{
 				inputEvent.KeyboardInput.Flags = NativeKeyboardEventFlags.Up;
 
-				return User32.SendInput(1u, ref inputEvent, KeyboardInputEventSize) != 0u;
+				return User32.SendInput(1u, ref inputEvent, NativeInputEvent.Size) != 0u;
 			}
 		}
 	}

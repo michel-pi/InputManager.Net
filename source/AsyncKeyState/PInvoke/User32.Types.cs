@@ -43,7 +43,7 @@ namespace AsyncKeyState.PInvoke
 	[StructLayout(LayoutKind.Sequential)]
 	internal struct NativeMouseInput
 	{
-		public static readonly int Size = 24;
+		public static readonly int Size = Marshal.SizeOf<NativeMouseInput>();
 
 		public int X;
 		public int Y;
@@ -58,7 +58,7 @@ namespace AsyncKeyState.PInvoke
 	[StructLayout(LayoutKind.Sequential)]
 	internal struct NativeKeyboardInput
 	{
-		public static readonly int Size = 16;
+		public static readonly int Size = Marshal.SizeOf<NativeKeyboardInput>();
 
 		public ushort Key;
 		public ushort Scancode;
@@ -72,6 +72,8 @@ namespace AsyncKeyState.PInvoke
 	[StructLayout(LayoutKind.Explicit)]
 	internal struct NativeInputEvent
 	{
+		public static readonly int Size = Marshal.SizeOf<NativeInputEvent>();
+
 		[FieldOffset(0)] public NativeInputType Type;
 
 		[FieldOffset(4)] public NativeMouseInput MouseInput;
