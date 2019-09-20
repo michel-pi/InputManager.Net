@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using System.Windows.Input;
 
+using AsyncKeyState.Internal;
 using AsyncKeyState.PInvoke;
 
 namespace AsyncKeyState

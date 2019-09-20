@@ -18,8 +18,8 @@ namespace AsyncKeyState.PInvoke
 
         public static IntPtr ImportLibrary(string libraryName)
         {
-            if (libraryName == null) throw ThrowHelper.ArgumentNullException(nameof(libraryName));
-            if (libraryName.Length == 0) throw ThrowHelper.ArgumentOutOfRangeException(nameof(libraryName));
+            if (libraryName == null) throw new ArgumentNullException(nameof(libraryName));
+            if (libraryName.Length == 0) throw new ArgumentOutOfRangeException(nameof(libraryName));
 
             IntPtr hModule = GetModuleHandle(libraryName);
 
@@ -30,7 +30,7 @@ namespace AsyncKeyState.PInvoke
 
             if (hModule == IntPtr.Zero)
             {
-                throw new DynamicImportException($"DynamicImport failed to import library \"{ libraryName }\"!");
+                throw new DynamicImportException($"DynamicImport failed to import library '{libraryName}'.");
             }
             else
             {
@@ -40,16 +40,16 @@ namespace AsyncKeyState.PInvoke
 
         public static IntPtr ImportMethod(IntPtr moduleHandle, string methodName)
         {
-            if (moduleHandle == IntPtr.Zero) throw ThrowHelper.ArgumentOutOfRangeException(nameof(moduleHandle));
+            if (moduleHandle == IntPtr.Zero) throw new ArgumentOutOfRangeException(nameof(moduleHandle));
 
-            if (methodName == null) throw ThrowHelper.ArgumentNullException(nameof(methodName));
-            if (methodName.Length == 0) throw ThrowHelper.ArgumentOutOfRangeException(nameof(methodName));
+            if (methodName == null) throw new ArgumentNullException(nameof(methodName));
+            if (methodName.Length == 0) throw new ArgumentException(nameof(methodName));
 
             IntPtr procAddress = GetProcAddress(moduleHandle, methodName);
 
             if (procAddress == IntPtr.Zero)
             {
-                throw new DynamicImportException($"DynamicImport failed to find method \"{ methodName }\" in module \"0x{ moduleHandle.ToString("X") }\"!");
+                throw new DynamicImportException($"DynamicImport failed to find method '{methodName}' in module '0x{moduleHandle.ToString("X")}'.");
             }
             else
             {
@@ -87,7 +87,7 @@ namespace AsyncKeyState.PInvoke
         {
         }
 
-        public DynamicImportException(string message) : base(message + Environment.NewLine + "ErrorCode: " + Marshal.GetLastWin32Error())
+        public DynamicImportException(string message) : base($"{message}{Environment.NewLine}ErrorCode: {Marshal.GetLastWin32Error()}.")
         {
         }
 
