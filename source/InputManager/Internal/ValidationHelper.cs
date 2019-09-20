@@ -2,9 +2,9 @@
 using System.Windows.Forms;
 using System.Windows.Input;
 
-using AsyncKeyState.PInvoke;
+using InputManager.PInvoke;
 
-namespace AsyncKeyState.Internal
+namespace InputManager.Internal
 {
     internal static class ValidationHelper
     {

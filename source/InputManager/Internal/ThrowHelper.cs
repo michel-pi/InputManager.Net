@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 
-namespace AsyncKeyState.Internal
+namespace InputManager.Internal
 {
     internal static class ThrowHelper
     {

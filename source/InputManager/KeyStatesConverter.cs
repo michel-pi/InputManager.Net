@@ -3,9 +3,9 @@ using System.Linq;
 using System.Windows.Input;
 using System.Collections.Generic;
 
-using AsyncKeyState.Internal;
+using InputManager.Internal;
 
-namespace AsyncKeyState
+namespace InputManager
 {
     /// <summary>
     /// Provides methods for converting KeyStates to strings and vice versa.

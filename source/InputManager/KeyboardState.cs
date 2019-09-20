@@ -3,10 +3,10 @@ using System.Threading;
 using System.Windows.Forms;
 using System.Windows.Input;
 
-using AsyncKeyState.Internal;
-using AsyncKeyState.PInvoke;
+using InputManager.Internal;
+using InputManager.PInvoke;
 
-namespace AsyncKeyState
+namespace InputManager
 {
     /// <summary>
     /// Provides access to the asynchronous status of all virtual keys.

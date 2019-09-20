@@ -2,9 +2,9 @@
 using System.Windows.Forms;
 using System.Windows.Input;
 
-using AsyncKeyState.PInvoke;
+using InputManager.PInvoke;
 
-namespace AsyncKeyState.InputHelper
+namespace InputManager.InputHelper
 {
 	internal static class KeyboardInputHelper
 	{

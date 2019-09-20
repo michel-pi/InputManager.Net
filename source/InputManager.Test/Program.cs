@@ -3,7 +3,7 @@ using System.Diagnostics;
 using System.Windows.Forms;
 using System.Windows.Input;
 
-namespace AsyncKeyState.Test
+namespace InputManager.Test
 {
 	internal static class Program
 	{

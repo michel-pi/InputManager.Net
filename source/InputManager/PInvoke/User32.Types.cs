@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 
-namespace AsyncKeyState.PInvoke
+namespace InputManager.PInvoke
 {
 	[Flags]
 	internal enum NativeKeyboardEventFlags : uint

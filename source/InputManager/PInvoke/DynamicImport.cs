@@ -3,7 +3,7 @@ using System.ComponentModel;
 using System.Runtime.InteropServices;
 using System.Runtime.Serialization;
 
-namespace AsyncKeyState.PInvoke
+namespace InputManager.PInvoke
 {
     internal static class DynamicImport
     {

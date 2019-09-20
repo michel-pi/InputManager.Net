@@ -4,9 +4,9 @@ using System.Windows.Forms;
 using System.Windows.Input;
 using System.Collections.Generic;
 
-using AsyncKeyState.Internal;
+using InputManager.Internal;
 
-namespace AsyncKeyState
+namespace InputManager
 {
     /// <summary>
     /// Provides methods to convert between strings and enums and aswell Windows Forms (Keys) and WPF (Key) enums.

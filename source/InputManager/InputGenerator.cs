@@ -3,10 +3,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Input;
 
-using AsyncKeyState.InputHelper;
-using AsyncKeyState.Internal;
+using InputManager.InputHelper;
+using InputManager.Internal;
 
-namespace AsyncKeyState
+namespace InputManager
 {
 	/// <summary>
 	/// Synthesizes custom mouse, keyboard and window input.

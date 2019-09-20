@@ -2,7 +2,7 @@
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 
-namespace AsyncKeyState.PInvoke
+namespace InputManager.PInvoke
 {
 	internal delegate short GetAsyncKeyStateDelegate(Keys key);
 

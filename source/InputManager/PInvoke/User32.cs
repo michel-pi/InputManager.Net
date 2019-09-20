@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Security;
 
-namespace AsyncKeyState.PInvoke
+namespace InputManager.PInvoke
 {
 	[SuppressUnmanagedCodeSecurity]
     internal static class User32
