@@ -8,13 +8,32 @@ using AsyncKeyState.Internal;
 
 namespace AsyncKeyState
 {
+	/// <summary>
+	/// Synthesizes custom Mouse, Keyboard and Window input.
+	/// </summary>
 	public static class InputGenerator
 	{
+		/// <summary>
+		/// Synthesizes Keyboard events.
+		/// </summary>
 		public static class Keyboard
 		{
+			/// <summary>
+			/// Presses a key on the Keyboard.
+			/// </summary>
+			/// <param name="key">The key to press.</param>
+			/// <param name="useKeyboardEvent">Determines whether to use the keyboard_event api or not.</param>
+			/// <returns>Returns true on success.</returns>
 			public static bool Press(Keys key, bool useKeyboardEvent = false)
 				=> Press(key, KeyStates.Toggled, useKeyboardEvent);
 
+			/// <summary>
+			/// Changes the state of a key on the Keyboard.
+			/// </summary>
+			/// <param name="key">The key.</param>
+			/// <param name="state">The new state of the given key.</param>
+			/// <param name="useKeyboardEvent">Determines whether to use the keyboard_event api or not.</param>
+			/// <returns>Returns true on success.</returns>
 			public static bool Press(Keys key, KeyStates state, bool useKeyboardEvent = false)
 			{
 				if (ValidationHelper.IsKeyOutOfRange(key)) ThrowHelper.ArgumentOutOfRangeException(nameof(key));
