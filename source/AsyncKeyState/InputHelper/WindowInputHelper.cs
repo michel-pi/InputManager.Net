@@ -63,16 +63,16 @@ namespace AsyncKeyState.InputHelper
 
 			if ((state & KeyStates.Toggled) == KeyStates.Toggled)
 			{
-				User32.SendMessage(hwnd, GetWindowMessageForKey(key, true), wparam, IntPtr.Zero);
-				User32.SendMessage(hwnd, GetWindowMessageForKey(key, false), wparam, IntPtr.Zero);
+				User32.SendMessageW(hwnd, GetWindowMessageForKey(key, true), wparam, IntPtr.Zero);
+				User32.SendMessageW(hwnd, GetWindowMessageForKey(key, false), wparam, IntPtr.Zero);
 			}
 			else if ((state & KeyStates.Down) == KeyStates.Down)
 			{
-				User32.SendMessage(hwnd, GetWindowMessageForKey(key, true), wparam, IntPtr.Zero);
+				User32.SendMessageW(hwnd, GetWindowMessageForKey(key, true), wparam, IntPtr.Zero);
 			}
 			else
 			{
-				User32.SendMessage(hwnd, GetWindowMessageForKey(key, false), wparam, IntPtr.Zero);
+				User32.SendMessageW(hwnd, GetWindowMessageForKey(key, false), wparam, IntPtr.Zero);
 			}
 
 			return true;
@@ -80,7 +80,7 @@ namespace AsyncKeyState.InputHelper
 
 		public static bool SendMouseMoveMessage(IntPtr hwnd, int x, int y)
 		{
-			User32.SendMessage(hwnd, WindowMessage.Mousemove, IntPtr.Zero, MakeLParam(x, y));
+			User32.SendMessageW(hwnd, WindowMessage.Mousemove, IntPtr.Zero, MakeLParam(x, y));
 
 			return true;
 		}

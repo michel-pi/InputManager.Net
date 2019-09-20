@@ -17,7 +17,7 @@ namespace AsyncKeyState.PInvoke
 		public static readonly KeybdEventDelegate KeybdEvent;
 		public static readonly MouseEventDelegate MouseEvent;
 		public static readonly PostMessageDelegate PostMessageW;
-		public static readonly SendMessageDelegate SendMessage;
+		public static readonly SendMessageDelegate SendMessageW;
 
 		static User32()
         {
@@ -30,7 +30,7 @@ namespace AsyncKeyState.PInvoke
 			KeybdEvent = DynamicImport.Import<KeybdEventDelegate>(library, "keybd_event");
 			MouseEvent = DynamicImport.Import<MouseEventDelegate>(library, "mouse_event");
 			PostMessageW = DynamicImport.Import<PostMessageDelegate>(library, nameof(PostMessageW));
-			SendMessage = DynamicImport.Import<SendMessageDelegate>(library, nameof(SendMessage));
+			SendMessageW = DynamicImport.Import<SendMessageDelegate>(library, nameof(SendMessageW));
 		}
     }
 }
