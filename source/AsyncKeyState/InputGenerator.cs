@@ -44,11 +44,11 @@ namespace AsyncKeyState
 					: KeyboardInputHelper.SendKeyboardInput(key, state);
 			}
 
-			public static Task<bool> PressAsync(Keys key)
-				=> Task.Factory.StartNew(() => Press(key));
+			public static Task<bool> PressAsync(Keys key, bool useKeyboardEvent = false)
+				=> Task.Factory.StartNew(() => Press(key, useKeyboardEvent));
 
-			public static Task<bool> PressAsync(Keys key, KeyStates state)
-				=> Task.Factory.StartNew(() => Press(key, state));
+			public static Task<bool> PressAsync(Keys key, KeyStates state, bool useKeyboardEvent = false)
+				=> Task.Factory.StartNew(() => Press(key, state, useKeyboardEvent));
 		}
 
 		public static class Mouse
@@ -76,11 +76,11 @@ namespace AsyncKeyState
 					: MouseInputHelper.SendMouseInput(key, state);
 			}
 
-			public static Task<bool> PressAsync(Keys key)
-				=> Task.Factory.StartNew(() => Press(key));
+			public static Task<bool> PressAsync(Keys key, bool useMouseEvent = false)
+				=> Task.Factory.StartNew(() => Press(key, useMouseEvent));
 
-			public static Task<bool> PressAsync(Keys key, KeyStates state)
-				=> Task.Factory.StartNew(() => Press(key, state));
+			public static Task<bool> PressAsync(Keys key, KeyStates state, bool useMouseEvent = false)
+				=> Task.Factory.StartNew(() => Press(key, state, useMouseEvent));
 		}
 
 		public static class Window
