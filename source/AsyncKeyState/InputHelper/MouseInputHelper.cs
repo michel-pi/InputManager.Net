@@ -32,18 +32,23 @@ namespace AsyncKeyState.InputHelper
 
 		public static bool SendMouseEvent(Keys key, KeyStates state)
 		{
+			uint mouseData;
+
+			if (key == Keys.XButton1) mouseData = 1u;
+			if (key == Keys.XButton2) mouseData = 2u;
+
 			if ((state & KeyStates.Toggled) == KeyStates.Toggled)
 			{
-				User32.MouseEvent(GetMouseEventFlags(key, true), 0u, 0u, 0u, IntPtr.Zero);
-				User32.MouseEvent(GetMouseEventFlags(key, false), 0u, 0u, 0u, IntPtr.Zero);
+				User32.MouseEvent(GetMouseEventFlags(key, true), 0u, 0u, mouseData, IntPtr.Zero);
+				User32.MouseEvent(GetMouseEventFlags(key, false), 0u, 0u, mouseData, IntPtr.Zero);
 			}
 			else if ((state & KeyStates.Down) == KeyStates.Down)
 			{
-				User32.MouseEvent(GetMouseEventFlags(key, true), 0u, 0u, 0u, IntPtr.Zero);
+				User32.MouseEvent(GetMouseEventFlags(key, true), 0u, 0u, mouseData, IntPtr.Zero);
 			}
 			else
 			{
-				User32.MouseEvent(GetMouseEventFlags(key, false), 0u, 0u, 0u, IntPtr.Zero);
+				User32.MouseEvent(GetMouseEventFlags(key, false), 0u, 0u, mouseData, IntPtr.Zero);
 			}
 
 			return true;
@@ -58,6 +63,9 @@ namespace AsyncKeyState.InputHelper
 			{
 				Type = NativeInputType.Mouse
 			};
+
+			if (key == Keys.XButton1) inputEvent.MouseInput.MouseData = 1u;
+			if (key == Keys.XButton2) inputEvent.MouseInput.MouseData = 2u;
 
 			if ((state & KeyStates.Toggled) == KeyStates.Toggled)
 			{
