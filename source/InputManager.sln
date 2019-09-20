@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28803.352
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncKeyState", "AsyncKeyState\AsyncKeyState.csproj", "{18E0576E-8247-4986-BF5A-3916AF000DC9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InputManager", "InputManager\InputManager.csproj", "{18E0576E-8247-4986-BF5A-3916AF000DC9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InputManager.Test", "InputManager.Test\InputManager.Test.csproj", "{E28B5B49-2990-4EE7-A96D-2883C0ADEC28}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{18E0576E-8247-4986-BF5A-3916AF000DC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{18E0576E-8247-4986-BF5A-3916AF000DC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{18E0576E-8247-4986-BF5A-3916AF000DC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E28B5B49-2990-4EE7-A96D-2883C0ADEC28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E28B5B49-2990-4EE7-A96D-2883C0ADEC28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E28B5B49-2990-4EE7-A96D-2883C0ADEC28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E28B5B49-2990-4EE7-A96D-2883C0ADEC28}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -2,9 +2,10 @@
 using System.Windows.Forms;
 using System.Windows.Input;
 
-using AsyncKeyState.PInvoke;
+using InputManager.Internal;
+using InputManager.PInvoke;
 
-namespace AsyncKeyState
+namespace InputManager
 {
     /// <summary>
     /// Provides methods to get the asynchronous state of a virtual key.

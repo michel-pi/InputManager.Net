@@ -7,18 +7,18 @@
     <StartupObject />
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <PackageId>AsyncKeyState.Net</PackageId>
+    <PackageId>InputManager.Net</PackageId>
     <Authors>michel-pi</Authors>
     <Company />
-    <Product>AsyncKeyState.Net</Product>
-    <Description>Provides access to GetAsyncKeyState and GetKeyboardState by implementing a complete managed wrapper.</Description>
+    <Product>InputManager.Net</Product>
+    <Description>Provides access to GetInputManager and GetKeyboardState by implementing a complete managed wrapper.</Description>
     <Copyright>Copyright (c) 2019 michel-pi</Copyright>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
-    <PackageProjectUrl>https://github.com/michel-pi/AsyncKeyState.Net</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/michel-pi/AsyncKeyState.Net</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/michel-pi/InputManager.Net</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/michel-pi/InputManager.Net</RepositoryUrl>
     <RepositoryType></RepositoryType>
-    <PackageTags>GetAsyncKeyState GetKeyboardState GetKeyState input wrapper global key state keystate async</PackageTags>
-    <Version>1.0.1</Version>
+    <PackageTags>GetInputManager GetKeyboardState GetKeyState input wrapper global key state keystate async</PackageTags>
+    <Version>1.1.0</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net47|AnyCPU'">
@@ -27,7 +27,7 @@
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net47|AnyCPU'">
     <DefineConstants />
-    <DocumentationFile>C:\Users\Michel\Documents\Github\Public\AsyncKeyState.Net\source\AsyncKeyState\AsyncKeyState.xml</DocumentationFile>
+    <DocumentationFile>C:\Users\Michel\Documents\Github\Public\InputManager.Net\source\InputManager\InputManager.xml</DocumentationFile>
     <DebugType>none</DebugType>
     <DebugSymbols>false</DebugSymbols>
   </PropertyGroup>
@@ -38,7 +38,7 @@
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net48|AnyCPU'">
     <DefineConstants />
-    <DocumentationFile>C:\Users\Michel\Documents\Github\Public\AsyncKeyState.Net\source\AsyncKeyState\AsyncKeyState.xml</DocumentationFile>
+    <DocumentationFile>C:\Users\Michel\Documents\Github\Public\InputManager.Net\source\InputManager\InputManager.xml</DocumentationFile>
     <DebugType>none</DebugType>
     <DebugSymbols>false</DebugSymbols>
   </PropertyGroup>

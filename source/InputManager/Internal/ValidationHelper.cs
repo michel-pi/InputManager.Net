@@ -2,9 +2,9 @@
 using System.Windows.Forms;
 using System.Windows.Input;
 
-using AsyncKeyState.PInvoke;
+using InputManager.PInvoke;
 
-namespace AsyncKeyState
+namespace InputManager.Internal
 {
     internal static class ValidationHelper
     {
@@ -15,12 +15,12 @@ namespace AsyncKeyState
 
         public static bool IsKeyOutOfRange(Key key)
         {
-            return (int)key < User32.MinKeyCode || (int)key > User32.MaxKeyCode;
+            return key < User32.MinKeyCode || (int)key > User32.MaxKeyCode;
         }
 
         public static bool IsKeyOutOfRange(Keys key)
         {
-            return (int)key < User32.MinKeyCode || (int)key > User32.MaxKeyCode;
+            return key < User32.MinKeyCode || (int)key > User32.MaxKeyCode;
         }
 
         public static bool IsKeyStatesOutOfRange(KeyStates state)

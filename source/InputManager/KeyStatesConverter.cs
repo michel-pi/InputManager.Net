@@ -3,7 +3,9 @@ using System.Linq;
 using System.Windows.Input;
 using System.Collections.Generic;
 
-namespace AsyncKeyState
+using InputManager.Internal;
+
+namespace InputManager
 {
     /// <summary>
     /// Provides methods for converting KeyStates to strings and vice versa.
@@ -30,7 +32,7 @@ namespace AsyncKeyState
         /// <returns>The signed int this method returns.</returns>
         public static int ToInt(KeyStates state)
         {
-            if (ValidationHelper.IsKeyStatesOutOfRange(state)) throw ThrowHelper.InvalidEnumArgumentException<KeyStates>(nameof(state), state);
+            if (ValidationHelper.IsKeyStatesOutOfRange(state)) throw ThrowHelper.InvalidEnumArgumentException(nameof(state), state);
 
             return (int)state;
         }
@@ -42,7 +44,7 @@ namespace AsyncKeyState
         /// <returns>The string this method generates.</returns>
         public static string ToString(KeyStates state)
         {
-            if (ValidationHelper.IsKeyStatesOutOfRange(state)) throw ThrowHelper.InvalidEnumArgumentException<KeyStates>(nameof(state), state);
+            if (ValidationHelper.IsKeyStatesOutOfRange(state)) throw ThrowHelper.InvalidEnumArgumentException(nameof(state), state);
 
             return state.ToString();
         }
