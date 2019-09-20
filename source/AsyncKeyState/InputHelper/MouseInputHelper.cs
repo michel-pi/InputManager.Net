@@ -32,7 +32,7 @@ namespace AsyncKeyState.InputHelper
 
 		public static bool SendMouseEvent(Keys key, KeyStates state)
 		{
-			uint mouseData;
+			uint mouseData = 0u;
 
 			if (key == Keys.XButton1) mouseData = 1u;
 			if (key == Keys.XButton2) mouseData = 2u;
