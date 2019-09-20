@@ -1,6 +1,7 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Windows.Forms;
-using AsyncKeyState;
+using System.Windows.Input
 
 namespace AsyncKeyState.Test
 {
@@ -8,7 +9,7 @@ namespace AsyncKeyState.Test
 	{
 		private static void Main()
 		{
-			InputGenerator.Keyboard.SendInput(Keys.Space);
+			Console.ReadLine();
 		}
 	}
 }
