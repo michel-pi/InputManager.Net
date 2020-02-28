@@ -1,0 +1,425 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>InputManager</name>
+    </assembly>
+    <members>
+        <member name="T:InputManager.AsyncInput">
+            <summary>
+            Provides methods to get the asynchronous state of a virtual key.
+            </summary>
+        </member>
+        <member name="F:InputManager.AsyncInput.MaxKeyValue">
+            <summary>
+            The upper bound of a virtual key.
+            </summary>
+        </member>
+        <member name="F:InputManager.AsyncInput.MinKeyValue">
+            <summary>
+            The lower bound of a virtual key.
+            </summary>
+        </member>
+        <member name="M:InputManager.AsyncInput.GetKeyState(System.Windows.Forms.Keys)">
+            <summary>
+            Returns the asynchronous state of a virtual key.
+            </summary>
+            <param name="key">A virtual key code.</param>
+            <returns>The state of a virtual key code.</returns>
+        </member>
+        <member name="M:InputManager.AsyncInput.IsPressed(System.Windows.Forms.Keys)">
+            <summary>
+            Determines whether a key is pressed.
+            </summary>
+            <param name="key">A virtual key.</param>
+            <returns><see langword="true"/> if the virtual key is pressed; otherwise, <see langword="false"/>.</returns>
+        </member>
+        <member name="M:InputManager.AsyncInput.WasPressed(System.Windows.Forms.Keys)">
+            <summary>
+            Determines whether a key was pressed.
+            </summary>
+            <param name="key">A virtual key.</param>
+            <returns><see langword="true"/> if the virtual key was pressed; otherwise, <see langword="false"/>.</returns>
+        </member>
+        <member name="M:InputManager.AsyncInput.IsFirstTimePressed(System.Windows.Forms.Keys)">
+            <summary>
+            Determines whether a key is pressed for the first time and not held down.
+            </summary>
+            <param name="key">A virtual key.</param>
+            <returns><see langword="true"/> if the virtual key is pressed for the first time and not held down; otherwise, <see langword="false"/>.</returns>
+        </member>
+        <member name="M:InputManager.AsyncInput.IsToggled(System.Windows.Forms.Keys)">
+            <summary>
+            Determines whether a key is toggled.
+            </summary>
+            <param name="key">A virtual key.</param>
+            <returns><see langword="true"/> if the virtual key is toggled; otherwise, <see langword="false"/>.</returns>
+        </member>
+        <member name="M:InputManager.AsyncInput.IsUp(System.Windows.Forms.Keys)">
+            <summary>
+            Determines whether a key is not pressed or toggled.
+            </summary>
+            <param name="key">A virtual key.</param>
+            <returns><see langword="true"/> if the virtual key is not pressed or toggled; otherwise, <see langword="false"/>.</returns>
+        </member>
+        <member name="T:InputManager.InputGenerator">
+            <summary>
+            Synthesizes custom mouse, keyboard and window input.
+            </summary>
+        </member>
+        <member name="T:InputManager.InputGenerator.Keyboard">
+            <summary>
+            Synthesizes keyboard events.
+            </summary>
+        </member>
+        <member name="M:InputManager.InputGenerator.Keyboard.Press(System.Windows.Forms.Keys,System.Boolean)">
+            <summary>
+            Presses a key on the Keyboard.
+            </summary>
+            <param name="key">The key to press.</param>
+            <param name="useKeyboardEvent">Determines whether to use the keyboard_event API or not.</param>
+            <returns>Returns true on success.</returns>
+        </member>
+        <member name="M:InputManager.InputGenerator.Keyboard.Press(System.Windows.Forms.Keys,System.Windows.Input.KeyStates,System.Boolean)">
+            <summary>
+            Changes the state of a key on the Keyboard.
+            </summary>
+            <param name="key">The key.</param>
+            <param name="state">The new state of the given key.</param>
+            <param name="useKeyboardEvent">Determines whether to use the keyboard_event API or not.</param>
+            <returns>Returns true on success.</returns>
+        </member>
+        <member name="M:InputManager.InputGenerator.Keyboard.PressAsync(System.Windows.Forms.Keys,System.Boolean)">
+            <summary>
+            Presses a key on the Keyboard and immediately returns.
+            </summary>
+            <param name="key">The key to press.</param>
+            <param name="useKeyboardEvent">Determines whether to use the keyboard_event API or not.</param>
+            <returns>Returns a Task<bool></bool>.</returns>
+        </member>
+        <member name="M:InputManager.InputGenerator.Keyboard.PressAsync(System.Windows.Forms.Keys,System.Windows.Input.KeyStates,System.Boolean)">
+            <summary>
+            Changes the state of a key on the Keyboard and immediately returns.
+            </summary>
+            <param name="key">The key.</param>
+            <param name="state">The new state of the given key.</param>
+            <param name="useKeyboardEvent">Determines whether to use the keyboard_event API or not.</param>
+            <returns>Returns a Task<bool></bool>.</returns>
+        </member>
+        <member name="T:InputManager.InputGenerator.Mouse">
+            <summary>
+            Synthesizes mouse events.
+            </summary>
+        </member>
+        <member name="M:InputManager.InputGenerator.Mouse.Move(System.Int32,System.Int32,System.Boolean,System.Boolean)">
+            <summary>
+            Moves the mouse to a specific coordinate on the screen or relative by an amount of pixels.
+            </summary>
+            <param name="x">The absolute x-coordinate of the mouse or a relative amount of pixels.</param>
+            <param name="y">The absolute y-coordinate of the mouse or a relative amount of pixels.</param>
+            <param name="relative">Determines whether the coordinates are absolute.</param>
+            <param name="useMouseEvent">Determines whether to use the mouse_event API or not.</param>
+            <returns>Returns true on success.</returns>
+        </member>
+        <member name="M:InputManager.InputGenerator.Mouse.MoveAsync(System.Int32,System.Int32,System.Boolean,System.Boolean)">
+            <summary>
+            Moves the mouse to a specific coordinate on the screen or relative by an amount of pixels and returns immediately.
+            </summary>
+            <param name="x">The absolute x-coordinate of the mouse or a relative amount of pixels.</param>
+            <param name="y">The absolute y-coordinate of the mouse or a relative amount of pixels.</param>
+            <param name="relative">Determines whether the coordinates are absolute.</param>
+            <param name="useMouseEvent">Determines whether to use the mouse_event API or not.</param>
+            <returns>Returns a Task<bool></bool>.</returns>
+        </member>
+        <member name="M:InputManager.InputGenerator.Mouse.Press(System.Windows.Forms.Keys,System.Boolean)">
+            <summary>
+            Presses a button on the mouse.
+            </summary>
+            <param name="key">The mouse button to press.</param>
+            <param name="useMouseEvent">Determines whether to use the mouse_event API or not.</param>
+            <returns>Returns true on success.</returns>
+        </member>
+        <member name="M:InputManager.InputGenerator.Mouse.Press(System.Windows.Forms.Keys,System.Windows.Input.KeyStates,System.Boolean)">
+            <summary>
+            Presses a button on the mouse.
+            </summary>
+            <param name="key">The mouse button to press.</param>
+            <param name="state">The new state of the mouse button.</param>
+            <param name="useMouseEvent">Determines whether to use the mouse_event API or not.</param>
+            <returns>Returns true on success.</returns>
+        </member>
+        <member name="M:InputManager.InputGenerator.Mouse.PressAsync(System.Windows.Forms.Keys,System.Boolean)">
+            <summary>
+            Presses a button on the mouse and returns immediately.
+            </summary>
+            <param name="key">The mouse button to press.</param>
+            <param name="useMouseEvent">Determines whether to use the mouse_event API or not.</param>
+            <returns>Returns a Task<bool></bool>.</returns>
+        </member>
+        <member name="M:InputManager.InputGenerator.Mouse.PressAsync(System.Windows.Forms.Keys,System.Windows.Input.KeyStates,System.Boolean)">
+            <summary>
+            Presses a button on the mouse and returns immediately.
+            </summary>
+            <param name="key">The mouse button to press.</param>
+            <param name="state">The new state of the mouse button.</param>
+            <param name="useMouseEvent">Determines whether to use the mouse_event API or not.</param>
+            <returns>Returns a Task<bool></bool>.</returns>
+        </member>
+        <member name="T:InputManager.InputGenerator.Window">
+            <summary>
+            Synthesizes mouse and keyboard events for a window or control.
+            </summary>
+        </member>
+        <member name="M:InputManager.InputGenerator.Window.MoveMouse(System.IntPtr,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Moves the mouse relative to the window. PostMessage alows async execution and returns immediately.
+            </summary>
+            <param name="windowHandle">The handle of a Window or Control.</param>
+            <param name="x">The new x-coordinate of the mouse.</param>
+            <param name="y">The new y-coordinate of the mouse.</param>
+            <param name="usePostMessage">Determines whether to use the PostMessage API or not.</param>
+            <returns>Returns true on success.</returns>
+        </member>
+        <member name="M:InputManager.InputGenerator.Window.PressKey(System.IntPtr,System.Windows.Forms.Keys,System.Boolean)">
+            <summary>
+            Presses a key (mouse or keyboard) inside a window or control. PostMessage alows async execution and returns immediately.
+            </summary>
+            <param name="windowHandle">The handle of a Window or Control.</param>
+            <param name="key">The key to press.</param>
+            <param name="usePostMessage">Determines whether to use the PostMessage API or not.</param>
+            <returns>Returns true on success.</returns>
+        </member>
+        <member name="M:InputManager.InputGenerator.Window.PressKey(System.IntPtr,System.Windows.Forms.Keys,System.Windows.Input.KeyStates,System.Boolean)">
+            <summary>
+            Presses a key (mouse or keyboard) inside a window or control. PostMessage alows async execution and returns immediately.
+            </summary>
+            <param name="windowHandle">The handle of a Window or Control.</param>
+            <param name="key">The key.</param>
+            <param name="state">The state of the given key.</param>
+            <param name="usePostMessage">Determines whether to use the PostMessage API or not.</param>
+            <returns>Returns true on success.</returns>
+        </member>
+        <member name="T:InputManager.KeyboardState">
+            <summary>
+            Provides access to the asynchronous status of all virtual keys.
+            </summary>
+        </member>
+        <member name="F:InputManager.KeyboardState.MaxKeyValue">
+            <summary>
+            The upper bound of a virtual key.
+            </summary>
+        </member>
+        <member name="F:InputManager.KeyboardState.MinKeyValue">
+            <summary>
+            The lower bound of a virtual key.
+            </summary>
+        </member>
+        <member name="P:InputManager.KeyboardState.Item(System.Int32)">
+            <summary>
+            Gets the bit field representing the status of a key.
+            </summary>
+            <param name="index">A virtual key.</param>
+            <returns>A 1 byte large bit field holding the status of a virtual key.</returns>
+        </member>
+        <member name="P:InputManager.KeyboardState.Item(System.Windows.Forms.Keys)">
+            <summary>
+            Gets the key state of a specified key.
+            </summary>
+            <param name="key">A virtual key.</param>
+            <returns>The KeyStates of the specified key.</returns>
+        </member>
+        <member name="M:InputManager.KeyboardState.#ctor">
+            <summary>
+            Initializes a new KeyboardState object and updates the underlying buffer.
+            </summary>
+        </member>
+        <member name="M:InputManager.KeyboardState.GetKeyState(System.Windows.Forms.Keys)">
+            <summary>
+            Returns the asynchronous state of a virtual key.
+            </summary>
+            <param name="key">A virtual key code.</param>
+            <returns>The state of a virtual key code.</returns>
+        </member>
+        <member name="M:InputManager.KeyboardState.IsPressed(System.Windows.Forms.Keys)">
+            <summary>
+            Determines whether a key is pressed.
+            </summary>
+            <param name="key">A virtual key.</param>
+            <returns><see langword="true"/> if the virtual key is pressed; otherwise, <see langword="false"/>.</returns>
+        </member>
+        <member name="M:InputManager.KeyboardState.WasPressed(System.Windows.Forms.Keys)">
+            <summary>
+            Determines whether a key was pressed.
+            </summary>
+            <param name="key">A virtual key.</param>
+            <returns><see langword="true"/> if the virtual key was pressed; otherwise, <see langword="false"/>.</returns>
+        </member>
+        <member name="M:InputManager.KeyboardState.IsFirstTimePressed(System.Windows.Forms.Keys)">
+            <summary>
+            Determines whether a key is pressed for the first time and not held down.
+            </summary>
+            <param name="key">A virtual key.</param>
+            <returns><see langword="true"/> if the virtual key is pressed for the first time and not held down; otherwise, <see langword="false"/>.</returns>
+        </member>
+        <member name="M:InputManager.KeyboardState.IsToggled(System.Windows.Forms.Keys)">
+            <summary>
+            Determines whether a key is toggled.
+            </summary>
+            <param name="key">A virtual key.</param>
+            <returns><see langword="true"/> if the virtual key is toggled; otherwise, <see langword="false"/>.</returns>
+        </member>
+        <member name="M:InputManager.KeyboardState.IsUp(System.Windows.Forms.Keys)">
+            <summary>
+            Determines whether a key is not pressed or toggled.
+            </summary>
+            <param name="key">A virtual key.</param>
+            <returns><see langword="true"/> if the virtual key is not pressed or toggled; otherwise, <see langword="false"/>.</returns>
+        </member>
+        <member name="M:InputManager.KeyboardState.Update">
+            <summary>
+            Updates the buffer holding the status of all virtual keys.
+            </summary>
+        </member>
+        <member name="M:InputManager.KeyboardState.Equals(System.Object)">
+            <summary>
+            Returns a value indicating whether this instance and a specified <see cref="T:System.Object" /> represent the same type and were created on the same thread.
+            </summary>
+            <param name="obj">The object to compare with this instance.</param>
+            <returns><see langword="true" /> if <paramref name="obj" /> is a KeyboardState and was created on the same thread; otherwise, <see langword="false" />.</returns>
+        </member>
+        <member name="M:InputManager.KeyboardState.Equals(InputManager.KeyboardState)">
+            <summary>
+            Returns a value indicating whether two specified instances of KeyboardState were created on the same thread.
+            </summary>
+            <param name="value">An object to compare to this instance.</param>
+            <returns><see langword="true" /> if <paramref name="value" /> was created on the same thread; otherwise, <see langword="false" />.</returns>
+        </member>
+        <member name="M:InputManager.KeyboardState.GetHashCode">
+            <summary>
+            Returns the hash code for this instance.
+            </summary>
+            <returns>A 32-bit signed integer hash code.</returns>
+        </member>
+        <member name="M:InputManager.KeyboardState.ToString">
+            <summary>
+            Converts this KeyboardState structure to a human-readable string.
+            </summary>
+            <returns>A string representation of this KeyboardState.</returns>
+        </member>
+        <member name="M:InputManager.KeyboardState.Create">
+            <summary>
+            Instantiates a new KeyboardState object.
+            </summary>
+            <returns>A KeyboardState object.</returns>
+        </member>
+        <member name="M:InputManager.KeyboardState.GetThreadStatic">
+            <summary>
+            Gets a cached and thread-static KeyboardState object which is unique for the calling thread and updates it.
+            </summary>
+            <returns>A KeyboardState object.</returns>
+        </member>
+        <member name="M:InputManager.KeyboardState.GetThreadStatic(System.Boolean)">
+            <summary>
+            Gets a cached and thread-static KeyboardState object which is unique for the calling thread.
+            </summary>
+            <param name="update">Indicates whether the thread-static KeyboardState object should be updated before returning it.</param>
+            <returns>A KeyboardState object.</returns>
+        </member>
+        <member name="T:InputManager.KeyCodeConverter">
+            <summary>
+            Provides methods to convert between strings and enums and aswell Windows Forms (Keys) and WPF (Key) enums.
+            </summary>
+        </member>
+        <member name="P:InputManager.KeyCodeConverter.Keys">
+            <summary>
+            Gets a readonly enumeration of all Keys.
+            </summary>
+        </member>
+        <member name="M:InputManager.KeyCodeConverter.ToInt(System.Windows.Input.Key)">
+            <summary>
+            Converts a WPF Key to a signed integer.
+            </summary>
+            <param name="key">A WPF Key.</param>
+            <returns>The signed int value representing a WPF Key.</returns>
+        </member>
+        <member name="M:InputManager.KeyCodeConverter.ToInt(System.Windows.Forms.Keys)">
+            <summary>
+            Converts a Windows Forms Keys to a signed integer.
+            </summary>
+            <param name="key">A Windows Forms Keys.</param>
+            <returns>The signed int value representing a WPF Keys.</returns>
+        </member>
+        <member name="M:InputManager.KeyCodeConverter.ToString(System.Windows.Input.Key)">
+            <summary>
+            Converts a WPF Key to a human readable string.
+            </summary>
+            <param name="key">A WPF Key.</param>
+            <returns>The string this method generates.</returns>
+        </member>
+        <member name="M:InputManager.KeyCodeConverter.ToString(System.Windows.Forms.Keys)">
+            <summary>
+            Converts a Windows Forms Keys to a human readable string.
+            </summary>
+            <param name="key">A Windows Forms Keys enum value.</param>
+            <returns>The string this method generates.</returns>
+        </member>
+        <member name="M:InputManager.KeyCodeConverter.WPFKeyFromString(System.String)">
+            <summary>
+            Turns the string representation of a WPF Key to a WPF Key enum value.
+            </summary>
+            <param name="value">The string representation of a WPF Key enum value.</param>
+            <returns>The WPF Key enum value.</returns>
+        </member>
+        <member name="M:InputManager.KeyCodeConverter.FormsKeyFromString(System.String)">
+            <summary>
+            Turns the string representation of a Windows Forms Keys to a Windows Forms Keys enum value.
+            </summary>
+            <param name="value">The string representation of a Windows Forms Keys enum value.</param>
+            <returns>The Windows Forms Keys enum value.</returns>
+        </member>
+        <member name="M:InputManager.KeyCodeConverter.FormsKeyToWPFKey(System.Windows.Forms.Keys)">
+            <summary>
+            Converts a Windows Forms Keys enum value to a WPF Key enum value.
+            </summary>
+            <param name="key">A Windows Forms Keys enum value.</param>
+            <returns>The WPF Key enum value.</returns>
+        </member>
+        <member name="M:InputManager.KeyCodeConverter.WPFKeyToFormsKey(System.Windows.Input.Key)">
+            <summary>
+            Converts a WPF Key enum value to a Windows Forms Keys enum value.
+            </summary>
+            <param name="key">A WPF Key enum value.</param>
+            <returns>The Windows Forms Keys enum value.</returns>
+        </member>
+        <member name="T:InputManager.KeyStatesConverter">
+            <summary>
+            Provides methods for converting KeyStates to strings and vice versa.
+            </summary>
+        </member>
+        <member name="P:InputManager.KeyStatesConverter.KeyStates">
+            <summary>
+            Gets a readonly enumeration of all KeyStates.
+            </summary>
+        </member>
+        <member name="M:InputManager.KeyStatesConverter.ToInt(System.Windows.Input.KeyStates)">
+            <summary>
+            Converts a KeyStates enum value to a signed int.
+            </summary>
+            <param name="state">A KeyStates enum value.</param>
+            <returns>The signed int this method returns.</returns>
+        </member>
+        <member name="M:InputManager.KeyStatesConverter.ToString(System.Windows.Input.KeyStates)">
+            <summary>
+            Converts a KeyStates enum value to a human readable string.
+            </summary>
+            <param name="state">A KeyStates enum value.</param>
+            <returns>The string this method generates.</returns>
+        </member>
+        <member name="M:InputManager.KeyStatesConverter.FromString(System.String)">
+            <summary>
+            Converts the string representation of a KeyStates enum value to a KeyStates enum value.
+            </summary>
+            <param name="value">The string representation of a KeyStates enum value.</param>
+            <returns>A KeyStates enum value.</returns>
+        </member>
+    </members>
+</doc>

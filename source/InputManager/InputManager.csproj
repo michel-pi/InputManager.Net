@@ -12,13 +12,13 @@
     <Company />
     <Product>InputManager.Net</Product>
     <Description>Provides access to GetInputManager and GetKeyboardState by implementing a complete managed wrapper.</Description>
-    <Copyright>Copyright (c) 2019 michel-pi</Copyright>
+    <Copyright>Copyright (c) 2020 michel-pi</Copyright>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageProjectUrl>https://github.com/michel-pi/InputManager.Net</PackageProjectUrl>
     <RepositoryUrl>https://github.com/michel-pi/InputManager.Net</RepositoryUrl>
     <RepositoryType></RepositoryType>
     <PackageTags>GetInputManager GetKeyboardState GetKeyState input wrapper global key state keystate async</PackageTags>
-    <Version>1.1.0</Version>
+    <Version>1.1.2</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net47|AnyCPU'">
