@@ -13,6 +13,8 @@ To provide better compatibility to other implementations using `VirtualKeyCodes`
 
 You can freely convert between Windows Forms `Keys` and WPF `Key` enum values.
 
+## [Documentation](https://michel-pi.github.io/InputManager.Net/ "InputManager.Net Documentation")
+
 ## NuGet
 
     Install-Package AsyncKeyState.Net
@@ -62,8 +64,6 @@ var keyboard = KeyboardState.GetThreadStatic();
 ```
 
 The thread static instance is automatically thread safe by design.
-
-### [Documentation](https://michel-pi.github.io/InputManager.Net/ "InputManager.Net Documentation")
 
 ## Contribute
 
