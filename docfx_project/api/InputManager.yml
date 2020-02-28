@@ -1,0 +1,70 @@
+### YamlMime:ManagedReference
+items:
+- uid: InputManager
+  commentId: N:InputManager
+  id: InputManager
+  children:
+  - InputManager.AsyncInput
+  - InputManager.InputGenerator
+  - InputManager.InputGenerator.Keyboard
+  - InputManager.InputGenerator.Mouse
+  - InputManager.InputGenerator.Window
+  - InputManager.KeyboardState
+  - InputManager.KeyCodeConverter
+  - InputManager.KeyStatesConverter
+  langs:
+  - csharp
+  - vb
+  name: InputManager
+  nameWithType: InputManager
+  fullName: InputManager
+  type: Namespace
+  assemblies:
+  - InputManager
+references:
+- uid: InputManager.AsyncInput
+  commentId: T:InputManager.AsyncInput
+  name: AsyncInput
+  nameWithType: AsyncInput
+  fullName: InputManager.AsyncInput
+- uid: InputManager.InputGenerator
+  commentId: T:InputManager.InputGenerator
+  name: InputGenerator
+  nameWithType: InputGenerator
+  fullName: InputManager.InputGenerator
+- uid: InputManager.InputGenerator.Keyboard
+  commentId: T:InputManager.InputGenerator.Keyboard
+  name: InputGenerator.Keyboard
+  nameWithType: InputGenerator.Keyboard
+  fullName: InputManager.InputGenerator.Keyboard
+- uid: InputManager.InputGenerator.Mouse
+  commentId: T:InputManager.InputGenerator.Mouse
+  name: InputGenerator.Mouse
+  nameWithType: InputGenerator.Mouse
+  fullName: InputManager.InputGenerator.Mouse
+- uid: InputManager.InputGenerator.Window
+  commentId: T:InputManager.InputGenerator.Window
+  name: InputGenerator.Window
+  nameWithType: InputGenerator.Window
+  fullName: InputManager.InputGenerator.Window
+- uid: InputManager.KeyboardState
+  commentId: T:InputManager.KeyboardState
+  parent: InputManager
+  name: KeyboardState
+  nameWithType: KeyboardState
+  fullName: InputManager.KeyboardState
+- uid: InputManager.KeyCodeConverter
+  commentId: T:InputManager.KeyCodeConverter
+  name: KeyCodeConverter
+  nameWithType: KeyCodeConverter
+  fullName: InputManager.KeyCodeConverter
+- uid: InputManager.KeyStatesConverter
+  commentId: T:InputManager.KeyStatesConverter
+  name: KeyStatesConverter
+  nameWithType: KeyStatesConverter
+  fullName: InputManager.KeyStatesConverter
+- uid: InputManager
+  commentId: N:InputManager
+  name: InputManager
+  nameWithType: InputManager
+  fullName: InputManager

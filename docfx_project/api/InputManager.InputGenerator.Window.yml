@@ -1,0 +1,552 @@
+### YamlMime:ManagedReference
+items:
+- uid: InputManager.InputGenerator.Window
+  commentId: T:InputManager.InputGenerator.Window
+  id: InputGenerator.Window
+  parent: InputManager
+  children:
+  - InputManager.InputGenerator.Window.MoveMouse(System.IntPtr,System.Int32,System.Int32,System.Boolean)
+  - InputManager.InputGenerator.Window.PressKey(System.IntPtr,System.Windows.Forms.Keys,System.Boolean)
+  - InputManager.InputGenerator.Window.PressKey(System.IntPtr,System.Windows.Forms.Keys,System.Windows.Input.KeyStates,System.Boolean)
+  langs:
+  - csharp
+  - vb
+  name: InputGenerator.Window
+  nameWithType: InputGenerator.Window
+  fullName: InputManager.InputGenerator.Window
+  type: Class
+  source:
+    remote:
+      path: source/InputManager/InputGenerator.cs
+      branch: master
+      repo: https://github.com/michel-pi/InputManager.Net.git
+    id: Window
+    path: ../source/InputManager/InputGenerator.cs
+    startLine: 146
+  assemblies:
+  - InputManager
+  namespace: InputManager
+  summary: "\nSynthesizes mouse and keyboard events for a window or control.\n"
+  example: []
+  syntax:
+    content: public static class Window
+    content.vb: Public Module Window
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: InputManager.InputGenerator.Window.MoveMouse(System.IntPtr,System.Int32,System.Int32,System.Boolean)
+  commentId: M:InputManager.InputGenerator.Window.MoveMouse(System.IntPtr,System.Int32,System.Int32,System.Boolean)
+  id: MoveMouse(System.IntPtr,System.Int32,System.Int32,System.Boolean)
+  parent: InputManager.InputGenerator.Window
+  langs:
+  - csharp
+  - vb
+  name: MoveMouse(IntPtr, Int32, Int32, Boolean)
+  nameWithType: InputGenerator.Window.MoveMouse(IntPtr, Int32, Int32, Boolean)
+  fullName: InputManager.InputGenerator.Window.MoveMouse(System.IntPtr, System.Int32, System.Int32, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: source/InputManager/InputGenerator.cs
+      branch: master
+      repo: https://github.com/michel-pi/InputManager.Net.git
+    id: MoveMouse
+    path: ../source/InputManager/InputGenerator.cs
+    startLine: 156
+  assemblies:
+  - InputManager
+  namespace: InputManager
+  summary: "\nMoves the mouse relative to the window. PostMessage alows async execution and returns immediately.\n"
+  example: []
+  syntax:
+    content: public static bool MoveMouse(IntPtr windowHandle, int x, int y, bool usePostMessage = false)
+    parameters:
+    - id: windowHandle
+      type: System.IntPtr
+      description: The handle of a Window or Control.
+    - id: x
+      type: System.Int32
+      description: The new x-coordinate of the mouse.
+    - id: y
+      type: System.Int32
+      description: The new y-coordinate of the mouse.
+    - id: usePostMessage
+      type: System.Boolean
+      description: Determines whether to use the PostMessage API or not.
+    return:
+      type: System.Boolean
+      description: Returns true on success.
+    content.vb: Public Shared Function MoveMouse(windowHandle As IntPtr, x As Integer, y As Integer, usePostMessage As Boolean = False) As Boolean
+  overload: InputManager.InputGenerator.Window.MoveMouse*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: InputManager.InputGenerator.Window.PressKey(System.IntPtr,System.Windows.Forms.Keys,System.Boolean)
+  commentId: M:InputManager.InputGenerator.Window.PressKey(System.IntPtr,System.Windows.Forms.Keys,System.Boolean)
+  id: PressKey(System.IntPtr,System.Windows.Forms.Keys,System.Boolean)
+  parent: InputManager.InputGenerator.Window
+  langs:
+  - csharp
+  - vb
+  name: PressKey(IntPtr, Keys, Boolean)
+  nameWithType: InputGenerator.Window.PressKey(IntPtr, Keys, Boolean)
+  fullName: InputManager.InputGenerator.Window.PressKey(System.IntPtr, System.Windows.Forms.Keys, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: source/InputManager/InputGenerator.cs
+      branch: master
+      repo: https://github.com/michel-pi/InputManager.Net.git
+    id: PressKey
+    path: ../source/InputManager/InputGenerator.cs
+    startLine: 170
+  assemblies:
+  - InputManager
+  namespace: InputManager
+  summary: "\nPresses a key (mouse or keyboard) inside a window or control. PostMessage alows async execution and returns immediately.\n"
+  example: []
+  syntax:
+    content: public static bool PressKey(IntPtr windowHandle, Keys key, bool usePostMessage = false)
+    parameters:
+    - id: windowHandle
+      type: System.IntPtr
+      description: The handle of a Window or Control.
+    - id: key
+      type: System.Windows.Forms.Keys
+      description: The key to press.
+    - id: usePostMessage
+      type: System.Boolean
+      description: Determines whether to use the PostMessage API or not.
+    return:
+      type: System.Boolean
+      description: Returns true on success.
+    content.vb: Public Shared Function PressKey(windowHandle As IntPtr, key As Keys, usePostMessage As Boolean = False) As Boolean
+  overload: InputManager.InputGenerator.Window.PressKey*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: InputManager.InputGenerator.Window.PressKey(System.IntPtr,System.Windows.Forms.Keys,System.Windows.Input.KeyStates,System.Boolean)
+  commentId: M:InputManager.InputGenerator.Window.PressKey(System.IntPtr,System.Windows.Forms.Keys,System.Windows.Input.KeyStates,System.Boolean)
+  id: PressKey(System.IntPtr,System.Windows.Forms.Keys,System.Windows.Input.KeyStates,System.Boolean)
+  parent: InputManager.InputGenerator.Window
+  langs:
+  - csharp
+  - vb
+  name: PressKey(IntPtr, Keys, KeyStates, Boolean)
+  nameWithType: InputGenerator.Window.PressKey(IntPtr, Keys, KeyStates, Boolean)
+  fullName: InputManager.InputGenerator.Window.PressKey(System.IntPtr, System.Windows.Forms.Keys, System.Windows.Input.KeyStates, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: source/InputManager/InputGenerator.cs
+      branch: master
+      repo: https://github.com/michel-pi/InputManager.Net.git
+    id: PressKey
+    path: ../source/InputManager/InputGenerator.cs
+    startLine: 181
+  assemblies:
+  - InputManager
+  namespace: InputManager
+  summary: "\nPresses a key (mouse or keyboard) inside a window or control. PostMessage alows async execution and returns immediately.\n"
+  example: []
+  syntax:
+    content: public static bool PressKey(IntPtr windowHandle, Keys key, KeyStates state, bool usePostMessage = false)
+    parameters:
+    - id: windowHandle
+      type: System.IntPtr
+      description: The handle of a Window or Control.
+    - id: key
+      type: System.Windows.Forms.Keys
+      description: The key.
+    - id: state
+      type: System.Windows.Input.KeyStates
+      description: The state of the given key.
+    - id: usePostMessage
+      type: System.Boolean
+      description: Determines whether to use the PostMessage API or not.
+    return:
+      type: System.Boolean
+      description: Returns true on success.
+    content.vb: Public Shared Function PressKey(windowHandle As IntPtr, key As Keys, state As KeyStates, usePostMessage As Boolean = False) As Boolean
+  overload: InputManager.InputGenerator.Window.PressKey*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: InputManager
+  commentId: N:InputManager
+  name: InputManager
+  nameWithType: InputManager
+  fullName: InputManager
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: InputManager.InputGenerator.Window.MoveMouse*
+  commentId: Overload:InputManager.InputGenerator.Window.MoveMouse
+  name: MoveMouse
+  nameWithType: InputGenerator.Window.MoveMouse
+  fullName: InputManager.InputGenerator.Window.MoveMouse
+- uid: System.IntPtr
+  commentId: T:System.IntPtr
+  parent: System
+  isExternal: true
+  name: IntPtr
+  nameWithType: IntPtr
+  fullName: System.IntPtr
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: InputManager.InputGenerator.Window.PressKey*
+  commentId: Overload:InputManager.InputGenerator.Window.PressKey
+  name: PressKey
+  nameWithType: InputGenerator.Window.PressKey
+  fullName: InputManager.InputGenerator.Window.PressKey
+- uid: System.Windows.Forms.Keys
+  commentId: T:System.Windows.Forms.Keys
+  parent: System.Windows.Forms
+  isExternal: true
+  name: Keys
+  nameWithType: Keys
+  fullName: System.Windows.Forms.Keys
+- uid: System.Windows.Forms
+  commentId: N:System.Windows.Forms
+  isExternal: true
+  name: System.Windows.Forms
+  nameWithType: System.Windows.Forms
+  fullName: System.Windows.Forms
+- uid: System.Windows.Input.KeyStates
+  commentId: T:System.Windows.Input.KeyStates
+  parent: System.Windows.Input
+  isExternal: true
+  name: KeyStates
+  nameWithType: KeyStates
+  fullName: System.Windows.Input.KeyStates
+- uid: System.Windows.Input
+  commentId: N:System.Windows.Input
+  isExternal: true
+  name: System.Windows.Input
+  nameWithType: System.Windows.Input
+  fullName: System.Windows.Input

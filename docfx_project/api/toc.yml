@@ -1,0 +1,20 @@
+### YamlMime:TableOfContent
+- uid: InputManager
+  name: InputManager
+  items:
+  - uid: InputManager.AsyncInput
+    name: AsyncInput
+  - uid: InputManager.InputGenerator
+    name: InputGenerator
+  - uid: InputManager.InputGenerator.Keyboard
+    name: InputGenerator.Keyboard
+  - uid: InputManager.InputGenerator.Mouse
+    name: InputGenerator.Mouse
+  - uid: InputManager.InputGenerator.Window
+    name: InputGenerator.Window
+  - uid: InputManager.KeyboardState
+    name: KeyboardState
+  - uid: InputManager.KeyCodeConverter
+    name: KeyCodeConverter
+  - uid: InputManager.KeyStatesConverter
+    name: KeyStatesConverter

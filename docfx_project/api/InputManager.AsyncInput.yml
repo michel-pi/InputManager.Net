@@ -1,0 +1,739 @@
+### YamlMime:ManagedReference
+items:
+- uid: InputManager.AsyncInput
+  commentId: T:InputManager.AsyncInput
+  id: AsyncInput
+  parent: InputManager
+  children:
+  - InputManager.AsyncInput.GetKeyState(System.Windows.Forms.Keys)
+  - InputManager.AsyncInput.IsFirstTimePressed(System.Windows.Forms.Keys)
+  - InputManager.AsyncInput.IsPressed(System.Windows.Forms.Keys)
+  - InputManager.AsyncInput.IsToggled(System.Windows.Forms.Keys)
+  - InputManager.AsyncInput.IsUp(System.Windows.Forms.Keys)
+  - InputManager.AsyncInput.MaxKeyValue
+  - InputManager.AsyncInput.MinKeyValue
+  - InputManager.AsyncInput.WasPressed(System.Windows.Forms.Keys)
+  langs:
+  - csharp
+  - vb
+  name: AsyncInput
+  nameWithType: AsyncInput
+  fullName: InputManager.AsyncInput
+  type: Class
+  source:
+    remote:
+      path: source/InputManager/AsyncInput.cs
+      branch: master
+      repo: https://github.com/michel-pi/InputManager.Net.git
+    id: AsyncInput
+    path: ../source/InputManager/AsyncInput.cs
+    startLine: 12
+  assemblies:
+  - InputManager
+  namespace: InputManager
+  summary: "\nProvides methods to get the asynchronous state of a virtual key.\n"
+  example: []
+  syntax:
+    content: public static class AsyncInput
+    content.vb: Public Module AsyncInput
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: InputManager.AsyncInput.MaxKeyValue
+  commentId: F:InputManager.AsyncInput.MaxKeyValue
+  id: MaxKeyValue
+  parent: InputManager.AsyncInput
+  langs:
+  - csharp
+  - vb
+  name: MaxKeyValue
+  nameWithType: AsyncInput.MaxKeyValue
+  fullName: InputManager.AsyncInput.MaxKeyValue
+  type: Field
+  source:
+    remote:
+      path: source/InputManager/AsyncInput.cs
+      branch: master
+      repo: https://github.com/michel-pi/InputManager.Net.git
+    id: MaxKeyValue
+    path: ../source/InputManager/AsyncInput.cs
+    startLine: 17
+  assemblies:
+  - InputManager
+  namespace: InputManager
+  summary: "\nThe upper bound of a virtual key.\n"
+  example: []
+  syntax:
+    content: public const int MaxKeyValue = 256
+    return:
+      type: System.Int32
+    content.vb: Public Const MaxKeyValue As Integer = 256
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: InputManager.AsyncInput.MinKeyValue
+  commentId: F:InputManager.AsyncInput.MinKeyValue
+  id: MinKeyValue
+  parent: InputManager.AsyncInput
+  langs:
+  - csharp
+  - vb
+  name: MinKeyValue
+  nameWithType: AsyncInput.MinKeyValue
+  fullName: InputManager.AsyncInput.MinKeyValue
+  type: Field
+  source:
+    remote:
+      path: source/InputManager/AsyncInput.cs
+      branch: master
+      repo: https://github.com/michel-pi/InputManager.Net.git
+    id: MinKeyValue
+    path: ../source/InputManager/AsyncInput.cs
+    startLine: 22
+  assemblies:
+  - InputManager
+  namespace: InputManager
+  summary: "\nThe lower bound of a virtual key.\n"
+  example: []
+  syntax:
+    content: public const int MinKeyValue = 0
+    return:
+      type: System.Int32
+    content.vb: Public Const MinKeyValue As Integer = 0
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: InputManager.AsyncInput.GetKeyState(System.Windows.Forms.Keys)
+  commentId: M:InputManager.AsyncInput.GetKeyState(System.Windows.Forms.Keys)
+  id: GetKeyState(System.Windows.Forms.Keys)
+  parent: InputManager.AsyncInput
+  langs:
+  - csharp
+  - vb
+  name: GetKeyState(Keys)
+  nameWithType: AsyncInput.GetKeyState(Keys)
+  fullName: InputManager.AsyncInput.GetKeyState(System.Windows.Forms.Keys)
+  type: Method
+  source:
+    remote:
+      path: source/InputManager/AsyncInput.cs
+      branch: master
+      repo: https://github.com/michel-pi/InputManager.Net.git
+    id: GetKeyState
+    path: ../source/InputManager/AsyncInput.cs
+    startLine: 29
+  assemblies:
+  - InputManager
+  namespace: InputManager
+  summary: "\nReturns the asynchronous state of a virtual key.\n"
+  example: []
+  syntax:
+    content: public static KeyStates GetKeyState(Keys key)
+    parameters:
+    - id: key
+      type: System.Windows.Forms.Keys
+      description: A virtual key code.
+    return:
+      type: System.Windows.Input.KeyStates
+      description: The state of a virtual key code.
+    content.vb: Public Shared Function GetKeyState(key As Keys) As KeyStates
+  overload: InputManager.AsyncInput.GetKeyState*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: InputManager.AsyncInput.IsPressed(System.Windows.Forms.Keys)
+  commentId: M:InputManager.AsyncInput.IsPressed(System.Windows.Forms.Keys)
+  id: IsPressed(System.Windows.Forms.Keys)
+  parent: InputManager.AsyncInput
+  langs:
+  - csharp
+  - vb
+  name: IsPressed(Keys)
+  nameWithType: AsyncInput.IsPressed(Keys)
+  fullName: InputManager.AsyncInput.IsPressed(System.Windows.Forms.Keys)
+  type: Method
+  source:
+    remote:
+      path: source/InputManager/AsyncInput.cs
+      branch: master
+      repo: https://github.com/michel-pi/InputManager.Net.git
+    id: IsPressed
+    path: ../source/InputManager/AsyncInput.cs
+    startLine: 58
+  assemblies:
+  - InputManager
+  namespace: InputManager
+  summary: "\nDetermines whether a key is pressed.\n"
+  example: []
+  syntax:
+    content: public static bool IsPressed(Keys key)
+    parameters:
+    - id: key
+      type: System.Windows.Forms.Keys
+      description: A virtual key.
+    return:
+      type: System.Boolean
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the virtual key is pressed; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
+    content.vb: Public Shared Function IsPressed(key As Keys) As Boolean
+  overload: InputManager.AsyncInput.IsPressed*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: InputManager.AsyncInput.WasPressed(System.Windows.Forms.Keys)
+  commentId: M:InputManager.AsyncInput.WasPressed(System.Windows.Forms.Keys)
+  id: WasPressed(System.Windows.Forms.Keys)
+  parent: InputManager.AsyncInput
+  langs:
+  - csharp
+  - vb
+  name: WasPressed(Keys)
+  nameWithType: AsyncInput.WasPressed(Keys)
+  fullName: InputManager.AsyncInput.WasPressed(System.Windows.Forms.Keys)
+  type: Method
+  source:
+    remote:
+      path: source/InputManager/AsyncInput.cs
+      branch: master
+      repo: https://github.com/michel-pi/InputManager.Net.git
+    id: WasPressed
+    path: ../source/InputManager/AsyncInput.cs
+    startLine: 68
+  assemblies:
+  - InputManager
+  namespace: InputManager
+  summary: "\nDetermines whether a key was pressed.\n"
+  example: []
+  syntax:
+    content: public static bool WasPressed(Keys key)
+    parameters:
+    - id: key
+      type: System.Windows.Forms.Keys
+      description: A virtual key.
+    return:
+      type: System.Boolean
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the virtual key was pressed; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
+    content.vb: Public Shared Function WasPressed(key As Keys) As Boolean
+  overload: InputManager.AsyncInput.WasPressed*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: InputManager.AsyncInput.IsFirstTimePressed(System.Windows.Forms.Keys)
+  commentId: M:InputManager.AsyncInput.IsFirstTimePressed(System.Windows.Forms.Keys)
+  id: IsFirstTimePressed(System.Windows.Forms.Keys)
+  parent: InputManager.AsyncInput
+  langs:
+  - csharp
+  - vb
+  name: IsFirstTimePressed(Keys)
+  nameWithType: AsyncInput.IsFirstTimePressed(Keys)
+  fullName: InputManager.AsyncInput.IsFirstTimePressed(System.Windows.Forms.Keys)
+  type: Method
+  source:
+    remote:
+      path: source/InputManager/AsyncInput.cs
+      branch: master
+      repo: https://github.com/michel-pi/InputManager.Net.git
+    id: IsFirstTimePressed
+    path: ../source/InputManager/AsyncInput.cs
+    startLine: 81
+  assemblies:
+  - InputManager
+  namespace: InputManager
+  summary: "\nDetermines whether a key is pressed for the first time and not held down.\n"
+  example: []
+  syntax:
+    content: public static bool IsFirstTimePressed(Keys key)
+    parameters:
+    - id: key
+      type: System.Windows.Forms.Keys
+      description: A virtual key.
+    return:
+      type: System.Boolean
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the virtual key is pressed for the first time and not held down; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
+    content.vb: Public Shared Function IsFirstTimePressed(key As Keys) As Boolean
+  overload: InputManager.AsyncInput.IsFirstTimePressed*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: InputManager.AsyncInput.IsToggled(System.Windows.Forms.Keys)
+  commentId: M:InputManager.AsyncInput.IsToggled(System.Windows.Forms.Keys)
+  id: IsToggled(System.Windows.Forms.Keys)
+  parent: InputManager.AsyncInput
+  langs:
+  - csharp
+  - vb
+  name: IsToggled(Keys)
+  nameWithType: AsyncInput.IsToggled(Keys)
+  fullName: InputManager.AsyncInput.IsToggled(System.Windows.Forms.Keys)
+  type: Method
+  source:
+    remote:
+      path: source/InputManager/AsyncInput.cs
+      branch: master
+      repo: https://github.com/michel-pi/InputManager.Net.git
+    id: IsToggled
+    path: ../source/InputManager/AsyncInput.cs
+    startLine: 94
+  assemblies:
+  - InputManager
+  namespace: InputManager
+  summary: "\nDetermines whether a key is toggled.\n"
+  example: []
+  syntax:
+    content: public static bool IsToggled(Keys key)
+    parameters:
+    - id: key
+      type: System.Windows.Forms.Keys
+      description: A virtual key.
+    return:
+      type: System.Boolean
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the virtual key is toggled; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
+    content.vb: Public Shared Function IsToggled(key As Keys) As Boolean
+  overload: InputManager.AsyncInput.IsToggled*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: InputManager.AsyncInput.IsUp(System.Windows.Forms.Keys)
+  commentId: M:InputManager.AsyncInput.IsUp(System.Windows.Forms.Keys)
+  id: IsUp(System.Windows.Forms.Keys)
+  parent: InputManager.AsyncInput
+  langs:
+  - csharp
+  - vb
+  name: IsUp(Keys)
+  nameWithType: AsyncInput.IsUp(Keys)
+  fullName: InputManager.AsyncInput.IsUp(System.Windows.Forms.Keys)
+  type: Method
+  source:
+    remote:
+      path: source/InputManager/AsyncInput.cs
+      branch: master
+      repo: https://github.com/michel-pi/InputManager.Net.git
+    id: IsUp
+    path: ../source/InputManager/AsyncInput.cs
+    startLine: 104
+  assemblies:
+  - InputManager
+  namespace: InputManager
+  summary: "\nDetermines whether a key is not pressed or toggled.\n"
+  example: []
+  syntax:
+    content: public static bool IsUp(Keys key)
+    parameters:
+    - id: key
+      type: System.Windows.Forms.Keys
+      description: A virtual key.
+    return:
+      type: System.Boolean
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the virtual key is not pressed or toggled; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
+    content.vb: Public Shared Function IsUp(key As Keys) As Boolean
+  overload: InputManager.AsyncInput.IsUp*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: InputManager
+  commentId: N:InputManager
+  name: InputManager
+  nameWithType: InputManager
+  fullName: InputManager
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: InputManager.AsyncInput.GetKeyState*
+  commentId: Overload:InputManager.AsyncInput.GetKeyState
+  name: GetKeyState
+  nameWithType: AsyncInput.GetKeyState
+  fullName: InputManager.AsyncInput.GetKeyState
+- uid: System.Windows.Forms.Keys
+  commentId: T:System.Windows.Forms.Keys
+  parent: System.Windows.Forms
+  isExternal: true
+  name: Keys
+  nameWithType: Keys
+  fullName: System.Windows.Forms.Keys
+- uid: System.Windows.Input.KeyStates
+  commentId: T:System.Windows.Input.KeyStates
+  parent: System.Windows.Input
+  isExternal: true
+  name: KeyStates
+  nameWithType: KeyStates
+  fullName: System.Windows.Input.KeyStates
+- uid: System.Windows.Forms
+  commentId: N:System.Windows.Forms
+  isExternal: true
+  name: System.Windows.Forms
+  nameWithType: System.Windows.Forms
+  fullName: System.Windows.Forms
+- uid: System.Windows.Input
+  commentId: N:System.Windows.Input
+  isExternal: true
+  name: System.Windows.Input
+  nameWithType: System.Windows.Input
+  fullName: System.Windows.Input
+- uid: InputManager.AsyncInput.IsPressed*
+  commentId: Overload:InputManager.AsyncInput.IsPressed
+  name: IsPressed
+  nameWithType: AsyncInput.IsPressed
+  fullName: InputManager.AsyncInput.IsPressed
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: InputManager.AsyncInput.WasPressed*
+  commentId: Overload:InputManager.AsyncInput.WasPressed
+  name: WasPressed
+  nameWithType: AsyncInput.WasPressed
+  fullName: InputManager.AsyncInput.WasPressed
+- uid: InputManager.AsyncInput.IsFirstTimePressed*
+  commentId: Overload:InputManager.AsyncInput.IsFirstTimePressed
+  name: IsFirstTimePressed
+  nameWithType: AsyncInput.IsFirstTimePressed
+  fullName: InputManager.AsyncInput.IsFirstTimePressed
+- uid: InputManager.AsyncInput.IsToggled*
+  commentId: Overload:InputManager.AsyncInput.IsToggled
+  name: IsToggled
+  nameWithType: AsyncInput.IsToggled
+  fullName: InputManager.AsyncInput.IsToggled
+- uid: InputManager.AsyncInput.IsUp*
+  commentId: Overload:InputManager.AsyncInput.IsUp
+  name: IsUp
+  nameWithType: AsyncInput.IsUp
+  fullName: InputManager.AsyncInput.IsUp

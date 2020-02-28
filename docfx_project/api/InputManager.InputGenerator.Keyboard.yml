@@ -1,0 +1,663 @@
+### YamlMime:ManagedReference
+items:
+- uid: InputManager.InputGenerator.Keyboard
+  commentId: T:InputManager.InputGenerator.Keyboard
+  id: InputGenerator.Keyboard
+  parent: InputManager
+  children:
+  - InputManager.InputGenerator.Keyboard.Press(System.Windows.Forms.Keys,System.Boolean)
+  - InputManager.InputGenerator.Keyboard.Press(System.Windows.Forms.Keys,System.Windows.Input.KeyStates,System.Boolean)
+  - InputManager.InputGenerator.Keyboard.PressAsync(System.Windows.Forms.Keys,System.Boolean)
+  - InputManager.InputGenerator.Keyboard.PressAsync(System.Windows.Forms.Keys,System.Windows.Input.KeyStates,System.Boolean)
+  langs:
+  - csharp
+  - vb
+  name: InputGenerator.Keyboard
+  nameWithType: InputGenerator.Keyboard
+  fullName: InputManager.InputGenerator.Keyboard
+  type: Class
+  source:
+    remote:
+      path: source/InputManager/InputGenerator.cs
+      branch: master
+      repo: https://github.com/michel-pi/InputManager.Net.git
+    id: Keyboard
+    path: ../source/InputManager/InputGenerator.cs
+    startLine: 18
+  assemblies:
+  - InputManager
+  namespace: InputManager
+  summary: "\nSynthesizes keyboard events.\n"
+  example: []
+  syntax:
+    content: public static class Keyboard
+    content.vb: Public Module Keyboard
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: InputManager.InputGenerator.Keyboard.Press(System.Windows.Forms.Keys,System.Boolean)
+  commentId: M:InputManager.InputGenerator.Keyboard.Press(System.Windows.Forms.Keys,System.Boolean)
+  id: Press(System.Windows.Forms.Keys,System.Boolean)
+  parent: InputManager.InputGenerator.Keyboard
+  langs:
+  - csharp
+  - vb
+  name: Press(Keys, Boolean)
+  nameWithType: InputGenerator.Keyboard.Press(Keys, Boolean)
+  fullName: InputManager.InputGenerator.Keyboard.Press(System.Windows.Forms.Keys, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: source/InputManager/InputGenerator.cs
+      branch: master
+      repo: https://github.com/michel-pi/InputManager.Net.git
+    id: Press
+    path: ../source/InputManager/InputGenerator.cs
+    startLine: 26
+  assemblies:
+  - InputManager
+  namespace: InputManager
+  summary: "\nPresses a key on the Keyboard.\n"
+  example: []
+  syntax:
+    content: public static bool Press(Keys key, bool useKeyboardEvent = false)
+    parameters:
+    - id: key
+      type: System.Windows.Forms.Keys
+      description: The key to press.
+    - id: useKeyboardEvent
+      type: System.Boolean
+      description: Determines whether to use the keyboard_event API or not.
+    return:
+      type: System.Boolean
+      description: Returns true on success.
+    content.vb: Public Shared Function Press(key As Keys, useKeyboardEvent As Boolean = False) As Boolean
+  overload: InputManager.InputGenerator.Keyboard.Press*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: InputManager.InputGenerator.Keyboard.Press(System.Windows.Forms.Keys,System.Windows.Input.KeyStates,System.Boolean)
+  commentId: M:InputManager.InputGenerator.Keyboard.Press(System.Windows.Forms.Keys,System.Windows.Input.KeyStates,System.Boolean)
+  id: Press(System.Windows.Forms.Keys,System.Windows.Input.KeyStates,System.Boolean)
+  parent: InputManager.InputGenerator.Keyboard
+  langs:
+  - csharp
+  - vb
+  name: Press(Keys, KeyStates, Boolean)
+  nameWithType: InputGenerator.Keyboard.Press(Keys, KeyStates, Boolean)
+  fullName: InputManager.InputGenerator.Keyboard.Press(System.Windows.Forms.Keys, System.Windows.Input.KeyStates, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: source/InputManager/InputGenerator.cs
+      branch: master
+      repo: https://github.com/michel-pi/InputManager.Net.git
+    id: Press
+    path: ../source/InputManager/InputGenerator.cs
+    startLine: 36
+  assemblies:
+  - InputManager
+  namespace: InputManager
+  summary: "\nChanges the state of a key on the Keyboard.\n"
+  example: []
+  syntax:
+    content: public static bool Press(Keys key, KeyStates state, bool useKeyboardEvent = false)
+    parameters:
+    - id: key
+      type: System.Windows.Forms.Keys
+      description: The key.
+    - id: state
+      type: System.Windows.Input.KeyStates
+      description: The new state of the given key.
+    - id: useKeyboardEvent
+      type: System.Boolean
+      description: Determines whether to use the keyboard_event API or not.
+    return:
+      type: System.Boolean
+      description: Returns true on success.
+    content.vb: Public Shared Function Press(key As Keys, state As KeyStates, useKeyboardEvent As Boolean = False) As Boolean
+  overload: InputManager.InputGenerator.Keyboard.Press*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: InputManager.InputGenerator.Keyboard.PressAsync(System.Windows.Forms.Keys,System.Boolean)
+  commentId: M:InputManager.InputGenerator.Keyboard.PressAsync(System.Windows.Forms.Keys,System.Boolean)
+  id: PressAsync(System.Windows.Forms.Keys,System.Boolean)
+  parent: InputManager.InputGenerator.Keyboard
+  langs:
+  - csharp
+  - vb
+  name: PressAsync(Keys, Boolean)
+  nameWithType: InputGenerator.Keyboard.PressAsync(Keys, Boolean)
+  fullName: InputManager.InputGenerator.Keyboard.PressAsync(System.Windows.Forms.Keys, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: source/InputManager/InputGenerator.cs
+      branch: master
+      repo: https://github.com/michel-pi/InputManager.Net.git
+    id: PressAsync
+    path: ../source/InputManager/InputGenerator.cs
+    startLine: 52
+  assemblies:
+  - InputManager
+  namespace: InputManager
+  summary: "\nPresses a key on the Keyboard and immediately returns.\n"
+  example: []
+  syntax:
+    content: public static Task<bool> PressAsync(Keys key, bool useKeyboardEvent = false)
+    parameters:
+    - id: key
+      type: System.Windows.Forms.Keys
+      description: The key to press.
+    - id: useKeyboardEvent
+      type: System.Boolean
+      description: Determines whether to use the keyboard_event API or not.
+    return:
+      type: System.Threading.Tasks.Task{System.Boolean}
+      description: Returns a Task<bool></bool>.
+    content.vb: Public Shared Function PressAsync(key As Keys, useKeyboardEvent As Boolean = False) As Task(Of Boolean)
+  overload: InputManager.InputGenerator.Keyboard.PressAsync*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: InputManager.InputGenerator.Keyboard.PressAsync(System.Windows.Forms.Keys,System.Windows.Input.KeyStates,System.Boolean)
+  commentId: M:InputManager.InputGenerator.Keyboard.PressAsync(System.Windows.Forms.Keys,System.Windows.Input.KeyStates,System.Boolean)
+  id: PressAsync(System.Windows.Forms.Keys,System.Windows.Input.KeyStates,System.Boolean)
+  parent: InputManager.InputGenerator.Keyboard
+  langs:
+  - csharp
+  - vb
+  name: PressAsync(Keys, KeyStates, Boolean)
+  nameWithType: InputGenerator.Keyboard.PressAsync(Keys, KeyStates, Boolean)
+  fullName: InputManager.InputGenerator.Keyboard.PressAsync(System.Windows.Forms.Keys, System.Windows.Input.KeyStates, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: source/InputManager/InputGenerator.cs
+      branch: master
+      repo: https://github.com/michel-pi/InputManager.Net.git
+    id: PressAsync
+    path: ../source/InputManager/InputGenerator.cs
+    startLine: 62
+  assemblies:
+  - InputManager
+  namespace: InputManager
+  summary: "\nChanges the state of a key on the Keyboard and immediately returns.\n"
+  example: []
+  syntax:
+    content: public static Task<bool> PressAsync(Keys key, KeyStates state, bool useKeyboardEvent = false)
+    parameters:
+    - id: key
+      type: System.Windows.Forms.Keys
+      description: The key.
+    - id: state
+      type: System.Windows.Input.KeyStates
+      description: The new state of the given key.
+    - id: useKeyboardEvent
+      type: System.Boolean
+      description: Determines whether to use the keyboard_event API or not.
+    return:
+      type: System.Threading.Tasks.Task{System.Boolean}
+      description: Returns a Task<bool></bool>.
+    content.vb: Public Shared Function PressAsync(key As Keys, state As KeyStates, useKeyboardEvent As Boolean = False) As Task(Of Boolean)
+  overload: InputManager.InputGenerator.Keyboard.PressAsync*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: InputManager
+  commentId: N:InputManager
+  name: InputManager
+  nameWithType: InputManager
+  fullName: InputManager
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: InputManager.InputGenerator.Keyboard.Press*
+  commentId: Overload:InputManager.InputGenerator.Keyboard.Press
+  name: Press
+  nameWithType: InputGenerator.Keyboard.Press
+  fullName: InputManager.InputGenerator.Keyboard.Press
+- uid: System.Windows.Forms.Keys
+  commentId: T:System.Windows.Forms.Keys
+  parent: System.Windows.Forms
+  isExternal: true
+  name: Keys
+  nameWithType: Keys
+  fullName: System.Windows.Forms.Keys
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.Windows.Forms
+  commentId: N:System.Windows.Forms
+  isExternal: true
+  name: System.Windows.Forms
+  nameWithType: System.Windows.Forms
+  fullName: System.Windows.Forms
+- uid: System.Windows.Input.KeyStates
+  commentId: T:System.Windows.Input.KeyStates
+  parent: System.Windows.Input
+  isExternal: true
+  name: KeyStates
+  nameWithType: KeyStates
+  fullName: System.Windows.Input.KeyStates
+- uid: System.Windows.Input
+  commentId: N:System.Windows.Input
+  isExternal: true
+  name: System.Windows.Input
+  nameWithType: System.Windows.Input
+  fullName: System.Windows.Input
+- uid: InputManager.InputGenerator.Keyboard.PressAsync*
+  commentId: Overload:InputManager.InputGenerator.Keyboard.PressAsync
+  name: PressAsync
+  nameWithType: InputGenerator.Keyboard.PressAsync
+  fullName: InputManager.InputGenerator.Keyboard.PressAsync
+- uid: System.Threading.Tasks.Task{System.Boolean}
+  commentId: T:System.Threading.Tasks.Task{System.Boolean}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  name: Task<Boolean>
+  nameWithType: Task<Boolean>
+  fullName: System.Threading.Tasks.Task<System.Boolean>
+  nameWithType.vb: Task(Of Boolean)
+  fullName.vb: System.Threading.Tasks.Task(Of System.Boolean)
+  name.vb: Task(Of Boolean)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks

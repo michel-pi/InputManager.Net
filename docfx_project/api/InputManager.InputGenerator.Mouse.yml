@@ -1,0 +1,782 @@
+### YamlMime:ManagedReference
+items:
+- uid: InputManager.InputGenerator.Mouse
+  commentId: T:InputManager.InputGenerator.Mouse
+  id: InputGenerator.Mouse
+  parent: InputManager
+  children:
+  - InputManager.InputGenerator.Mouse.Move(System.Int32,System.Int32,System.Boolean,System.Boolean)
+  - InputManager.InputGenerator.Mouse.MoveAsync(System.Int32,System.Int32,System.Boolean,System.Boolean)
+  - InputManager.InputGenerator.Mouse.Press(System.Windows.Forms.Keys,System.Boolean)
+  - InputManager.InputGenerator.Mouse.Press(System.Windows.Forms.Keys,System.Windows.Input.KeyStates,System.Boolean)
+  - InputManager.InputGenerator.Mouse.PressAsync(System.Windows.Forms.Keys,System.Boolean)
+  - InputManager.InputGenerator.Mouse.PressAsync(System.Windows.Forms.Keys,System.Windows.Input.KeyStates,System.Boolean)
+  langs:
+  - csharp
+  - vb
+  name: InputGenerator.Mouse
+  nameWithType: InputGenerator.Mouse
+  fullName: InputManager.InputGenerator.Mouse
+  type: Class
+  source:
+    remote:
+      path: source/InputManager/InputGenerator.cs
+      branch: master
+      repo: https://github.com/michel-pi/InputManager.Net.git
+    id: Mouse
+    path: ../source/InputManager/InputGenerator.cs
+    startLine: 69
+  assemblies:
+  - InputManager
+  namespace: InputManager
+  summary: "\nSynthesizes mouse events.\n"
+  example: []
+  syntax:
+    content: public static class Mouse
+    content.vb: Public Module Mouse
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: InputManager.InputGenerator.Mouse.Move(System.Int32,System.Int32,System.Boolean,System.Boolean)
+  commentId: M:InputManager.InputGenerator.Mouse.Move(System.Int32,System.Int32,System.Boolean,System.Boolean)
+  id: Move(System.Int32,System.Int32,System.Boolean,System.Boolean)
+  parent: InputManager.InputGenerator.Mouse
+  langs:
+  - csharp
+  - vb
+  name: Move(Int32, Int32, Boolean, Boolean)
+  nameWithType: InputGenerator.Mouse.Move(Int32, Int32, Boolean, Boolean)
+  fullName: InputManager.InputGenerator.Mouse.Move(System.Int32, System.Int32, System.Boolean, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: source/InputManager/InputGenerator.cs
+      branch: master
+      repo: https://github.com/michel-pi/InputManager.Net.git
+    id: Move
+    path: ../source/InputManager/InputGenerator.cs
+    startLine: 79
+  assemblies:
+  - InputManager
+  namespace: InputManager
+  summary: "\nMoves the mouse to a specific coordinate on the screen or relative by an amount of pixels.\n"
+  example: []
+  syntax:
+    content: public static bool Move(int x, int y, bool relative = false, bool useMouseEvent = false)
+    parameters:
+    - id: x
+      type: System.Int32
+      description: The absolute x-coordinate of the mouse or a relative amount of pixels.
+    - id: y
+      type: System.Int32
+      description: The absolute y-coordinate of the mouse or a relative amount of pixels.
+    - id: relative
+      type: System.Boolean
+      description: Determines whether the coordinates are absolute.
+    - id: useMouseEvent
+      type: System.Boolean
+      description: Determines whether to use the mouse_event API or not.
+    return:
+      type: System.Boolean
+      description: Returns true on success.
+    content.vb: Public Shared Function Move(x As Integer, y As Integer, relative As Boolean = False, useMouseEvent As Boolean = False) As Boolean
+  overload: InputManager.InputGenerator.Mouse.Move*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: InputManager.InputGenerator.Mouse.MoveAsync(System.Int32,System.Int32,System.Boolean,System.Boolean)
+  commentId: M:InputManager.InputGenerator.Mouse.MoveAsync(System.Int32,System.Int32,System.Boolean,System.Boolean)
+  id: MoveAsync(System.Int32,System.Int32,System.Boolean,System.Boolean)
+  parent: InputManager.InputGenerator.Mouse
+  langs:
+  - csharp
+  - vb
+  name: MoveAsync(Int32, Int32, Boolean, Boolean)
+  nameWithType: InputGenerator.Mouse.MoveAsync(Int32, Int32, Boolean, Boolean)
+  fullName: InputManager.InputGenerator.Mouse.MoveAsync(System.Int32, System.Int32, System.Boolean, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: source/InputManager/InputGenerator.cs
+      branch: master
+      repo: https://github.com/michel-pi/InputManager.Net.git
+    id: MoveAsync
+    path: ../source/InputManager/InputGenerator.cs
+    startLine: 94
+  assemblies:
+  - InputManager
+  namespace: InputManager
+  summary: "\nMoves the mouse to a specific coordinate on the screen or relative by an amount of pixels and returns immediately.\n"
+  example: []
+  syntax:
+    content: public static Task<bool> MoveAsync(int x, int y, bool relative = false, bool useMouseEvent = false)
+    parameters:
+    - id: x
+      type: System.Int32
+      description: The absolute x-coordinate of the mouse or a relative amount of pixels.
+    - id: y
+      type: System.Int32
+      description: The absolute y-coordinate of the mouse or a relative amount of pixels.
+    - id: relative
+      type: System.Boolean
+      description: Determines whether the coordinates are absolute.
+    - id: useMouseEvent
+      type: System.Boolean
+      description: Determines whether to use the mouse_event API or not.
+    return:
+      type: System.Threading.Tasks.Task{System.Boolean}
+      description: Returns a Task<bool></bool>.
+    content.vb: Public Shared Function MoveAsync(x As Integer, y As Integer, relative As Boolean = False, useMouseEvent As Boolean = False) As Task(Of Boolean)
+  overload: InputManager.InputGenerator.Mouse.MoveAsync*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: InputManager.InputGenerator.Mouse.Press(System.Windows.Forms.Keys,System.Boolean)
+  commentId: M:InputManager.InputGenerator.Mouse.Press(System.Windows.Forms.Keys,System.Boolean)
+  id: Press(System.Windows.Forms.Keys,System.Boolean)
+  parent: InputManager.InputGenerator.Mouse
+  langs:
+  - csharp
+  - vb
+  name: Press(Keys, Boolean)
+  nameWithType: InputGenerator.Mouse.Press(Keys, Boolean)
+  fullName: InputManager.InputGenerator.Mouse.Press(System.Windows.Forms.Keys, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: source/InputManager/InputGenerator.cs
+      branch: master
+      repo: https://github.com/michel-pi/InputManager.Net.git
+    id: Press
+    path: ../source/InputManager/InputGenerator.cs
+    startLine: 103
+  assemblies:
+  - InputManager
+  namespace: InputManager
+  summary: "\nPresses a button on the mouse.\n"
+  example: []
+  syntax:
+    content: public static bool Press(Keys key, bool useMouseEvent = false)
+    parameters:
+    - id: key
+      type: System.Windows.Forms.Keys
+      description: The mouse button to press.
+    - id: useMouseEvent
+      type: System.Boolean
+      description: Determines whether to use the mouse_event API or not.
+    return:
+      type: System.Boolean
+      description: Returns true on success.
+    content.vb: Public Shared Function Press(key As Keys, useMouseEvent As Boolean = False) As Boolean
+  overload: InputManager.InputGenerator.Mouse.Press*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: InputManager.InputGenerator.Mouse.Press(System.Windows.Forms.Keys,System.Windows.Input.KeyStates,System.Boolean)
+  commentId: M:InputManager.InputGenerator.Mouse.Press(System.Windows.Forms.Keys,System.Windows.Input.KeyStates,System.Boolean)
+  id: Press(System.Windows.Forms.Keys,System.Windows.Input.KeyStates,System.Boolean)
+  parent: InputManager.InputGenerator.Mouse
+  langs:
+  - csharp
+  - vb
+  name: Press(Keys, KeyStates, Boolean)
+  nameWithType: InputGenerator.Mouse.Press(Keys, KeyStates, Boolean)
+  fullName: InputManager.InputGenerator.Mouse.Press(System.Windows.Forms.Keys, System.Windows.Input.KeyStates, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: source/InputManager/InputGenerator.cs
+      branch: master
+      repo: https://github.com/michel-pi/InputManager.Net.git
+    id: Press
+    path: ../source/InputManager/InputGenerator.cs
+    startLine: 113
+  assemblies:
+  - InputManager
+  namespace: InputManager
+  summary: "\nPresses a button on the mouse.\n"
+  example: []
+  syntax:
+    content: public static bool Press(Keys key, KeyStates state, bool useMouseEvent = false)
+    parameters:
+    - id: key
+      type: System.Windows.Forms.Keys
+      description: The mouse button to press.
+    - id: state
+      type: System.Windows.Input.KeyStates
+      description: The new state of the mouse button.
+    - id: useMouseEvent
+      type: System.Boolean
+      description: Determines whether to use the mouse_event API or not.
+    return:
+      type: System.Boolean
+      description: Returns true on success.
+    content.vb: Public Shared Function Press(key As Keys, state As KeyStates, useMouseEvent As Boolean = False) As Boolean
+  overload: InputManager.InputGenerator.Mouse.Press*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: InputManager.InputGenerator.Mouse.PressAsync(System.Windows.Forms.Keys,System.Boolean)
+  commentId: M:InputManager.InputGenerator.Mouse.PressAsync(System.Windows.Forms.Keys,System.Boolean)
+  id: PressAsync(System.Windows.Forms.Keys,System.Boolean)
+  parent: InputManager.InputGenerator.Mouse
+  langs:
+  - csharp
+  - vb
+  name: PressAsync(Keys, Boolean)
+  nameWithType: InputGenerator.Mouse.PressAsync(Keys, Boolean)
+  fullName: InputManager.InputGenerator.Mouse.PressAsync(System.Windows.Forms.Keys, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: source/InputManager/InputGenerator.cs
+      branch: master
+      repo: https://github.com/michel-pi/InputManager.Net.git
+    id: PressAsync
+    path: ../source/InputManager/InputGenerator.cs
+    startLine: 129
+  assemblies:
+  - InputManager
+  namespace: InputManager
+  summary: "\nPresses a button on the mouse and returns immediately.\n"
+  example: []
+  syntax:
+    content: public static Task<bool> PressAsync(Keys key, bool useMouseEvent = false)
+    parameters:
+    - id: key
+      type: System.Windows.Forms.Keys
+      description: The mouse button to press.
+    - id: useMouseEvent
+      type: System.Boolean
+      description: Determines whether to use the mouse_event API or not.
+    return:
+      type: System.Threading.Tasks.Task{System.Boolean}
+      description: Returns a Task<bool></bool>.
+    content.vb: Public Shared Function PressAsync(key As Keys, useMouseEvent As Boolean = False) As Task(Of Boolean)
+  overload: InputManager.InputGenerator.Mouse.PressAsync*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: InputManager.InputGenerator.Mouse.PressAsync(System.Windows.Forms.Keys,System.Windows.Input.KeyStates,System.Boolean)
+  commentId: M:InputManager.InputGenerator.Mouse.PressAsync(System.Windows.Forms.Keys,System.Windows.Input.KeyStates,System.Boolean)
+  id: PressAsync(System.Windows.Forms.Keys,System.Windows.Input.KeyStates,System.Boolean)
+  parent: InputManager.InputGenerator.Mouse
+  langs:
+  - csharp
+  - vb
+  name: PressAsync(Keys, KeyStates, Boolean)
+  nameWithType: InputGenerator.Mouse.PressAsync(Keys, KeyStates, Boolean)
+  fullName: InputManager.InputGenerator.Mouse.PressAsync(System.Windows.Forms.Keys, System.Windows.Input.KeyStates, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: source/InputManager/InputGenerator.cs
+      branch: master
+      repo: https://github.com/michel-pi/InputManager.Net.git
+    id: PressAsync
+    path: ../source/InputManager/InputGenerator.cs
+    startLine: 139
+  assemblies:
+  - InputManager
+  namespace: InputManager
+  summary: "\nPresses a button on the mouse and returns immediately.\n"
+  example: []
+  syntax:
+    content: public static Task<bool> PressAsync(Keys key, KeyStates state, bool useMouseEvent = false)
+    parameters:
+    - id: key
+      type: System.Windows.Forms.Keys
+      description: The mouse button to press.
+    - id: state
+      type: System.Windows.Input.KeyStates
+      description: The new state of the mouse button.
+    - id: useMouseEvent
+      type: System.Boolean
+      description: Determines whether to use the mouse_event API or not.
+    return:
+      type: System.Threading.Tasks.Task{System.Boolean}
+      description: Returns a Task<bool></bool>.
+    content.vb: Public Shared Function PressAsync(key As Keys, state As KeyStates, useMouseEvent As Boolean = False) As Task(Of Boolean)
+  overload: InputManager.InputGenerator.Mouse.PressAsync*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: InputManager
+  commentId: N:InputManager
+  name: InputManager
+  nameWithType: InputManager
+  fullName: InputManager
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: InputManager.InputGenerator.Mouse.Move*
+  commentId: Overload:InputManager.InputGenerator.Mouse.Move
+  name: Move
+  nameWithType: InputGenerator.Mouse.Move
+  fullName: InputManager.InputGenerator.Mouse.Move
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: InputManager.InputGenerator.Mouse.MoveAsync*
+  commentId: Overload:InputManager.InputGenerator.Mouse.MoveAsync
+  name: MoveAsync
+  nameWithType: InputGenerator.Mouse.MoveAsync
+  fullName: InputManager.InputGenerator.Mouse.MoveAsync
+- uid: System.Threading.Tasks.Task{System.Boolean}
+  commentId: T:System.Threading.Tasks.Task{System.Boolean}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  name: Task<Boolean>
+  nameWithType: Task<Boolean>
+  fullName: System.Threading.Tasks.Task<System.Boolean>
+  nameWithType.vb: Task(Of Boolean)
+  fullName.vb: System.Threading.Tasks.Task(Of System.Boolean)
+  name.vb: Task(Of Boolean)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+- uid: InputManager.InputGenerator.Mouse.Press*
+  commentId: Overload:InputManager.InputGenerator.Mouse.Press
+  name: Press
+  nameWithType: InputGenerator.Mouse.Press
+  fullName: InputManager.InputGenerator.Mouse.Press
+- uid: System.Windows.Forms.Keys
+  commentId: T:System.Windows.Forms.Keys
+  parent: System.Windows.Forms
+  isExternal: true
+  name: Keys
+  nameWithType: Keys
+  fullName: System.Windows.Forms.Keys
+- uid: System.Windows.Forms
+  commentId: N:System.Windows.Forms
+  isExternal: true
+  name: System.Windows.Forms
+  nameWithType: System.Windows.Forms
+  fullName: System.Windows.Forms
+- uid: System.Windows.Input.KeyStates
+  commentId: T:System.Windows.Input.KeyStates
+  parent: System.Windows.Input
+  isExternal: true
+  name: KeyStates
+  nameWithType: KeyStates
+  fullName: System.Windows.Input.KeyStates
+- uid: System.Windows.Input
+  commentId: N:System.Windows.Input
+  isExternal: true
+  name: System.Windows.Input
+  nameWithType: System.Windows.Input
+  fullName: System.Windows.Input
+- uid: InputManager.InputGenerator.Mouse.PressAsync*
+  commentId: Overload:InputManager.InputGenerator.Mouse.PressAsync
+  name: PressAsync
+  nameWithType: InputGenerator.Mouse.PressAsync
+  fullName: InputManager.InputGenerator.Mouse.PressAsync

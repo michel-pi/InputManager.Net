@@ -1,0 +1,885 @@
+### YamlMime:ManagedReference
+items:
+- uid: InputManager.KeyCodeConverter
+  commentId: T:InputManager.KeyCodeConverter
+  id: KeyCodeConverter
+  parent: InputManager
+  children:
+  - InputManager.KeyCodeConverter.FormsKeyFromString(System.String)
+  - InputManager.KeyCodeConverter.FormsKeyToWPFKey(System.Windows.Forms.Keys)
+  - InputManager.KeyCodeConverter.Keys
+  - InputManager.KeyCodeConverter.ToInt(System.Windows.Forms.Keys)
+  - InputManager.KeyCodeConverter.ToInt(System.Windows.Input.Key)
+  - InputManager.KeyCodeConverter.ToString(System.Windows.Forms.Keys)
+  - InputManager.KeyCodeConverter.ToString(System.Windows.Input.Key)
+  - InputManager.KeyCodeConverter.WPFKeyFromString(System.String)
+  - InputManager.KeyCodeConverter.WPFKeyToFormsKey(System.Windows.Input.Key)
+  langs:
+  - csharp
+  - vb
+  name: KeyCodeConverter
+  nameWithType: KeyCodeConverter
+  fullName: InputManager.KeyCodeConverter
+  type: Class
+  source:
+    remote:
+      path: source/InputManager/KeyCodeConverter.cs
+      branch: master
+      repo: https://github.com/michel-pi/InputManager.Net.git
+    id: KeyCodeConverter
+    path: ../source/InputManager/KeyCodeConverter.cs
+    startLine: 13
+  assemblies:
+  - InputManager
+  namespace: InputManager
+  summary: "\nProvides methods to convert between strings and enums and aswell Windows Forms (Keys) and WPF (Key) enums.\n"
+  example: []
+  syntax:
+    content: public static class KeyCodeConverter
+    content.vb: Public Module KeyCodeConverter
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: InputManager.KeyCodeConverter.Keys
+  commentId: P:InputManager.KeyCodeConverter.Keys
+  id: Keys
+  parent: InputManager.KeyCodeConverter
+  langs:
+  - csharp
+  - vb
+  name: Keys
+  nameWithType: KeyCodeConverter.Keys
+  fullName: InputManager.KeyCodeConverter.Keys
+  type: Property
+  source:
+    remote:
+      path: source/InputManager/KeyCodeConverter.cs
+      branch: master
+      repo: https://github.com/michel-pi/InputManager.Net.git
+    id: Keys
+    path: ../source/InputManager/KeyCodeConverter.cs
+    startLine: 20
+  assemblies:
+  - InputManager
+  namespace: InputManager
+  summary: "\nGets a readonly enumeration of all Keys.\n"
+  example: []
+  syntax:
+    content: public static IEnumerable<Keys> Keys { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{System.Windows.Forms.Keys}
+    content.vb: Public Shared ReadOnly Property Keys As IEnumerable(Of Keys)
+  overload: InputManager.KeyCodeConverter.Keys*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: InputManager.KeyCodeConverter.ToInt(System.Windows.Input.Key)
+  commentId: M:InputManager.KeyCodeConverter.ToInt(System.Windows.Input.Key)
+  id: ToInt(System.Windows.Input.Key)
+  parent: InputManager.KeyCodeConverter
+  langs:
+  - csharp
+  - vb
+  name: ToInt(Key)
+  nameWithType: KeyCodeConverter.ToInt(Key)
+  fullName: InputManager.KeyCodeConverter.ToInt(System.Windows.Input.Key)
+  type: Method
+  source:
+    remote:
+      path: source/InputManager/KeyCodeConverter.cs
+      branch: master
+      repo: https://github.com/michel-pi/InputManager.Net.git
+    id: ToInt
+    path: ../source/InputManager/KeyCodeConverter.cs
+    startLine: 33
+  assemblies:
+  - InputManager
+  namespace: InputManager
+  summary: "\nConverts a WPF Key to a signed integer.\n"
+  example: []
+  syntax:
+    content: public static int ToInt(Key key)
+    parameters:
+    - id: key
+      type: System.Windows.Input.Key
+      description: A WPF Key.
+    return:
+      type: System.Int32
+      description: The signed int value representing a WPF Key.
+    content.vb: Public Shared Function ToInt(key As Key) As Integer
+  overload: InputManager.KeyCodeConverter.ToInt*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: InputManager.KeyCodeConverter.ToInt(System.Windows.Forms.Keys)
+  commentId: M:InputManager.KeyCodeConverter.ToInt(System.Windows.Forms.Keys)
+  id: ToInt(System.Windows.Forms.Keys)
+  parent: InputManager.KeyCodeConverter
+  langs:
+  - csharp
+  - vb
+  name: ToInt(Keys)
+  nameWithType: KeyCodeConverter.ToInt(Keys)
+  fullName: InputManager.KeyCodeConverter.ToInt(System.Windows.Forms.Keys)
+  type: Method
+  source:
+    remote:
+      path: source/InputManager/KeyCodeConverter.cs
+      branch: master
+      repo: https://github.com/michel-pi/InputManager.Net.git
+    id: ToInt
+    path: ../source/InputManager/KeyCodeConverter.cs
+    startLine: 45
+  assemblies:
+  - InputManager
+  namespace: InputManager
+  summary: "\nConverts a Windows Forms Keys to a signed integer.\n"
+  example: []
+  syntax:
+    content: public static int ToInt(Keys key)
+    parameters:
+    - id: key
+      type: System.Windows.Forms.Keys
+      description: A Windows Forms Keys.
+    return:
+      type: System.Int32
+      description: The signed int value representing a WPF Keys.
+    content.vb: Public Shared Function ToInt(key As Keys) As Integer
+  overload: InputManager.KeyCodeConverter.ToInt*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: InputManager.KeyCodeConverter.ToString(System.Windows.Input.Key)
+  commentId: M:InputManager.KeyCodeConverter.ToString(System.Windows.Input.Key)
+  id: ToString(System.Windows.Input.Key)
+  parent: InputManager.KeyCodeConverter
+  langs:
+  - csharp
+  - vb
+  name: ToString(Key)
+  nameWithType: KeyCodeConverter.ToString(Key)
+  fullName: InputManager.KeyCodeConverter.ToString(System.Windows.Input.Key)
+  type: Method
+  source:
+    remote:
+      path: source/InputManager/KeyCodeConverter.cs
+      branch: master
+      repo: https://github.com/michel-pi/InputManager.Net.git
+    id: ToString
+    path: ../source/InputManager/KeyCodeConverter.cs
+    startLine: 57
+  assemblies:
+  - InputManager
+  namespace: InputManager
+  summary: "\nConverts a WPF Key to a human readable string.\n"
+  example: []
+  syntax:
+    content: public static string ToString(Key key)
+    parameters:
+    - id: key
+      type: System.Windows.Input.Key
+      description: A WPF Key.
+    return:
+      type: System.String
+      description: The string this method generates.
+    content.vb: Public Shared Function ToString(key As Key) As String
+  overload: InputManager.KeyCodeConverter.ToString*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: InputManager.KeyCodeConverter.ToString(System.Windows.Forms.Keys)
+  commentId: M:InputManager.KeyCodeConverter.ToString(System.Windows.Forms.Keys)
+  id: ToString(System.Windows.Forms.Keys)
+  parent: InputManager.KeyCodeConverter
+  langs:
+  - csharp
+  - vb
+  name: ToString(Keys)
+  nameWithType: KeyCodeConverter.ToString(Keys)
+  fullName: InputManager.KeyCodeConverter.ToString(System.Windows.Forms.Keys)
+  type: Method
+  source:
+    remote:
+      path: source/InputManager/KeyCodeConverter.cs
+      branch: master
+      repo: https://github.com/michel-pi/InputManager.Net.git
+    id: ToString
+    path: ../source/InputManager/KeyCodeConverter.cs
+    startLine: 69
+  assemblies:
+  - InputManager
+  namespace: InputManager
+  summary: "\nConverts a Windows Forms Keys to a human readable string.\n"
+  example: []
+  syntax:
+    content: public static string ToString(Keys key)
+    parameters:
+    - id: key
+      type: System.Windows.Forms.Keys
+      description: A Windows Forms Keys enum value.
+    return:
+      type: System.String
+      description: The string this method generates.
+    content.vb: Public Shared Function ToString(key As Keys) As String
+  overload: InputManager.KeyCodeConverter.ToString*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: InputManager.KeyCodeConverter.WPFKeyFromString(System.String)
+  commentId: M:InputManager.KeyCodeConverter.WPFKeyFromString(System.String)
+  id: WPFKeyFromString(System.String)
+  parent: InputManager.KeyCodeConverter
+  langs:
+  - csharp
+  - vb
+  name: WPFKeyFromString(String)
+  nameWithType: KeyCodeConverter.WPFKeyFromString(String)
+  fullName: InputManager.KeyCodeConverter.WPFKeyFromString(System.String)
+  type: Method
+  source:
+    remote:
+      path: source/InputManager/KeyCodeConverter.cs
+      branch: master
+      repo: https://github.com/michel-pi/InputManager.Net.git
+    id: WPFKeyFromString
+    path: ../source/InputManager/KeyCodeConverter.cs
+    startLine: 81
+  assemblies:
+  - InputManager
+  namespace: InputManager
+  summary: "\nTurns the string representation of a WPF Key to a WPF Key enum value.\n"
+  example: []
+  syntax:
+    content: public static Key WPFKeyFromString(string value)
+    parameters:
+    - id: value
+      type: System.String
+      description: The string representation of a WPF Key enum value.
+    return:
+      type: System.Windows.Input.Key
+      description: The WPF Key enum value.
+    content.vb: Public Shared Function WPFKeyFromString(value As String) As Key
+  overload: InputManager.KeyCodeConverter.WPFKeyFromString*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: InputManager.KeyCodeConverter.FormsKeyFromString(System.String)
+  commentId: M:InputManager.KeyCodeConverter.FormsKeyFromString(System.String)
+  id: FormsKeyFromString(System.String)
+  parent: InputManager.KeyCodeConverter
+  langs:
+  - csharp
+  - vb
+  name: FormsKeyFromString(String)
+  nameWithType: KeyCodeConverter.FormsKeyFromString(String)
+  fullName: InputManager.KeyCodeConverter.FormsKeyFromString(System.String)
+  type: Method
+  source:
+    remote:
+      path: source/InputManager/KeyCodeConverter.cs
+      branch: master
+      repo: https://github.com/michel-pi/InputManager.Net.git
+    id: FormsKeyFromString
+    path: ../source/InputManager/KeyCodeConverter.cs
+    startLine: 101
+  assemblies:
+  - InputManager
+  namespace: InputManager
+  summary: "\nTurns the string representation of a Windows Forms Keys to a Windows Forms Keys enum value.\n"
+  example: []
+  syntax:
+    content: public static Keys FormsKeyFromString(string value)
+    parameters:
+    - id: value
+      type: System.String
+      description: The string representation of a Windows Forms Keys enum value.
+    return:
+      type: System.Windows.Forms.Keys
+      description: The Windows Forms Keys enum value.
+    content.vb: Public Shared Function FormsKeyFromString(value As String) As Keys
+  overload: InputManager.KeyCodeConverter.FormsKeyFromString*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: InputManager.KeyCodeConverter.FormsKeyToWPFKey(System.Windows.Forms.Keys)
+  commentId: M:InputManager.KeyCodeConverter.FormsKeyToWPFKey(System.Windows.Forms.Keys)
+  id: FormsKeyToWPFKey(System.Windows.Forms.Keys)
+  parent: InputManager.KeyCodeConverter
+  langs:
+  - csharp
+  - vb
+  name: FormsKeyToWPFKey(Keys)
+  nameWithType: KeyCodeConverter.FormsKeyToWPFKey(Keys)
+  fullName: InputManager.KeyCodeConverter.FormsKeyToWPFKey(System.Windows.Forms.Keys)
+  type: Method
+  source:
+    remote:
+      path: source/InputManager/KeyCodeConverter.cs
+      branch: master
+      repo: https://github.com/michel-pi/InputManager.Net.git
+    id: FormsKeyToWPFKey
+    path: ../source/InputManager/KeyCodeConverter.cs
+    startLine: 121
+  assemblies:
+  - InputManager
+  namespace: InputManager
+  summary: "\nConverts a Windows Forms Keys enum value to a WPF Key enum value.\n"
+  example: []
+  syntax:
+    content: public static Key FormsKeyToWPFKey(Keys key)
+    parameters:
+    - id: key
+      type: System.Windows.Forms.Keys
+      description: A Windows Forms Keys enum value.
+    return:
+      type: System.Windows.Input.Key
+      description: The WPF Key enum value.
+    content.vb: Public Shared Function FormsKeyToWPFKey(key As Keys) As Key
+  overload: InputManager.KeyCodeConverter.FormsKeyToWPFKey*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: InputManager.KeyCodeConverter.WPFKeyToFormsKey(System.Windows.Input.Key)
+  commentId: M:InputManager.KeyCodeConverter.WPFKeyToFormsKey(System.Windows.Input.Key)
+  id: WPFKeyToFormsKey(System.Windows.Input.Key)
+  parent: InputManager.KeyCodeConverter
+  langs:
+  - csharp
+  - vb
+  name: WPFKeyToFormsKey(Key)
+  nameWithType: KeyCodeConverter.WPFKeyToFormsKey(Key)
+  fullName: InputManager.KeyCodeConverter.WPFKeyToFormsKey(System.Windows.Input.Key)
+  type: Method
+  source:
+    remote:
+      path: source/InputManager/KeyCodeConverter.cs
+      branch: master
+      repo: https://github.com/michel-pi/InputManager.Net.git
+    id: WPFKeyToFormsKey
+    path: ../source/InputManager/KeyCodeConverter.cs
+    startLine: 133
+  assemblies:
+  - InputManager
+  namespace: InputManager
+  summary: "\nConverts a WPF Key enum value to a Windows Forms Keys enum value.\n"
+  example: []
+  syntax:
+    content: public static Keys WPFKeyToFormsKey(Key key)
+    parameters:
+    - id: key
+      type: System.Windows.Input.Key
+      description: A WPF Key enum value.
+    return:
+      type: System.Windows.Forms.Keys
+      description: The Windows Forms Keys enum value.
+    content.vb: Public Shared Function WPFKeyToFormsKey(key As Key) As Keys
+  overload: InputManager.KeyCodeConverter.WPFKeyToFormsKey*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: InputManager
+  commentId: N:InputManager
+  name: InputManager
+  nameWithType: InputManager
+  fullName: InputManager
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: InputManager.KeyCodeConverter.Keys*
+  commentId: Overload:InputManager.KeyCodeConverter.Keys
+  name: Keys
+  nameWithType: KeyCodeConverter.Keys
+  fullName: InputManager.KeyCodeConverter.Keys
+- uid: System.Collections.Generic.IEnumerable{System.Windows.Forms.Keys}
+  commentId: T:System.Collections.Generic.IEnumerable{System.Windows.Forms.Keys}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<Keys>
+  nameWithType: IEnumerable<Keys>
+  fullName: System.Collections.Generic.IEnumerable<System.Windows.Forms.Keys>
+  nameWithType.vb: IEnumerable(Of Keys)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.Windows.Forms.Keys)
+  name.vb: IEnumerable(Of Keys)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Windows.Forms.Keys
+    name: Keys
+    nameWithType: Keys
+    fullName: System.Windows.Forms.Keys
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Windows.Forms.Keys
+    name: Keys
+    nameWithType: Keys
+    fullName: System.Windows.Forms.Keys
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: InputManager.KeyCodeConverter.ToInt*
+  commentId: Overload:InputManager.KeyCodeConverter.ToInt
+  name: ToInt
+  nameWithType: KeyCodeConverter.ToInt
+  fullName: InputManager.KeyCodeConverter.ToInt
+- uid: System.Windows.Input.Key
+  commentId: T:System.Windows.Input.Key
+  parent: System.Windows.Input
+  isExternal: true
+  name: Key
+  nameWithType: Key
+  fullName: System.Windows.Input.Key
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.Windows.Input
+  commentId: N:System.Windows.Input
+  isExternal: true
+  name: System.Windows.Input
+  nameWithType: System.Windows.Input
+  fullName: System.Windows.Input
+- uid: System.Windows.Forms.Keys
+  commentId: T:System.Windows.Forms.Keys
+  parent: System.Windows.Forms
+  isExternal: true
+  name: Keys
+  nameWithType: Keys
+  fullName: System.Windows.Forms.Keys
+- uid: System.Windows.Forms
+  commentId: N:System.Windows.Forms
+  isExternal: true
+  name: System.Windows.Forms
+  nameWithType: System.Windows.Forms
+  fullName: System.Windows.Forms
+- uid: InputManager.KeyCodeConverter.ToString*
+  commentId: Overload:InputManager.KeyCodeConverter.ToString
+  name: ToString
+  nameWithType: KeyCodeConverter.ToString
+  fullName: InputManager.KeyCodeConverter.ToString
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: InputManager.KeyCodeConverter.WPFKeyFromString*
+  commentId: Overload:InputManager.KeyCodeConverter.WPFKeyFromString
+  name: WPFKeyFromString
+  nameWithType: KeyCodeConverter.WPFKeyFromString
+  fullName: InputManager.KeyCodeConverter.WPFKeyFromString
+- uid: InputManager.KeyCodeConverter.FormsKeyFromString*
+  commentId: Overload:InputManager.KeyCodeConverter.FormsKeyFromString
+  name: FormsKeyFromString
+  nameWithType: KeyCodeConverter.FormsKeyFromString
+  fullName: InputManager.KeyCodeConverter.FormsKeyFromString
+- uid: InputManager.KeyCodeConverter.FormsKeyToWPFKey*
+  commentId: Overload:InputManager.KeyCodeConverter.FormsKeyToWPFKey
+  name: FormsKeyToWPFKey
+  nameWithType: KeyCodeConverter.FormsKeyToWPFKey
+  fullName: InputManager.KeyCodeConverter.FormsKeyToWPFKey
+- uid: InputManager.KeyCodeConverter.WPFKeyToFormsKey*
+  commentId: Overload:InputManager.KeyCodeConverter.WPFKeyToFormsKey
+  name: WPFKeyToFormsKey
+  nameWithType: KeyCodeConverter.WPFKeyToFormsKey
+  fullName: InputManager.KeyCodeConverter.WPFKeyToFormsKey

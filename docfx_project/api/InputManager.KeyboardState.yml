@@ -1,0 +1,1218 @@
+### YamlMime:ManagedReference
+items:
+- uid: InputManager.KeyboardState
+  commentId: T:InputManager.KeyboardState
+  id: KeyboardState
+  parent: InputManager
+  children:
+  - InputManager.KeyboardState.#ctor
+  - InputManager.KeyboardState.Create
+  - InputManager.KeyboardState.Equals(InputManager.KeyboardState)
+  - InputManager.KeyboardState.Equals(System.Object)
+  - InputManager.KeyboardState.GetHashCode
+  - InputManager.KeyboardState.GetKeyState(System.Windows.Forms.Keys)
+  - InputManager.KeyboardState.GetThreadStatic
+  - InputManager.KeyboardState.GetThreadStatic(System.Boolean)
+  - InputManager.KeyboardState.IsFirstTimePressed(System.Windows.Forms.Keys)
+  - InputManager.KeyboardState.IsPressed(System.Windows.Forms.Keys)
+  - InputManager.KeyboardState.IsToggled(System.Windows.Forms.Keys)
+  - InputManager.KeyboardState.IsUp(System.Windows.Forms.Keys)
+  - InputManager.KeyboardState.Item(System.Int32)
+  - InputManager.KeyboardState.Item(System.Windows.Forms.Keys)
+  - InputManager.KeyboardState.MaxKeyValue
+  - InputManager.KeyboardState.MinKeyValue
+  - InputManager.KeyboardState.ToString
+  - InputManager.KeyboardState.Update
+  - InputManager.KeyboardState.WasPressed(System.Windows.Forms.Keys)
+  langs:
+  - csharp
+  - vb
+  name: KeyboardState
+  nameWithType: KeyboardState
+  fullName: InputManager.KeyboardState
+  type: Class
+  source:
+    remote:
+      path: source/InputManager/KeyboardState.cs
+      branch: master
+      repo: https://github.com/michel-pi/InputManager.Net.git
+    id: KeyboardState
+    path: ../source/InputManager/KeyboardState.cs
+    startLine: 13
+  assemblies:
+  - InputManager
+  namespace: InputManager
+  summary: "\nProvides access to the asynchronous status of all virtual keys.\n"
+  example: []
+  syntax:
+    content: public class KeyboardState
+    content.vb: Public Class KeyboardState
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: InputManager.KeyboardState.MaxKeyValue
+  commentId: F:InputManager.KeyboardState.MaxKeyValue
+  id: MaxKeyValue
+  parent: InputManager.KeyboardState
+  langs:
+  - csharp
+  - vb
+  name: MaxKeyValue
+  nameWithType: KeyboardState.MaxKeyValue
+  fullName: InputManager.KeyboardState.MaxKeyValue
+  type: Field
+  source:
+    remote:
+      path: source/InputManager/KeyboardState.cs
+      branch: master
+      repo: https://github.com/michel-pi/InputManager.Net.git
+    id: MaxKeyValue
+    path: ../source/InputManager/KeyboardState.cs
+    startLine: 18
+  assemblies:
+  - InputManager
+  namespace: InputManager
+  summary: "\nThe upper bound of a virtual key.\n"
+  example: []
+  syntax:
+    content: public const int MaxKeyValue = 256
+    return:
+      type: System.Int32
+    content.vb: Public Const MaxKeyValue As Integer = 256
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: InputManager.KeyboardState.MinKeyValue
+  commentId: F:InputManager.KeyboardState.MinKeyValue
+  id: MinKeyValue
+  parent: InputManager.KeyboardState
+  langs:
+  - csharp
+  - vb
+  name: MinKeyValue
+  nameWithType: KeyboardState.MinKeyValue
+  fullName: InputManager.KeyboardState.MinKeyValue
+  type: Field
+  source:
+    remote:
+      path: source/InputManager/KeyboardState.cs
+      branch: master
+      repo: https://github.com/michel-pi/InputManager.Net.git
+    id: MinKeyValue
+    path: ../source/InputManager/KeyboardState.cs
+    startLine: 23
+  assemblies:
+  - InputManager
+  namespace: InputManager
+  summary: "\nThe lower bound of a virtual key.\n"
+  example: []
+  syntax:
+    content: public const int MinKeyValue = 0
+    return:
+      type: System.Int32
+    content.vb: Public Const MinKeyValue As Integer = 0
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: InputManager.KeyboardState.Item(System.Int32)
+  commentId: P:InputManager.KeyboardState.Item(System.Int32)
+  id: Item(System.Int32)
+  parent: InputManager.KeyboardState
+  langs:
+  - csharp
+  - vb
+  name: Item[Int32]
+  nameWithType: KeyboardState.Item[Int32]
+  fullName: InputManager.KeyboardState.Item[System.Int32]
+  type: Property
+  source:
+    remote:
+      path: source/InputManager/KeyboardState.cs
+      branch: master
+      repo: https://github.com/michel-pi/InputManager.Net.git
+    id: this[]
+    path: ../source/InputManager/KeyboardState.cs
+    startLine: 36
+  assemblies:
+  - InputManager
+  namespace: InputManager
+  summary: "\nGets the bit field representing the status of a key.\n"
+  example: []
+  syntax:
+    content: public byte this[int index] { get; }
+    parameters:
+    - id: index
+      type: System.Int32
+      description: A virtual key.
+    return:
+      type: System.Byte
+      description: A 1 byte large bit field holding the status of a virtual key.
+    content.vb: Public ReadOnly Property Item(index As Integer) As Byte
+  overload: InputManager.KeyboardState.Item*
+  nameWithType.vb: KeyboardState.Item(Int32)
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+  fullName.vb: InputManager.KeyboardState.Item(System.Int32)
+  name.vb: Item(Int32)
+- uid: InputManager.KeyboardState.Item(System.Windows.Forms.Keys)
+  commentId: P:InputManager.KeyboardState.Item(System.Windows.Forms.Keys)
+  id: Item(System.Windows.Forms.Keys)
+  parent: InputManager.KeyboardState
+  langs:
+  - csharp
+  - vb
+  name: Item[Keys]
+  nameWithType: KeyboardState.Item[Keys]
+  fullName: InputManager.KeyboardState.Item[System.Windows.Forms.Keys]
+  type: Property
+  source:
+    remote:
+      path: source/InputManager/KeyboardState.cs
+      branch: master
+      repo: https://github.com/michel-pi/InputManager.Net.git
+    id: this[]
+    path: ../source/InputManager/KeyboardState.cs
+    startLine: 51
+  assemblies:
+  - InputManager
+  namespace: InputManager
+  summary: "\nGets the key state of a specified key.\n"
+  example: []
+  syntax:
+    content: public KeyStates this[Keys key] { get; }
+    parameters:
+    - id: key
+      type: System.Windows.Forms.Keys
+      description: A virtual key.
+    return:
+      type: System.Windows.Input.KeyStates
+      description: The KeyStates of the specified key.
+    content.vb: Public ReadOnly Property Item(key As Keys) As KeyStates
+  overload: InputManager.KeyboardState.Item*
+  nameWithType.vb: KeyboardState.Item(Keys)
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+  fullName.vb: InputManager.KeyboardState.Item(System.Windows.Forms.Keys)
+  name.vb: Item(Keys)
+- uid: InputManager.KeyboardState.#ctor
+  commentId: M:InputManager.KeyboardState.#ctor
+  id: '#ctor'
+  parent: InputManager.KeyboardState
+  langs:
+  - csharp
+  - vb
+  name: KeyboardState()
+  nameWithType: KeyboardState.KeyboardState()
+  fullName: InputManager.KeyboardState.KeyboardState()
+  type: Constructor
+  source:
+    remote:
+      path: source/InputManager/KeyboardState.cs
+      branch: master
+      repo: https://github.com/michel-pi/InputManager.Net.git
+    id: .ctor
+    path: ../source/InputManager/KeyboardState.cs
+    startLine: 56
+  assemblies:
+  - InputManager
+  namespace: InputManager
+  summary: "\nInitializes a new KeyboardState object and updates the underlying buffer.\n"
+  example: []
+  syntax:
+    content: public KeyboardState()
+    content.vb: Public Sub New
+  overload: InputManager.KeyboardState.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: InputManager.KeyboardState.GetKeyState(System.Windows.Forms.Keys)
+  commentId: M:InputManager.KeyboardState.GetKeyState(System.Windows.Forms.Keys)
+  id: GetKeyState(System.Windows.Forms.Keys)
+  parent: InputManager.KeyboardState
+  langs:
+  - csharp
+  - vb
+  name: GetKeyState(Keys)
+  nameWithType: KeyboardState.GetKeyState(Keys)
+  fullName: InputManager.KeyboardState.GetKeyState(System.Windows.Forms.Keys)
+  type: Method
+  source:
+    remote:
+      path: source/InputManager/KeyboardState.cs
+      branch: master
+      repo: https://github.com/michel-pi/InputManager.Net.git
+    id: GetKeyState
+    path: ../source/InputManager/KeyboardState.cs
+    startLine: 70
+  assemblies:
+  - InputManager
+  namespace: InputManager
+  summary: "\nReturns the asynchronous state of a virtual key.\n"
+  example: []
+  syntax:
+    content: public KeyStates GetKeyState(Keys key)
+    parameters:
+    - id: key
+      type: System.Windows.Forms.Keys
+      description: A virtual key code.
+    return:
+      type: System.Windows.Input.KeyStates
+      description: The state of a virtual key code.
+    content.vb: Public Function GetKeyState(key As Keys) As KeyStates
+  overload: InputManager.KeyboardState.GetKeyState*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: InputManager.KeyboardState.IsPressed(System.Windows.Forms.Keys)
+  commentId: M:InputManager.KeyboardState.IsPressed(System.Windows.Forms.Keys)
+  id: IsPressed(System.Windows.Forms.Keys)
+  parent: InputManager.KeyboardState
+  langs:
+  - csharp
+  - vb
+  name: IsPressed(Keys)
+  nameWithType: KeyboardState.IsPressed(Keys)
+  fullName: InputManager.KeyboardState.IsPressed(System.Windows.Forms.Keys)
+  type: Method
+  source:
+    remote:
+      path: source/InputManager/KeyboardState.cs
+      branch: master
+      repo: https://github.com/michel-pi/InputManager.Net.git
+    id: IsPressed
+    path: ../source/InputManager/KeyboardState.cs
+    startLine: 101
+  assemblies:
+  - InputManager
+  namespace: InputManager
+  summary: "\nDetermines whether a key is pressed.\n"
+  example: []
+  syntax:
+    content: public bool IsPressed(Keys key)
+    parameters:
+    - id: key
+      type: System.Windows.Forms.Keys
+      description: A virtual key.
+    return:
+      type: System.Boolean
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the virtual key is pressed; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
+    content.vb: Public Function IsPressed(key As Keys) As Boolean
+  overload: InputManager.KeyboardState.IsPressed*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: InputManager.KeyboardState.WasPressed(System.Windows.Forms.Keys)
+  commentId: M:InputManager.KeyboardState.WasPressed(System.Windows.Forms.Keys)
+  id: WasPressed(System.Windows.Forms.Keys)
+  parent: InputManager.KeyboardState
+  langs:
+  - csharp
+  - vb
+  name: WasPressed(Keys)
+  nameWithType: KeyboardState.WasPressed(Keys)
+  fullName: InputManager.KeyboardState.WasPressed(System.Windows.Forms.Keys)
+  type: Method
+  source:
+    remote:
+      path: source/InputManager/KeyboardState.cs
+      branch: master
+      repo: https://github.com/michel-pi/InputManager.Net.git
+    id: WasPressed
+    path: ../source/InputManager/KeyboardState.cs
+    startLine: 111
+  assemblies:
+  - InputManager
+  namespace: InputManager
+  summary: "\nDetermines whether a key was pressed.\n"
+  example: []
+  syntax:
+    content: public bool WasPressed(Keys key)
+    parameters:
+    - id: key
+      type: System.Windows.Forms.Keys
+      description: A virtual key.
+    return:
+      type: System.Boolean
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the virtual key was pressed; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
+    content.vb: Public Function WasPressed(key As Keys) As Boolean
+  overload: InputManager.KeyboardState.WasPressed*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: InputManager.KeyboardState.IsFirstTimePressed(System.Windows.Forms.Keys)
+  commentId: M:InputManager.KeyboardState.IsFirstTimePressed(System.Windows.Forms.Keys)
+  id: IsFirstTimePressed(System.Windows.Forms.Keys)
+  parent: InputManager.KeyboardState
+  langs:
+  - csharp
+  - vb
+  name: IsFirstTimePressed(Keys)
+  nameWithType: KeyboardState.IsFirstTimePressed(Keys)
+  fullName: InputManager.KeyboardState.IsFirstTimePressed(System.Windows.Forms.Keys)
+  type: Method
+  source:
+    remote:
+      path: source/InputManager/KeyboardState.cs
+      branch: master
+      repo: https://github.com/michel-pi/InputManager.Net.git
+    id: IsFirstTimePressed
+    path: ../source/InputManager/KeyboardState.cs
+    startLine: 124
+  assemblies:
+  - InputManager
+  namespace: InputManager
+  summary: "\nDetermines whether a key is pressed for the first time and not held down.\n"
+  example: []
+  syntax:
+    content: public bool IsFirstTimePressed(Keys key)
+    parameters:
+    - id: key
+      type: System.Windows.Forms.Keys
+      description: A virtual key.
+    return:
+      type: System.Boolean
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the virtual key is pressed for the first time and not held down; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
+    content.vb: Public Function IsFirstTimePressed(key As Keys) As Boolean
+  overload: InputManager.KeyboardState.IsFirstTimePressed*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: InputManager.KeyboardState.IsToggled(System.Windows.Forms.Keys)
+  commentId: M:InputManager.KeyboardState.IsToggled(System.Windows.Forms.Keys)
+  id: IsToggled(System.Windows.Forms.Keys)
+  parent: InputManager.KeyboardState
+  langs:
+  - csharp
+  - vb
+  name: IsToggled(Keys)
+  nameWithType: KeyboardState.IsToggled(Keys)
+  fullName: InputManager.KeyboardState.IsToggled(System.Windows.Forms.Keys)
+  type: Method
+  source:
+    remote:
+      path: source/InputManager/KeyboardState.cs
+      branch: master
+      repo: https://github.com/michel-pi/InputManager.Net.git
+    id: IsToggled
+    path: ../source/InputManager/KeyboardState.cs
+    startLine: 137
+  assemblies:
+  - InputManager
+  namespace: InputManager
+  summary: "\nDetermines whether a key is toggled.\n"
+  example: []
+  syntax:
+    content: public bool IsToggled(Keys key)
+    parameters:
+    - id: key
+      type: System.Windows.Forms.Keys
+      description: A virtual key.
+    return:
+      type: System.Boolean
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the virtual key is toggled; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
+    content.vb: Public Function IsToggled(key As Keys) As Boolean
+  overload: InputManager.KeyboardState.IsToggled*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: InputManager.KeyboardState.IsUp(System.Windows.Forms.Keys)
+  commentId: M:InputManager.KeyboardState.IsUp(System.Windows.Forms.Keys)
+  id: IsUp(System.Windows.Forms.Keys)
+  parent: InputManager.KeyboardState
+  langs:
+  - csharp
+  - vb
+  name: IsUp(Keys)
+  nameWithType: KeyboardState.IsUp(Keys)
+  fullName: InputManager.KeyboardState.IsUp(System.Windows.Forms.Keys)
+  type: Method
+  source:
+    remote:
+      path: source/InputManager/KeyboardState.cs
+      branch: master
+      repo: https://github.com/michel-pi/InputManager.Net.git
+    id: IsUp
+    path: ../source/InputManager/KeyboardState.cs
+    startLine: 147
+  assemblies:
+  - InputManager
+  namespace: InputManager
+  summary: "\nDetermines whether a key is not pressed or toggled.\n"
+  example: []
+  syntax:
+    content: public bool IsUp(Keys key)
+    parameters:
+    - id: key
+      type: System.Windows.Forms.Keys
+      description: A virtual key.
+    return:
+      type: System.Boolean
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the virtual key is not pressed or toggled; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
+    content.vb: Public Function IsUp(key As Keys) As Boolean
+  overload: InputManager.KeyboardState.IsUp*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: InputManager.KeyboardState.Update
+  commentId: M:InputManager.KeyboardState.Update
+  id: Update
+  parent: InputManager.KeyboardState
+  langs:
+  - csharp
+  - vb
+  name: Update()
+  nameWithType: KeyboardState.Update()
+  fullName: InputManager.KeyboardState.Update()
+  type: Method
+  source:
+    remote:
+      path: source/InputManager/KeyboardState.cs
+      branch: master
+      repo: https://github.com/michel-pi/InputManager.Net.git
+    id: Update
+    path: ../source/InputManager/KeyboardState.cs
+    startLine: 155
+  assemblies:
+  - InputManager
+  namespace: InputManager
+  summary: "\nUpdates the buffer holding the status of all virtual keys.\n"
+  example: []
+  syntax:
+    content: public void Update()
+    content.vb: Public Sub Update
+  overload: InputManager.KeyboardState.Update*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: InputManager.KeyboardState.Equals(System.Object)
+  commentId: M:InputManager.KeyboardState.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: InputManager.KeyboardState
+  langs:
+  - csharp
+  - vb
+  name: Equals(Object)
+  nameWithType: KeyboardState.Equals(Object)
+  fullName: InputManager.KeyboardState.Equals(System.Object)
+  type: Method
+  source:
+    remote:
+      path: source/InputManager/KeyboardState.cs
+      branch: master
+      repo: https://github.com/michel-pi/InputManager.Net.git
+    id: Equals
+    path: ../source/InputManager/KeyboardState.cs
+    startLine: 168
+  assemblies:
+  - InputManager
+  namespace: InputManager
+  summary: "\nReturns a value indicating whether this instance and a specified <xref href=\"System.Object\" data-throw-if-not-resolved=\"false\"></xref> represent the same type and were created on the same thread.\n"
+  example: []
+  syntax:
+    content: public override bool Equals(object obj)
+    parameters:
+    - id: obj
+      type: System.Object
+      description: The object to compare with this instance.
+    return:
+      type: System.Boolean
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if <code data-dev-comment-type="paramref" class="paramref">obj</code> is a KeyboardState and was created on the same thread; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
+    content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+  overridden: System.Object.Equals(System.Object)
+  overload: InputManager.KeyboardState.Equals*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: InputManager.KeyboardState.Equals(InputManager.KeyboardState)
+  commentId: M:InputManager.KeyboardState.Equals(InputManager.KeyboardState)
+  id: Equals(InputManager.KeyboardState)
+  parent: InputManager.KeyboardState
+  langs:
+  - csharp
+  - vb
+  name: Equals(KeyboardState)
+  nameWithType: KeyboardState.Equals(KeyboardState)
+  fullName: InputManager.KeyboardState.Equals(InputManager.KeyboardState)
+  type: Method
+  source:
+    remote:
+      path: source/InputManager/KeyboardState.cs
+      branch: master
+      repo: https://github.com/michel-pi/InputManager.Net.git
+    id: Equals
+    path: ../source/InputManager/KeyboardState.cs
+    startLine: 185
+  assemblies:
+  - InputManager
+  namespace: InputManager
+  summary: "\nReturns a value indicating whether two specified instances of KeyboardState were created on the same thread.\n"
+  example: []
+  syntax:
+    content: public bool Equals(KeyboardState value)
+    parameters:
+    - id: value
+      type: InputManager.KeyboardState
+      description: An object to compare to this instance.
+    return:
+      type: System.Boolean
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if <code data-dev-comment-type="paramref" class="paramref">value</code> was created on the same thread; otherwise, <xref uid="langword_csharp_false" name="false" href=""></xref>.
+    content.vb: Public Function Equals(value As KeyboardState) As Boolean
+  overload: InputManager.KeyboardState.Equals*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: InputManager.KeyboardState.GetHashCode
+  commentId: M:InputManager.KeyboardState.GetHashCode
+  id: GetHashCode
+  parent: InputManager.KeyboardState
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: KeyboardState.GetHashCode()
+  fullName: InputManager.KeyboardState.GetHashCode()
+  type: Method
+  source:
+    remote:
+      path: source/InputManager/KeyboardState.cs
+      branch: master
+      repo: https://github.com/michel-pi/InputManager.Net.git
+    id: GetHashCode
+    path: ../source/InputManager/KeyboardState.cs
+    startLine: 195
+  assemblies:
+  - InputManager
+  namespace: InputManager
+  summary: "\nReturns the hash code for this instance.\n"
+  example: []
+  syntax:
+    content: public override int GetHashCode()
+    return:
+      type: System.Int32
+      description: A 32-bit signed integer hash code.
+    content.vb: Public Overrides Function GetHashCode As Integer
+  overridden: System.Object.GetHashCode
+  overload: InputManager.KeyboardState.GetHashCode*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: InputManager.KeyboardState.ToString
+  commentId: M:InputManager.KeyboardState.ToString
+  id: ToString
+  parent: InputManager.KeyboardState
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: KeyboardState.ToString()
+  fullName: InputManager.KeyboardState.ToString()
+  type: Method
+  source:
+    remote:
+      path: source/InputManager/KeyboardState.cs
+      branch: master
+      repo: https://github.com/michel-pi/InputManager.Net.git
+    id: ToString
+    path: ../source/InputManager/KeyboardState.cs
+    startLine: 204
+  assemblies:
+  - InputManager
+  namespace: InputManager
+  summary: "\nConverts this KeyboardState structure to a human-readable string.\n"
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: A string representation of this KeyboardState.
+    content.vb: Public Overrides Function ToString As String
+  overridden: System.Object.ToString
+  overload: InputManager.KeyboardState.ToString*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: InputManager.KeyboardState.Create
+  commentId: M:InputManager.KeyboardState.Create
+  id: Create
+  parent: InputManager.KeyboardState
+  langs:
+  - csharp
+  - vb
+  name: Create()
+  nameWithType: KeyboardState.Create()
+  fullName: InputManager.KeyboardState.Create()
+  type: Method
+  source:
+    remote:
+      path: source/InputManager/KeyboardState.cs
+      branch: master
+      repo: https://github.com/michel-pi/InputManager.Net.git
+    id: Create
+    path: ../source/InputManager/KeyboardState.cs
+    startLine: 213
+  assemblies:
+  - InputManager
+  namespace: InputManager
+  summary: "\nInstantiates a new KeyboardState object.\n"
+  example: []
+  syntax:
+    content: public static KeyboardState Create()
+    return:
+      type: InputManager.KeyboardState
+      description: A KeyboardState object.
+    content.vb: Public Shared Function Create As KeyboardState
+  overload: InputManager.KeyboardState.Create*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: InputManager.KeyboardState.GetThreadStatic
+  commentId: M:InputManager.KeyboardState.GetThreadStatic
+  id: GetThreadStatic
+  parent: InputManager.KeyboardState
+  langs:
+  - csharp
+  - vb
+  name: GetThreadStatic()
+  nameWithType: KeyboardState.GetThreadStatic()
+  fullName: InputManager.KeyboardState.GetThreadStatic()
+  type: Method
+  source:
+    remote:
+      path: source/InputManager/KeyboardState.cs
+      branch: master
+      repo: https://github.com/michel-pi/InputManager.Net.git
+    id: GetThreadStatic
+    path: ../source/InputManager/KeyboardState.cs
+    startLine: 222
+  assemblies:
+  - InputManager
+  namespace: InputManager
+  summary: "\nGets a cached and thread-static KeyboardState object which is unique for the calling thread and updates it.\n"
+  example: []
+  syntax:
+    content: public static KeyboardState GetThreadStatic()
+    return:
+      type: InputManager.KeyboardState
+      description: A KeyboardState object.
+    content.vb: Public Shared Function GetThreadStatic As KeyboardState
+  overload: InputManager.KeyboardState.GetThreadStatic*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: InputManager.KeyboardState.GetThreadStatic(System.Boolean)
+  commentId: M:InputManager.KeyboardState.GetThreadStatic(System.Boolean)
+  id: GetThreadStatic(System.Boolean)
+  parent: InputManager.KeyboardState
+  langs:
+  - csharp
+  - vb
+  name: GetThreadStatic(Boolean)
+  nameWithType: KeyboardState.GetThreadStatic(Boolean)
+  fullName: InputManager.KeyboardState.GetThreadStatic(System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: source/InputManager/KeyboardState.cs
+      branch: master
+      repo: https://github.com/michel-pi/InputManager.Net.git
+    id: GetThreadStatic
+    path: ../source/InputManager/KeyboardState.cs
+    startLine: 243
+  assemblies:
+  - InputManager
+  namespace: InputManager
+  summary: "\nGets a cached and thread-static KeyboardState object which is unique for the calling thread.\n"
+  example: []
+  syntax:
+    content: public static KeyboardState GetThreadStatic(bool update)
+    parameters:
+    - id: update
+      type: System.Boolean
+      description: Indicates whether the thread-static KeyboardState object should be updated before returning it.
+    return:
+      type: InputManager.KeyboardState
+      description: A KeyboardState object.
+    content.vb: Public Shared Function GetThreadStatic(update As Boolean) As KeyboardState
+  overload: InputManager.KeyboardState.GetThreadStatic*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: InputManager
+  commentId: N:InputManager
+  name: InputManager
+  nameWithType: InputManager
+  fullName: InputManager
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: InputManager.KeyboardState.Item*
+  commentId: Overload:InputManager.KeyboardState.Item
+  name: Item
+  nameWithType: KeyboardState.Item
+  fullName: InputManager.KeyboardState.Item
+- uid: System.Byte
+  commentId: T:System.Byte
+  parent: System
+  isExternal: true
+  name: Byte
+  nameWithType: Byte
+  fullName: System.Byte
+- uid: System.Windows.Forms.Keys
+  commentId: T:System.Windows.Forms.Keys
+  parent: System.Windows.Forms
+  isExternal: true
+  name: Keys
+  nameWithType: Keys
+  fullName: System.Windows.Forms.Keys
+- uid: System.Windows.Input.KeyStates
+  commentId: T:System.Windows.Input.KeyStates
+  parent: System.Windows.Input
+  isExternal: true
+  name: KeyStates
+  nameWithType: KeyStates
+  fullName: System.Windows.Input.KeyStates
+- uid: System.Windows.Forms
+  commentId: N:System.Windows.Forms
+  isExternal: true
+  name: System.Windows.Forms
+  nameWithType: System.Windows.Forms
+  fullName: System.Windows.Forms
+- uid: System.Windows.Input
+  commentId: N:System.Windows.Input
+  isExternal: true
+  name: System.Windows.Input
+  nameWithType: System.Windows.Input
+  fullName: System.Windows.Input
+- uid: InputManager.KeyboardState.#ctor*
+  commentId: Overload:InputManager.KeyboardState.#ctor
+  name: KeyboardState
+  nameWithType: KeyboardState.KeyboardState
+  fullName: InputManager.KeyboardState.KeyboardState
+- uid: InputManager.KeyboardState.GetKeyState*
+  commentId: Overload:InputManager.KeyboardState.GetKeyState
+  name: GetKeyState
+  nameWithType: KeyboardState.GetKeyState
+  fullName: InputManager.KeyboardState.GetKeyState
+- uid: InputManager.KeyboardState.IsPressed*
+  commentId: Overload:InputManager.KeyboardState.IsPressed
+  name: IsPressed
+  nameWithType: KeyboardState.IsPressed
+  fullName: InputManager.KeyboardState.IsPressed
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: InputManager.KeyboardState.WasPressed*
+  commentId: Overload:InputManager.KeyboardState.WasPressed
+  name: WasPressed
+  nameWithType: KeyboardState.WasPressed
+  fullName: InputManager.KeyboardState.WasPressed
+- uid: InputManager.KeyboardState.IsFirstTimePressed*
+  commentId: Overload:InputManager.KeyboardState.IsFirstTimePressed
+  name: IsFirstTimePressed
+  nameWithType: KeyboardState.IsFirstTimePressed
+  fullName: InputManager.KeyboardState.IsFirstTimePressed
+- uid: InputManager.KeyboardState.IsToggled*
+  commentId: Overload:InputManager.KeyboardState.IsToggled
+  name: IsToggled
+  nameWithType: KeyboardState.IsToggled
+  fullName: InputManager.KeyboardState.IsToggled
+- uid: InputManager.KeyboardState.IsUp*
+  commentId: Overload:InputManager.KeyboardState.IsUp
+  name: IsUp
+  nameWithType: KeyboardState.IsUp
+  fullName: InputManager.KeyboardState.IsUp
+- uid: InputManager.KeyboardState.Update*
+  commentId: Overload:InputManager.KeyboardState.Update
+  name: Update
+  nameWithType: KeyboardState.Update
+  fullName: InputManager.KeyboardState.Update
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: InputManager.KeyboardState.Equals*
+  commentId: Overload:InputManager.KeyboardState.Equals
+  name: Equals
+  nameWithType: KeyboardState.Equals
+  fullName: InputManager.KeyboardState.Equals
+- uid: InputManager.KeyboardState
+  commentId: T:InputManager.KeyboardState
+  parent: InputManager
+  name: KeyboardState
+  nameWithType: KeyboardState
+  fullName: InputManager.KeyboardState
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: InputManager.KeyboardState.GetHashCode*
+  commentId: Overload:InputManager.KeyboardState.GetHashCode
+  name: GetHashCode
+  nameWithType: KeyboardState.GetHashCode
+  fullName: InputManager.KeyboardState.GetHashCode
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: InputManager.KeyboardState.ToString*
+  commentId: Overload:InputManager.KeyboardState.ToString
+  name: ToString
+  nameWithType: KeyboardState.ToString
+  fullName: InputManager.KeyboardState.ToString
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: InputManager.KeyboardState.Create*
+  commentId: Overload:InputManager.KeyboardState.Create
+  name: Create
+  nameWithType: KeyboardState.Create
+  fullName: InputManager.KeyboardState.Create
+- uid: InputManager.KeyboardState.GetThreadStatic*
+  commentId: Overload:InputManager.KeyboardState.GetThreadStatic
+  name: GetThreadStatic
+  nameWithType: KeyboardState.GetThreadStatic
+  fullName: InputManager.KeyboardState.GetThreadStatic

@@ -1,0 +1,647 @@
+### YamlMime:ManagedReference
+items:
+- uid: InputManager.KeyStatesConverter
+  commentId: T:InputManager.KeyStatesConverter
+  id: KeyStatesConverter
+  parent: InputManager
+  children:
+  - InputManager.KeyStatesConverter.FromString(System.String)
+  - InputManager.KeyStatesConverter.KeyStates
+  - InputManager.KeyStatesConverter.ToInt(System.Windows.Input.KeyStates)
+  - InputManager.KeyStatesConverter.ToString(System.Windows.Input.KeyStates)
+  langs:
+  - csharp
+  - vb
+  name: KeyStatesConverter
+  nameWithType: KeyStatesConverter
+  fullName: InputManager.KeyStatesConverter
+  type: Class
+  source:
+    remote:
+      path: source/InputManager/KeyStatesConverter.cs
+      branch: master
+      repo: https://github.com/michel-pi/InputManager.Net.git
+    id: KeyStatesConverter
+    path: ../source/InputManager/KeyStatesConverter.cs
+    startLine: 12
+  assemblies:
+  - InputManager
+  namespace: InputManager
+  summary: "\nProvides methods for converting KeyStates to strings and vice versa.\n"
+  example: []
+  syntax:
+    content: public static class KeyStatesConverter
+    content.vb: Public Module KeyStatesConverter
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: InputManager.KeyStatesConverter.KeyStates
+  commentId: P:InputManager.KeyStatesConverter.KeyStates
+  id: KeyStates
+  parent: InputManager.KeyStatesConverter
+  langs:
+  - csharp
+  - vb
+  name: KeyStates
+  nameWithType: KeyStatesConverter.KeyStates
+  fullName: InputManager.KeyStatesConverter.KeyStates
+  type: Property
+  source:
+    remote:
+      path: source/InputManager/KeyStatesConverter.cs
+      branch: master
+      repo: https://github.com/michel-pi/InputManager.Net.git
+    id: KeyStates
+    path: ../source/InputManager/KeyStatesConverter.cs
+    startLine: 19
+  assemblies:
+  - InputManager
+  namespace: InputManager
+  summary: "\nGets a readonly enumeration of all KeyStates.\n"
+  example: []
+  syntax:
+    content: public static IEnumerable<KeyStates> KeyStates { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{System.Windows.Input.KeyStates}
+    content.vb: Public Shared ReadOnly Property KeyStates As IEnumerable(Of KeyStates)
+  overload: InputManager.KeyStatesConverter.KeyStates*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: InputManager.KeyStatesConverter.ToInt(System.Windows.Input.KeyStates)
+  commentId: M:InputManager.KeyStatesConverter.ToInt(System.Windows.Input.KeyStates)
+  id: ToInt(System.Windows.Input.KeyStates)
+  parent: InputManager.KeyStatesConverter
+  langs:
+  - csharp
+  - vb
+  name: ToInt(KeyStates)
+  nameWithType: KeyStatesConverter.ToInt(KeyStates)
+  fullName: InputManager.KeyStatesConverter.ToInt(System.Windows.Input.KeyStates)
+  type: Method
+  source:
+    remote:
+      path: source/InputManager/KeyStatesConverter.cs
+      branch: master
+      repo: https://github.com/michel-pi/InputManager.Net.git
+    id: ToInt
+    path: ../source/InputManager/KeyStatesConverter.cs
+    startLine: 32
+  assemblies:
+  - InputManager
+  namespace: InputManager
+  summary: "\nConverts a KeyStates enum value to a signed int.\n"
+  example: []
+  syntax:
+    content: public static int ToInt(KeyStates state)
+    parameters:
+    - id: state
+      type: System.Windows.Input.KeyStates
+      description: A KeyStates enum value.
+    return:
+      type: System.Int32
+      description: The signed int this method returns.
+    content.vb: Public Shared Function ToInt(state As KeyStates) As Integer
+  overload: InputManager.KeyStatesConverter.ToInt*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: InputManager.KeyStatesConverter.ToString(System.Windows.Input.KeyStates)
+  commentId: M:InputManager.KeyStatesConverter.ToString(System.Windows.Input.KeyStates)
+  id: ToString(System.Windows.Input.KeyStates)
+  parent: InputManager.KeyStatesConverter
+  langs:
+  - csharp
+  - vb
+  name: ToString(KeyStates)
+  nameWithType: KeyStatesConverter.ToString(KeyStates)
+  fullName: InputManager.KeyStatesConverter.ToString(System.Windows.Input.KeyStates)
+  type: Method
+  source:
+    remote:
+      path: source/InputManager/KeyStatesConverter.cs
+      branch: master
+      repo: https://github.com/michel-pi/InputManager.Net.git
+    id: ToString
+    path: ../source/InputManager/KeyStatesConverter.cs
+    startLine: 44
+  assemblies:
+  - InputManager
+  namespace: InputManager
+  summary: "\nConverts a KeyStates enum value to a human readable string.\n"
+  example: []
+  syntax:
+    content: public static string ToString(KeyStates state)
+    parameters:
+    - id: state
+      type: System.Windows.Input.KeyStates
+      description: A KeyStates enum value.
+    return:
+      type: System.String
+      description: The string this method generates.
+    content.vb: Public Shared Function ToString(state As KeyStates) As String
+  overload: InputManager.KeyStatesConverter.ToString*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: InputManager.KeyStatesConverter.FromString(System.String)
+  commentId: M:InputManager.KeyStatesConverter.FromString(System.String)
+  id: FromString(System.String)
+  parent: InputManager.KeyStatesConverter
+  langs:
+  - csharp
+  - vb
+  name: FromString(String)
+  nameWithType: KeyStatesConverter.FromString(String)
+  fullName: InputManager.KeyStatesConverter.FromString(System.String)
+  type: Method
+  source:
+    remote:
+      path: source/InputManager/KeyStatesConverter.cs
+      branch: master
+      repo: https://github.com/michel-pi/InputManager.Net.git
+    id: FromString
+    path: ../source/InputManager/KeyStatesConverter.cs
+    startLine: 56
+  assemblies:
+  - InputManager
+  namespace: InputManager
+  summary: "\nConverts the string representation of a KeyStates enum value to a KeyStates enum value.\n"
+  example: []
+  syntax:
+    content: public static KeyStates FromString(string value)
+    parameters:
+    - id: value
+      type: System.String
+      description: The string representation of a KeyStates enum value.
+    return:
+      type: System.Windows.Input.KeyStates
+      description: A KeyStates enum value.
+    content.vb: Public Shared Function FromString(value As String) As KeyStates
+  overload: InputManager.KeyStatesConverter.FromString*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: InputManager
+  commentId: N:InputManager
+  name: InputManager
+  nameWithType: InputManager
+  fullName: InputManager
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: InputManager.KeyStatesConverter.KeyStates*
+  commentId: Overload:InputManager.KeyStatesConverter.KeyStates
+  name: KeyStates
+  nameWithType: KeyStatesConverter.KeyStates
+  fullName: InputManager.KeyStatesConverter.KeyStates
+- uid: System.Collections.Generic.IEnumerable{System.Windows.Input.KeyStates}
+  commentId: T:System.Collections.Generic.IEnumerable{System.Windows.Input.KeyStates}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<KeyStates>
+  nameWithType: IEnumerable<KeyStates>
+  fullName: System.Collections.Generic.IEnumerable<System.Windows.Input.KeyStates>
+  nameWithType.vb: IEnumerable(Of KeyStates)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.Windows.Input.KeyStates)
+  name.vb: IEnumerable(Of KeyStates)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Windows.Input.KeyStates
+    name: KeyStates
+    nameWithType: KeyStates
+    fullName: System.Windows.Input.KeyStates
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Windows.Input.KeyStates
+    name: KeyStates
+    nameWithType: KeyStates
+    fullName: System.Windows.Input.KeyStates
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: InputManager.KeyStatesConverter.ToInt*
+  commentId: Overload:InputManager.KeyStatesConverter.ToInt
+  name: ToInt
+  nameWithType: KeyStatesConverter.ToInt
+  fullName: InputManager.KeyStatesConverter.ToInt
+- uid: System.Windows.Input.KeyStates
+  commentId: T:System.Windows.Input.KeyStates
+  parent: System.Windows.Input
+  isExternal: true
+  name: KeyStates
+  nameWithType: KeyStates
+  fullName: System.Windows.Input.KeyStates
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.Windows.Input
+  commentId: N:System.Windows.Input
+  isExternal: true
+  name: System.Windows.Input
+  nameWithType: System.Windows.Input
+  fullName: System.Windows.Input
+- uid: InputManager.KeyStatesConverter.ToString*
+  commentId: Overload:InputManager.KeyStatesConverter.ToString
+  name: ToString
+  nameWithType: KeyStatesConverter.ToString
+  fullName: InputManager.KeyStatesConverter.ToString
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: InputManager.KeyStatesConverter.FromString*
+  commentId: Overload:InputManager.KeyStatesConverter.FromString
+  name: FromString
+  nameWithType: KeyStatesConverter.FromString
+  fullName: InputManager.KeyStatesConverter.FromString
