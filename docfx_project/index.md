@@ -1,26 +1,26 @@
-# ProcessMemoryUtilities.Net
+# InputManager.Net
 
-## What is ProcessMemoryUtilities.Net?
+## What is InputManager.Net?
 
-ProcessMemoryUtilities.Net implements performant wrapper methods over, in game hacking, commonly used NtDll and Kernel32 functions. The different classes allow you to use generic type parameters with ReadProcessMemory and WriteProcessMemory and call simpler functions like OpenProcess, CreateRemoteThread and more without any overhead.
+This library provides an easy to use interface forthe native `GetAsyncKeyState`, `GetKeyState` and `GetKeyboardState` API and aswell synthesizes keyboard and mouse input.
 
 ## Installation
 
 You can install this library using the NuGet Package Manager.
 
-    Install-Package ProcessMemoryUtilities.Net
+    Install-Package InputManager.Net
 
 ## Where to start?
 
 You can find all relevant classes in our api documentation.
 
-[API Reference](https://michel-pi.github.io/ProcessMemoryUtilities.Net/api/index.html "ProcessMemoryUtilities.Net API Reference")
+[API Reference](https://michel-pi.github.io/InputManager.Net/api/index.html "InputManager.Net API Reference")
 
 ## Additional Resources
 
-[GitHub](https://github.com/michel-pi/ProcessMemoryUtilities.Net "ProcessMemoryUtilities.Net on GitHub")
+[GitHub](https://github.com/michel-pi/InputManager.Net "InputManager.Net on GitHub")
 
-[NuGet](https://www.nuget.org/packages/ProcessMemoryUtilities.Net/ "ProcessMemoryUtilities.Net on NuGet")
+[NuGet](https://www.nuget.org/packages/InputManager.Net/ "InputManager.Net on NuGet")
 
 ## Donate
 
