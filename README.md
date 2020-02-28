@@ -7,7 +7,7 @@
 ![Net Framework 4.7](https://img.shields.io/badge/.Net-4.7-informational.svg) ![Net Framework 4.8](https://img.shields.io/badge/.Net-4.8-informational.svg)
 </div>
 
-This library provides an easy to use interface forthe native `GetAsyncKeyState`, `GetKeyState` and `GetKeyboardState` API and aswell synthesizes keyboard and mouse input.
+This library provides an easy to use interface for the native `GetAsyncKeyState`, `GetKeyState` and `GetKeyboardState` API and aswell synthesizes keyboard and mouse input.
 
 To provide better compatibility to other implementations using `VirtualKeyCodes` i decided to not implement the enum myself and instead use the Windows Forms implementation which is a complete enum representing the native `VK_` constants.
 
